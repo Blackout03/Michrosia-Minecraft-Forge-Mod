@@ -590,17 +590,33 @@
       }
     },
     {
-      "name": "PlanksTag",
+      "name": "PlanksBlockTag",
       "type": "tag",
-      "sortid": 46,
+      "sortid": 48,
       "compiles": true,
       "locked_code": false,
       "ids": {}
     },
     {
-      "name": "LogsTag",
+      "name": "PlanksItemTag",
       "type": "tag",
-      "sortid": 47,
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "LogsBlockTag",
+      "type": "tag",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "LogsItemTag",
+      "type": "tag",
+      "sortid": 51,
       "compiles": true,
       "locked_code": false,
       "ids": {}

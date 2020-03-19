@@ -1,0 +1,16 @@
+{
+  "_fv": 6,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:MichrosiaPlanks"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "name": "planks",
+    "namespace": "minecraft"
+  }
+}
