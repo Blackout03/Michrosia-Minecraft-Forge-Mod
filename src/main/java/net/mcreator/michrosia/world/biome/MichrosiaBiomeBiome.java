@@ -49,7 +49,7 @@ public class MichrosiaBiomeBiome extends MichrosiaElements.ModElement {
 	@ObjectHolder("michrosia:michrosiabiome")
 	public static final CustomBiome biome = null;
 	public MichrosiaBiomeBiome(MichrosiaElements instance) {
-		super(instance, 24);
+		super(instance, 28);
 	}
 
 	@Override

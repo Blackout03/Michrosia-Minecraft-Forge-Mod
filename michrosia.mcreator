@@ -4,7 +4,7 @@
     {
       "name": "Darkstone",
       "type": "block",
-      "sortid": 8,
+      "sortid": 12,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -12,77 +12,13 @@
     {
       "name": "PlutoniumOre",
       "type": "block",
-      "sortid": 10,
+      "sortid": 14,
       "compiles": true,
       "locked_code": false,
       "ids": {}
     },
     {
       "name": "PlutoniumIngotItemInInventoryTick",
-      "type": "procedure",
-      "sortid": 16,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "PlutoniumIngotMobIsHitWithItem",
-      "type": "procedure",
-      "sortid": 17,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "PlutoniumIngot",
-      "type": "item",
-      "sortid": 12,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "SmeltPlutoniumOreToPlutoniumNugget",
-      "type": "recipe",
-      "sortid": 18,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "CraftPlutoniumNuggetToPlutoniumIngot",
-      "type": "recipe",
-      "sortid": 19,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "PlutoniumNugget",
-      "type": "item",
-      "sortid": 11,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "PlutoniumBlockEntityCollidesInTheBlock",
       "type": "procedure",
       "sortid": 20,
       "compiles": true,
@@ -98,7 +34,7 @@
       }
     },
     {
-      "name": "PlutoniumBlockEntityWalksOnTheBlock",
+      "name": "PlutoniumIngotMobIsHitWithItem",
       "type": "procedure",
       "sortid": 21,
       "compiles": true,
@@ -114,23 +50,15 @@
       }
     },
     {
-      "name": "PlutoniumBlock",
-      "type": "block",
-      "sortid": 13,
+      "name": "PlutoniumIngot",
+      "type": "item",
+      "sortid": 16,
       "compiles": true,
       "locked_code": false,
       "ids": {}
     },
     {
-      "name": "Darkcobblestone",
-      "type": "block",
-      "sortid": 9,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "SmeltDarkCobblestoneToDarkStone",
+      "name": "SmeltPlutoniumOreToPlutoniumNugget",
       "type": "recipe",
       "sortid": 22,
       "compiles": true,
@@ -138,9 +66,81 @@
       "ids": {}
     },
     {
+      "name": "CraftPlutoniumNuggetToPlutoniumIngot",
+      "type": "recipe",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PlutoniumNugget",
+      "type": "item",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PlutoniumBlockEntityCollidesInTheBlock",
+      "type": "procedure",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PlutoniumBlockEntityWalksOnTheBlock",
+      "type": "procedure",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PlutoniumBlock",
+      "type": "block",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Darkcobblestone",
+      "type": "block",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "SmeltDarkCobblestoneToDarkStone",
+      "type": "recipe",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
       "name": "Plutonium",
       "type": "tag",
-      "sortid": 23,
+      "sortid": 27,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -164,7 +164,7 @@
     {
       "name": "MichrosiaBiome",
       "type": "biome",
-      "sortid": 24,
+      "sortid": 28,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -172,7 +172,7 @@
     {
       "name": "Darkstone2",
       "type": "block",
-      "sortid": 25,
+      "sortid": 29,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -180,7 +180,7 @@
     {
       "name": "MichrosiaTab",
       "type": "tab",
-      "sortid": 26,
+      "sortid": 30,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -188,7 +188,7 @@
     {
       "name": "ReprocessorPartMain",
       "type": "block",
-      "sortid": 14,
+      "sortid": 18,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -196,7 +196,7 @@
     {
       "name": "ReprocessorPart",
       "type": "block",
-      "sortid": 15,
+      "sortid": 19,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -204,7 +204,7 @@
     {
       "name": "ReprocessorPartMainOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 27,
+      "sortid": 31,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -232,7 +232,7 @@
     {
       "name": "ReprocessorBlockDestroyedByPlayer",
       "type": "procedure",
-      "sortid": 28,
+      "sortid": 32,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -260,7 +260,7 @@
     {
       "name": "Reprocessor",
       "type": "block",
-      "sortid": 29,
+      "sortid": 33,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -268,7 +268,7 @@
     {
       "name": "ReprocessorGUI",
       "type": "gui",
-      "sortid": 30,
+      "sortid": 34,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -276,7 +276,7 @@
     {
       "name": "ReprocessorOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 31,
+      "sortid": 35,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -308,7 +308,7 @@
     {
       "name": "ReprocessorUpdateTick",
       "type": "procedure",
-      "sortid": 32,
+      "sortid": 36,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -344,7 +344,7 @@
     {
       "name": "MichrosiaLeaves",
       "type": "block",
-      "sortid": 6,
+      "sortid": 10,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -352,7 +352,7 @@
     {
       "name": "MichrosiaSapling",
       "type": "block",
-      "sortid": 7,
+      "sortid": 11,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -360,7 +360,7 @@
     {
       "name": "MichrosiaLeavesBlockDestroyedByPlayer",
       "type": "procedure",
-      "sortid": 33,
+      "sortid": 37,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -396,7 +396,7 @@
     {
       "name": "CraftMichrosiaLogToMichrosiaWood",
       "type": "recipe",
-      "sortid": 34,
+      "sortid": 38,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -404,7 +404,7 @@
     {
       "name": "MichrosiaPlanks",
       "type": "block",
-      "sortid": 5,
+      "sortid": 7,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -412,7 +412,7 @@
     {
       "name": "CraftMichrosiaLogToMichrosiaPlanks",
       "type": "recipe",
-      "sortid": 35,
+      "sortid": 39,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -420,7 +420,7 @@
     {
       "name": "MichrosiaSaplingUpdateTick",
       "type": "procedure",
-      "sortid": 36,
+      "sortid": 40,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -448,7 +448,7 @@
     {
       "name": "MichrosiaSaplingOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 37,
+      "sortid": 41,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -480,7 +480,7 @@
     {
       "name": "MichrosiaPlanksSlab",
       "type": "block",
-      "sortid": 38,
+      "sortid": 8,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -488,7 +488,7 @@
     {
       "name": "CraftMichrosiaPlanksToMichrosiaSlabs",
       "type": "recipe",
-      "sortid": 39,
+      "sortid": 42,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -496,7 +496,7 @@
     {
       "name": "MichrosiaPlanksStairs",
       "type": "block",
-      "sortid": 40,
+      "sortid": 9,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -504,7 +504,7 @@
     {
       "name": "CraftMichrosiaPlanksToMichrosiaStairs",
       "type": "recipe",
-      "sortid": 41,
+      "sortid": 43,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -512,7 +512,7 @@
     {
       "name": "StrippedMichrosiaLog",
       "type": "block",
-      "sortid": 42,
+      "sortid": 5,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -520,7 +520,7 @@
     {
       "name": "MichrosiaLogOnBlockRightClicked",
       "type": "procedure",
-      "sortid": 43,
+      "sortid": 44,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -552,7 +552,7 @@
     {
       "name": "StrippedMichrosiaWood",
       "type": "block",
-      "sortid": 44,
+      "sortid": 6,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -592,7 +592,7 @@
     {
       "name": "PlanksBlockTag",
       "type": "tag",
-      "sortid": 48,
+      "sortid": 46,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -600,7 +600,7 @@
     {
       "name": "PlanksItemTag",
       "type": "tag",
-      "sortid": 49,
+      "sortid": 47,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -608,7 +608,7 @@
     {
       "name": "LogsBlockTag",
       "type": "tag",
-      "sortid": 50,
+      "sortid": 48,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -616,7 +616,7 @@
     {
       "name": "LogsItemTag",
       "type": "tag",
-      "sortid": 51,
+      "sortid": 49,
       "compiles": true,
       "locked_code": false,
       "ids": {}

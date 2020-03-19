@@ -28,7 +28,7 @@ public class MichrosiaPlanksBlock extends MichrosiaElements.ModElement {
 	@ObjectHolder("michrosia:michrosiaplanks")
 	public static final Block block = null;
 	public MichrosiaPlanksBlock(MichrosiaElements instance) {
-		super(instance, 5);
+		super(instance, 7);
 	}
 
 	@Override

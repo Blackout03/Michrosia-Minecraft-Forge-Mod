@@ -22,7 +22,7 @@ import io.netty.buffer.Unpooled;
 @MichrosiaElements.ModElement.Tag
 public class ReprocessorOnBlockRightClickedProcedure extends MichrosiaElements.ModElement {
 	public ReprocessorOnBlockRightClickedProcedure(MichrosiaElements instance) {
-		super(instance, 31);
+		super(instance, 35);
 	}
 
 	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {

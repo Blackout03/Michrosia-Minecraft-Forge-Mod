@@ -16,7 +16,7 @@ import net.mcreator.michrosia.MichrosiaElements;
 @MichrosiaElements.ModElement.Tag
 public class ReprocessorUpdateTickProcedure extends MichrosiaElements.ModElement {
 	public ReprocessorUpdateTickProcedure(MichrosiaElements instance) {
-		super(instance, 32);
+		super(instance, 36);
 	}
 
 	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {

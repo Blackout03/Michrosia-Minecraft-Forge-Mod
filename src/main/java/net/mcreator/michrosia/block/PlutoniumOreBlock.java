@@ -40,7 +40,7 @@ public class PlutoniumOreBlock extends MichrosiaElements.ModElement {
 	@ObjectHolder("michrosia:plutoniumore")
 	public static final Block block = null;
 	public PlutoniumOreBlock(MichrosiaElements instance) {
-		super(instance, 10);
+		super(instance, 14);
 	}
 
 	@Override

@@ -10,7 +10,7 @@ import net.mcreator.michrosia.MichrosiaElements;
 @MichrosiaElements.ModElement.Tag
 public class MichrosiaLeavesBlockDestroyedByPlayerProcedure extends MichrosiaElements.ModElement {
 	public MichrosiaLeavesBlockDestroyedByPlayerProcedure(MichrosiaElements instance) {
-		super(instance, 33);
+		super(instance, 37);
 	}
 
 	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {

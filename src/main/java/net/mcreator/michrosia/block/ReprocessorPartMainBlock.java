@@ -39,7 +39,7 @@ public class ReprocessorPartMainBlock extends MichrosiaElements.ModElement {
 	@ObjectHolder("michrosia:reprocessorpartmain")
 	public static final Block block = null;
 	public ReprocessorPartMainBlock(MichrosiaElements instance) {
-		super(instance, 14);
+		super(instance, 18);
 	}
 
 	@Override

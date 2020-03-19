@@ -33,7 +33,7 @@ public class StrippedMichrosiaWoodBlock extends MichrosiaElements.ModElement {
 	@ObjectHolder("michrosia:strippedmichrosiawood")
 	public static final Block block = null;
 	public StrippedMichrosiaWoodBlock(MichrosiaElements instance) {
-		super(instance, 44);
+		super(instance, 6);
 	}
 
 	@Override

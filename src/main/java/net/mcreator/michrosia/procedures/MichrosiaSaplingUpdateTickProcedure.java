@@ -18,7 +18,7 @@ import net.mcreator.michrosia.MichrosiaElements;
 @MichrosiaElements.ModElement.Tag
 public class MichrosiaSaplingUpdateTickProcedure extends MichrosiaElements.ModElement {
 	public MichrosiaSaplingUpdateTickProcedure(MichrosiaElements instance) {
-		super(instance, 36);
+		super(instance, 40);
 	}
 
 	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {

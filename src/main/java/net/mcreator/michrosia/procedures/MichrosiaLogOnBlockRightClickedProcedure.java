@@ -14,7 +14,7 @@ import net.mcreator.michrosia.MichrosiaElements;
 @MichrosiaElements.ModElement.Tag
 public class MichrosiaLogOnBlockRightClickedProcedure extends MichrosiaElements.ModElement {
 	public MichrosiaLogOnBlockRightClickedProcedure(MichrosiaElements instance) {
-		super(instance, 43);
+		super(instance, 44);
 	}
 
 	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {

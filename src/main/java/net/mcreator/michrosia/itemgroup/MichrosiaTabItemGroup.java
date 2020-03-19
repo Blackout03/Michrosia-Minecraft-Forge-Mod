@@ -13,7 +13,7 @@ import net.mcreator.michrosia.MichrosiaElements;
 @MichrosiaElements.ModElement.Tag
 public class MichrosiaTabItemGroup extends MichrosiaElements.ModElement {
 	public MichrosiaTabItemGroup(MichrosiaElements instance) {
-		super(instance, 26);
+		super(instance, 30);
 	}
 
 	@Override

@@ -10,7 +10,7 @@ import net.mcreator.michrosia.MichrosiaElements;
 @MichrosiaElements.ModElement.Tag
 public class ReprocessorBlockDestroyedByPlayerProcedure extends MichrosiaElements.ModElement {
 	public ReprocessorBlockDestroyedByPlayerProcedure(MichrosiaElements instance) {
-		super(instance, 28);
+		super(instance, 32);
 	}
 
 	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {

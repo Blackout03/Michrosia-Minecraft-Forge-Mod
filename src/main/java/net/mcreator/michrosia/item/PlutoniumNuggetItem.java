@@ -27,7 +27,7 @@ public class PlutoniumNuggetItem extends MichrosiaElements.ModElement {
 	@ObjectHolder("michrosia:plutoniumnugget")
 	public static final Item block = null;
 	public PlutoniumNuggetItem(MichrosiaElements instance) {
-		super(instance, 11);
+		super(instance, 15);
 	}
 
 	@Override

@@ -38,7 +38,7 @@ public class DarkcobblestoneBlock extends MichrosiaElements.ModElement {
 	@ObjectHolder("michrosia:darkcobblestone")
 	public static final Block block = null;
 	public DarkcobblestoneBlock(MichrosiaElements instance) {
-		super(instance, 9);
+		super(instance, 13);
 	}
 
 	@Override

@@ -33,7 +33,7 @@ public class StrippedMichrosiaLogBlock extends MichrosiaElements.ModElement {
 	@ObjectHolder("michrosia:strippedmichrosialog")
 	public static final Block block = null;
 	public StrippedMichrosiaLogBlock(MichrosiaElements instance) {
-		super(instance, 42);
+		super(instance, 5);
 	}
 
 	@Override

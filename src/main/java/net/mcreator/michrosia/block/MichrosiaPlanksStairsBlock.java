@@ -32,7 +32,7 @@ public class MichrosiaPlanksStairsBlock extends MichrosiaElements.ModElement {
 	@ObjectHolder("michrosia:michrosiaplanksstairs")
 	public static final Block block = null;
 	public MichrosiaPlanksStairsBlock(MichrosiaElements instance) {
-		super(instance, 40);
+		super(instance, 9);
 	}
 
 	@Override

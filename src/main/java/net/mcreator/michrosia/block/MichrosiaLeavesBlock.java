@@ -36,7 +36,7 @@ public class MichrosiaLeavesBlock extends MichrosiaElements.ModElement {
 	@ObjectHolder("michrosia:michrosialeaves")
 	public static final Block block = null;
 	public MichrosiaLeavesBlock(MichrosiaElements instance) {
-		super(instance, 6);
+		super(instance, 10);
 	}
 
 	@Override
