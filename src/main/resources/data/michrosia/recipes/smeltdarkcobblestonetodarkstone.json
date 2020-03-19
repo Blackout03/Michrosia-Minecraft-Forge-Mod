@@ -1,0 +1,11 @@
+{
+  "group": "michrosia",
+  "type": "minecraft:smelting",
+  "experience": 0,
+  "ingredient": {
+    "item": "michrosia:darkcobblestone"
+  },
+  "result": {
+    "item": "michrosia:darkstone"
+  }
+}

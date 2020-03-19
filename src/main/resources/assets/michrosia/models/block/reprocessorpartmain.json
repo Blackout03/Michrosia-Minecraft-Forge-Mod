@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "michrosia:blocks/reprocessor_main_part",
+    "up": "michrosia:blocks/reprocessor_main_part",
+    "north": "michrosia:blocks/reprocessor_main_part_front",
+    "east": "michrosia:blocks/reprocessor_main_part",
+    "south": "michrosia:blocks/reprocessor_main_part",
+    "west": "michrosia:blocks/reprocessor_main_part",
+    "particle": "michrosia:blocks/reprocessor_main_part"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "group": "michrosia",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "michrosia:plutoniumnugget"
+    },
+    "1": {
+      "item": "michrosia:plutoniumnugget"
+    },
+    "2": {
+      "item": "michrosia:plutoniumnugget"
+    },
+    "3": {
+      "item": "michrosia:plutoniumnugget"
+    },
+    "4": {
+      "item": "michrosia:plutoniumnugget"
+    },
+    "5": {
+      "item": "michrosia:plutoniumnugget"
+    },
+    "6": {
+      "item": "michrosia:plutoniumnugget"
+    },
+    "7": {
+      "item": "michrosia:plutoniumnugget"
+    },
+    "8": {
+      "item": "michrosia:plutoniumnugget"
+    }
+  },
+  "result": {
+    "item": "michrosia:plutoniumingot",
+    "count": 1
+  }
+}

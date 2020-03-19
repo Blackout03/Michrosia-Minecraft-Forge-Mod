@@ -1,0 +1,21 @@
+[
+  {
+    "modid": "michrosia",
+    "name": "Michrosia",
+    "description": "",
+    "version": "1.0.0",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "logoFile": "assets/michrosia/textures/michrosiagrass.png",
+    "mcversion": "1.14.4",
+    "url": "https://mcreator.net",
+    "updateUrl": "",
+    "authorList": [
+      "Blackout03",
+      "MCreator"
+    ],
+    "dependencies": [],
+    "dependants": [],
+    "requiredMods": [],
+    "useDependencyInformation": "true"
+  }
+]

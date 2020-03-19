@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "michrosia:blocks/dirt",
+    "up": "michrosia:blocks/dirt",
+    "north": "michrosia:blocks/dirt",
+    "east": "michrosia:blocks/dirt",
+    "south": "michrosia:blocks/dirt",
+    "west": "michrosia:blocks/dirt",
+    "particle": "michrosia:blocks/dirt"
+  }
+}

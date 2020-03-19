@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "michrosia:block/reprocessorpartmain"
+    },
+    "facing=east": {
+      "model": "michrosia:block/reprocessorpartmain",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "michrosia:block/reprocessorpartmain",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "michrosia:block/reprocessorpartmain",
+      "y": 270
+    }
+  }
+}

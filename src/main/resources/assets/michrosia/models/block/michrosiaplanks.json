@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "michrosia:blocks/michrosia_planks",
+    "up": "michrosia:blocks/michrosia_planks",
+    "north": "michrosia:blocks/michrosia_planks",
+    "east": "michrosia:blocks/michrosia_planks",
+    "south": "michrosia:blocks/michrosia_planks",
+    "west": "michrosia:blocks/michrosia_planks",
+    "particle": "michrosia:blocks/michrosia_planks"
+  }
+}

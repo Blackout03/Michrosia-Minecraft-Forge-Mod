@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "michrosia:blocks/block_plutonium2",
+    "up": "michrosia:blocks/block_plutonium2",
+    "north": "michrosia:blocks/block_plutonium2",
+    "east": "michrosia:blocks/block_plutonium2",
+    "south": "michrosia:blocks/block_plutonium2",
+    "west": "michrosia:blocks/block_plutonium2",
+    "particle": "michrosia:blocks/block_plutonium2"
+  }
+}

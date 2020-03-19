@@ -1,0 +1,44 @@
+{
+  "_fv": 6,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "recipeRetstackSize": 3,
+    "recipeShapeless": true,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:MichrosiaLog"
+      },
+      {
+        "value": "CUSTOM:MichrosiaLog"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:MichrosiaLog"
+      },
+      {
+        "value": "CUSTOM:MichrosiaLog"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:MichrosiaWood"
+    },
+    "name": "craftmichrosialogtomichrosiawood",
+    "namespace": "mod"
+  }
+}

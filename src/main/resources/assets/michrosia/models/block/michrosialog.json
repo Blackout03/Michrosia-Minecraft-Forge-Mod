@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "michrosia:blocks/michrosia_log_top",
+    "up": "michrosia:blocks/michrosia_log_top",
+    "north": "michrosia:blocks/michrosia_log",
+    "east": "michrosia:blocks/michrosia_log",
+    "south": "michrosia:blocks/michrosia_log",
+    "west": "michrosia:blocks/michrosia_log",
+    "particle": "michrosia:blocks/michrosia_log_top"
+  }
+}

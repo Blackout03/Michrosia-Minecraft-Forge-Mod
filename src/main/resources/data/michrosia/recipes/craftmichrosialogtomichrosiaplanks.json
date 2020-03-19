@@ -1,0 +1,13 @@
+{
+  "group": "michrosia",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "michrosia:michrosialog"
+    }
+  ],
+  "result": {
+    "item": "michrosia:michrosiaplanks",
+    "count": 4
+  }
+}

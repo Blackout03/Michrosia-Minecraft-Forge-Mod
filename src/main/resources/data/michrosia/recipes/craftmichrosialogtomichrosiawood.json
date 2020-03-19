@@ -1,0 +1,22 @@
+{
+  "group": "michrosia",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "michrosia:michrosialog"
+    },
+    {
+      "item": "michrosia:michrosialog"
+    },
+    {
+      "item": "michrosia:michrosialog"
+    },
+    {
+      "item": "michrosia:michrosialog"
+    }
+  ],
+  "result": {
+    "item": "michrosia:michrosiawood",
+    "count": 3
+  }
+}

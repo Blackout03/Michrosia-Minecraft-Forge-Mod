@@ -1,0 +1,92 @@
+{
+  "_fv": 6,
+  "_type": "block",
+  "definition": {
+    "texture": "reprocessor",
+    "textureTop": "reprocessor_main_part",
+    "textureLeft": "reprocessor_main_part",
+    "textureFront": "reprocessor_main_part",
+    "textureRight": "reprocessor_main_part",
+    "textureBack": "reprocessor_main_part",
+    "renderType": 2,
+    "customModelName": "reprocessor:default",
+    "rotationMode": 1,
+    "hasTransparency": true,
+    "transparencyType": "SOLID",
+    "mx": 0.0,
+    "my": -1.0,
+    "mz": 0.0,
+    "Mx": 1.0,
+    "My": 2.0,
+    "Mz": 1.0,
+    "faceShape": "SOLID",
+    "name": "Reprocessor",
+    "specialInfo": [],
+    "hardness": 3.0,
+    "resistance": 10.0,
+    "hasGravity": false,
+    "creativeTab": {
+      "value": "No creative tab entry"
+    },
+    "destroyTool": "pickaxe",
+    "affectedBySilkTouch": true,
+    "customDrop": {
+      "value": "CUSTOM:ReprocessorPartMain"
+    },
+    "dropAmount": 1,
+    "isBeaconBase": false,
+    "enchantPowerBonus": 0.0,
+    "plantsGrowOn": false,
+    "canProvidePower": false,
+    "lightOpacity": 0,
+    "material": {
+      "value": "IRON"
+    },
+    "tickRate": 1,
+    "tickRandomly": false,
+    "isReplaceable": false,
+    "isFlammable": false,
+    "colorOnMap": "BLUE",
+    "creativePickItem": {
+      "value": "CUSTOM:ReprocessorPartMain"
+    },
+    "isNotColidable": false,
+    "soundOnStep": {
+      "value": "METAL"
+    },
+    "luminance": 0.0,
+    "unbreakable": false,
+    "breakHarvestLevel": 2,
+    "spawnParticles": false,
+    "particleToSpawn": {
+      "value": "EXPLOSION_NORMAL"
+    },
+    "particleSpawningShape": "Spread",
+    "particleSpawningRadious": 0.5,
+    "particleAmount": 4,
+    "particleSpawningCondition": "ALWAYS",
+    "hasInventory": true,
+    "guiBoundTo": "ReprocessorGUI",
+    "openGUIOnRightClick": true,
+    "inventorySize": 3,
+    "inventoryStackSize": 64,
+    "inventoryDropWhenDestroyed": true,
+    "inventoryComparatorPower": false,
+    "inventoryOutSlotIDs": [
+      2
+    ],
+    "onTickUpdate": {
+      "name": "ReprocessorUpdateTick"
+    },
+    "onDestroyedByPlayer": {
+      "name": "ReprocessorBlockDestroyedByPlayer"
+    },
+    "spawnWorldTypes": [],
+    "restrictionBiomes": [],
+    "blocksToReplace": [],
+    "frequencyPerChunks": 10,
+    "frequencyOnChunk": 16,
+    "minGenerateHeight": 0,
+    "maxGenerateHeight": 64
+  }
+}

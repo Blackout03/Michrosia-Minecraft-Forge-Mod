@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "michrosia:blocks/grass_michrosia_bottom",
+    "up": "michrosia:blocks/grass_michrosia_top",
+    "north": "michrosia:blocks/grass_michrosia_side",
+    "east": "michrosia:blocks/grass_michrosia_side",
+    "south": "michrosia:blocks/grass_michrosia_side",
+    "west": "michrosia:blocks/grass_michrosia_side",
+    "particle": "michrosia:blocks/grass_michrosia_bottom"
+  }
+}

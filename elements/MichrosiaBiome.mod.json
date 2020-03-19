@@ -1,0 +1,86 @@
+{
+  "_fv": 6,
+  "_type": "biome",
+  "definition": {
+    "name": "Michrosia",
+    "groundBlock": {
+      "value": "CUSTOM:MichrosiaGrass"
+    },
+    "undergroundBlock": {
+      "value": "CUSTOM:MichrosiaDirt"
+    },
+    "generateLakes": true,
+    "treeType": 1,
+    "vanillaTreeType": "Default",
+    "minHeight": 4,
+    "spawnVines": false,
+    "treeVines": {
+      "value": "CUSTOM:MichrosiaLeaves"
+    },
+    "treeStem": {
+      "value": "CUSTOM:MichrosiaLog"
+    },
+    "treeBranch": {
+      "value": "Blocks.AIR"
+    },
+    "treeFruits": {
+      "value": "Blocks.AIR"
+    },
+    "customColors": true,
+    "airColor": {
+      "value": -16750849,
+      "falpha": 0.0
+    },
+    "grassColor": {
+      "value": -65536,
+      "falpha": 0.0
+    },
+    "waterColor": {
+      "value": -65536,
+      "falpha": 0.0
+    },
+    "treesPerChunk": 10,
+    "grassPerChunk": 10,
+    "flowersPerChunk": 10,
+    "mushroomsPerChunk": 0,
+    "bigMushroomsChunk": 0,
+    "sandPathcesPerChunk": 0,
+    "gravelPatchesPerChunk": 0,
+    "reedsPerChunk": 0,
+    "cactiPerChunk": 0,
+    "deadBushesPerChunk": 0,
+    "rainingPossibility": 0.7000000000000001,
+    "temperature": 0.6,
+    "baseHeight": 0.3,
+    "heightVariation": 0.75,
+    "spawnBiome": true,
+    "biomeWeight": 1024,
+    "biomeType": "WARM",
+    "biomeCategory": "NONE",
+    "parent": {
+      "value": "No parent"
+    },
+    "biomeDictionaryTypes": [
+      "FOREST",
+      "PLAINS",
+      "MAGICAL"
+    ],
+    "spawnList": [
+      {
+        "value": "EntityAnimal"
+      },
+      {
+        "value": "EntityMob"
+      },
+      {
+        "value": "EntityWolf"
+      },
+      {
+        "value": "EntityCat"
+      },
+      {
+        "value": "EntityFox"
+      }
+    ]
+  }
+}

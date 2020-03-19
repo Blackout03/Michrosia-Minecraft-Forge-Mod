@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "michrosia:blocks/darkcobblestone2",
+    "up": "michrosia:blocks/darkcobblestone2",
+    "north": "michrosia:blocks/darkcobblestone2",
+    "east": "michrosia:blocks/darkcobblestone2",
+    "south": "michrosia:blocks/darkcobblestone2",
+    "west": "michrosia:blocks/darkcobblestone2",
+    "particle": "michrosia:blocks/darkcobblestone2"
+  }
+}
