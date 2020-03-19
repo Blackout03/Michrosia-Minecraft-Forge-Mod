@@ -1,0 +1,22 @@
+{
+  "group": "michrosia",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "michrosia:michrosiaplanks"
+    },
+    "1": {
+      "item": "michrosia:michrosiaplanks"
+    },
+    "2": {
+      "item": "michrosia:michrosiaplanks"
+    }
+  },
+  "result": {
+    "item": "michrosia:michrosiaplanksslab",
+    "count": 6
+  }
+}

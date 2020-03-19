@@ -34,7 +34,7 @@ public class MichrosiaLeavesBlockDestroyedByPlayerProcedure extends MichrosiaEle
 		int y = (int) dependencies.get("y");
 		int z = (int) dependencies.get("z");
 		World world = (World) dependencies.get("world");
-		if ((Math.random() < 0.3)) {
+		if ((Math.random() < 0.01)) {
 			if (!world.isRemote) {
 				ItemEntity entityToSpawn = new ItemEntity(world, x, y, z, new ItemStack(MichrosiaSaplingBlock.block, (int) (1)));
 				entityToSpawn.setPickupDelay(10);

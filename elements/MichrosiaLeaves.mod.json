@@ -31,7 +31,7 @@
     "destroyTool": "Not specified",
     "affectedBySilkTouch": true,
     "customDrop": {
-      "value": ""
+      "value": "Blocks.AIR"
     },
     "dropAmount": 1,
     "isBeaconBase": false,
@@ -46,7 +46,7 @@
     "tickRandomly": false,
     "isReplaceable": false,
     "isFlammable": true,
-    "colorOnMap": "DEFAULT",
+    "colorOnMap": "PURPLE",
     "creativePickItem": {
       "value": "Blocks.AIR"
     },

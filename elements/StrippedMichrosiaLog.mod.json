@@ -2,12 +2,12 @@
   "_fv": 6,
   "_type": "block",
   "definition": {
-    "texture": "michrosia_log_top",
-    "textureTop": "michrosia_log_top",
-    "textureLeft": "michrosia_log",
-    "textureFront": "michrosia_log",
-    "textureRight": "michrosia_log",
-    "textureBack": "michrosia_log",
+    "texture": "stripped_michrosia_log_top",
+    "textureTop": "stripped_michrosia_log_top",
+    "textureLeft": "stripped_michrosia_log",
+    "textureFront": "stripped_michrosia_log",
+    "textureRight": "stripped_michrosia_log",
+    "textureBack": "stripped_michrosia_log",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 5,
@@ -20,7 +20,7 @@
     "My": 1.0,
     "Mz": 1.0,
     "faceShape": "SOLID",
-    "name": "Michrosia Log",
+    "name": "Stripped Michrosia Log",
     "specialInfo": [],
     "hardness": 2.0,
     "resistance": 2.0,
@@ -29,7 +29,7 @@
       "value": "CUSTOM:MichrosiaTab"
     },
     "destroyTool": "axe",
-    "affectedBySilkTouch": false,
+    "affectedBySilkTouch": true,
     "customDrop": {
       "value": ""
     },
@@ -73,9 +73,6 @@
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,
     "inventoryOutSlotIDs": [],
-    "onRightClicked": {
-      "name": "MichrosiaLogOnBlockRightClicked"
-    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [],

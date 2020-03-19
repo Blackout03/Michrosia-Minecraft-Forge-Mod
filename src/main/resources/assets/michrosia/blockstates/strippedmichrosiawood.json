@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "facing=south": {
+      "model": "michrosia:block/strippedmichrosiawood"
+    },
+    "facing=north": {
+      "model": "michrosia:block/strippedmichrosiawood"
+    },
+    "facing=east": {
+      "model": "michrosia:block/strippedmichrosiawood",
+      "x": 90
+    },
+    "facing=west": {
+      "model": "michrosia:block/strippedmichrosiawood",
+      "x": 90
+    },
+    "facing=up": {
+      "model": "michrosia:block/strippedmichrosiawood",
+      "x": 90,
+      "y": 90
+    },
+    "facing=down": {
+      "model": "michrosia:block/strippedmichrosiawood",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

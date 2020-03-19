@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "michrosia:blocks/michrosia_planks",
+    "particle": "michrosia:blocks/michrosia_planks"
+  }
+}

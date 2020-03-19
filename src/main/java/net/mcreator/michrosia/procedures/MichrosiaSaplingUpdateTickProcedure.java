@@ -47,7 +47,7 @@ public class MichrosiaSaplingUpdateTickProcedure extends MichrosiaElements.ModEl
 			Block.spawnDrops(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), world, new BlockPos((int) x, (int) y, (int) z));
 			world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
 		}
-		if ((Math.random() <= 0.005)) {
+		if ((Math.random() <= 0.01)) {
 			if ((((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.AIR.getDefaultState().getBlock())
 					&& (((world.getBlockState(new BlockPos((int) x, (int) (y + 2), (int) z))).getBlock() == Blocks.AIR.getDefaultState().getBlock())
 							&& ((((world.getBlockState(new BlockPos((int) (x - 2), (int) (y + 3), (int) (z + 1)))).getBlock() == Blocks.AIR
@@ -367,29 +367,32 @@ public class MichrosiaSaplingUpdateTickProcedure extends MichrosiaElements.ModEl
 																									.getBlock() == Blocks.AIR.getDefaultState()
 																											.getBlock()))))))))))) {
 				if ((Math.random() <= 0.3)) {
+					world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
 					if (!world.isRemote) {
 						Template template = ((ServerWorld) world.getWorld()).getSaveHandler().getStructureTemplateManager()
 								.getTemplateDefaulted(new ResourceLocation("michrosia", "michrosiatree1"));
 						if (template != null) {
-							template.addBlocksToWorldChunk(world, new BlockPos((int) x, (int) y, (int) z), new PlacementSettings()
+							template.addBlocksToWorldChunk(world, new BlockPos((int) (x - 2), (int) y, (int) (z - 2)), new PlacementSettings()
 									.setRotation(Rotation.NONE).setMirror(Mirror.NONE).setChunk((ChunkPos) null).setIgnoreEntities(false));
 						}
 					}
 				} else if ((Math.random() <= 0.6)) {
-					if (!world.isRemote) {
-						Template template = ((ServerWorld) world.getWorld()).getSaveHandler().getStructureTemplateManager()
-								.getTemplateDefaulted(new ResourceLocation("michrosia", "michrosiatree2"));
-						if (template != null) {
-							template.addBlocksToWorldChunk(world, new BlockPos((int) x, (int) y, (int) z), new PlacementSettings()
-									.setRotation(Rotation.NONE).setMirror(Mirror.NONE).setChunk((ChunkPos) null).setIgnoreEntities(false));
-						}
-					}
-				} else {
+					world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
 					if (!world.isRemote) {
 						Template template = ((ServerWorld) world.getWorld()).getSaveHandler().getStructureTemplateManager()
 								.getTemplateDefaulted(new ResourceLocation("michrosia", "michrosiatree3"));
 						if (template != null) {
-							template.addBlocksToWorldChunk(world, new BlockPos((int) x, (int) y, (int) z), new PlacementSettings()
+							template.addBlocksToWorldChunk(world, new BlockPos((int) (x - 2), (int) y, (int) (z - 2)), new PlacementSettings()
+									.setRotation(Rotation.NONE).setMirror(Mirror.NONE).setChunk((ChunkPos) null).setIgnoreEntities(false));
+						}
+					}
+				} else {
+					world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
+					if (!world.isRemote) {
+						Template template = ((ServerWorld) world.getWorld()).getSaveHandler().getStructureTemplateManager()
+								.getTemplateDefaulted(new ResourceLocation("michrosia", "michrosiatree2"));
+						if (template != null) {
+							template.addBlocksToWorldChunk(world, new BlockPos((int) (x - 2), (int) y, (int) (z - 2)), new PlacementSettings()
 									.setRotation(Rotation.NONE).setMirror(Mirror.NONE).setChunk((ChunkPos) null).setIgnoreEntities(false));
 						}
 					}

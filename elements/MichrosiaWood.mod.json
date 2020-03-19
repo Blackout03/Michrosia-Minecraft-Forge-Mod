@@ -73,6 +73,9 @@
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,
     "inventoryOutSlotIDs": [],
+    "onRightClicked": {
+      "name": "MichrosiaWoodOnBlockRightClicked"
+    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [],

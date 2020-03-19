@@ -1,0 +1,33 @@
+{
+  "group": "michrosia",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0  ",
+    "34 ",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "michrosia:michrosiaplanks"
+    },
+    "3": {
+      "item": "michrosia:michrosiaplanks"
+    },
+    "4": {
+      "item": "michrosia:michrosiaplanks"
+    },
+    "6": {
+      "item": "michrosia:michrosiaplanks"
+    },
+    "7": {
+      "item": "michrosia:michrosiaplanks"
+    },
+    "8": {
+      "item": "michrosia:michrosiaplanks"
+    }
+  },
+  "result": {
+    "item": "michrosia:michrosiaplanksstairs",
+    "count": 4
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "facing=south": {
+      "model": "michrosia:block/strippedmichrosialog"
+    },
+    "facing=north": {
+      "model": "michrosia:block/strippedmichrosialog"
+    },
+    "facing=east": {
+      "model": "michrosia:block/strippedmichrosialog",
+      "x": 90
+    },
+    "facing=west": {
+      "model": "michrosia:block/strippedmichrosialog",
+      "x": 90
+    },
+    "facing=up": {
+      "model": "michrosia:block/strippedmichrosialog",
+      "x": 90,
+      "y": 90
+    },
+    "facing=down": {
+      "model": "michrosia:block/strippedmichrosialog",
+      "x": 90,
+      "y": 90
+    }
+  }
+}
