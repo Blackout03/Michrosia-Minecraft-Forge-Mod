@@ -10,7 +10,9 @@ import net.minecraft.util.Rotation;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Mirror;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.Block;
 
+import net.mcreator.michrosia.block.MichrosiaGrassBlock;
 import net.mcreator.michrosia.MichrosiaElements;
 
 @MichrosiaElements.ModElement.Tag
@@ -40,6 +42,11 @@ public class MichrosiaSaplingUpdateTickProcedure extends MichrosiaElements.ModEl
 		int y = (int) dependencies.get("y");
 		int z = (int) dependencies.get("z");
 		World world = (World) dependencies.get("world");
+		if ((!((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == MichrosiaGrassBlock.block.getDefaultState()
+				.getBlock()))) {
+			Block.spawnDrops(world.getBlockState(new BlockPos((int) x, (int) y, (int) z)), world, new BlockPos((int) x, (int) y, (int) z));
+			world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
+		}
 		if ((Math.random() <= 0.005)) {
 			if ((((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.AIR.getDefaultState().getBlock())
 					&& (((world.getBlockState(new BlockPos((int) x, (int) (y + 2), (int) z))).getBlock() == Blocks.AIR.getDefaultState().getBlock())
