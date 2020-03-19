@@ -1,0 +1,25 @@
+{
+  "_fv": 6,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:MichrosiaLog"
+      },
+      {
+        "value": "CUSTOM:MichrosiaWood"
+      },
+      {
+        "value": "CUSTOM:StrippedMichrosiaLog"
+      },
+      {
+        "value": "CUSTOM:StrippedMichrosiaWood"
+      }
+    ],
+    "functions": [],
+    "name": "logs",
+    "namespace": "minecraft"
+  }
+}
