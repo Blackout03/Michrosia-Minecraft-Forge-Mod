@@ -15,13 +15,13 @@
     "minHeight": 4,
     "spawnVines": false,
     "treeVines": {
-      "value": "CUSTOM:MichrosiaLeaves"
+      "value": "Blocks.AIR"
     },
     "treeStem": {
       "value": "CUSTOM:MichrosiaLog"
     },
     "treeBranch": {
-      "value": "Blocks.AIR"
+      "value": "CUSTOM:MichrosiaLeaves"
     },
     "treeFruits": {
       "value": "Blocks.AIR"

@@ -159,10 +159,9 @@ public class MichrosiaBiomeBiome extends MichrosiaElements.ModElement {
 										BlockPos blockpos = new BlockPos(k1, genh, i2);
 										state = world.getBlockState(blockpos);
 										if (state.getBlock().isAir(state, world, blockpos) || state.getMaterial().blocksMovement()
-												|| state.isIn(BlockTags.LEAVES)
-												|| state.getBlock() == MichrosiaLeavesBlock.block.getDefaultState().getBlock()
-												|| state.getBlock() == Blocks.AIR.getDefaultState().getBlock()) {
-											setTreeBlockState(changedBlocks, world, blockpos, Blocks.AIR.getDefaultState(), bbox);
+												|| state.isIn(BlockTags.LEAVES) || state.getBlock() == Blocks.AIR.getDefaultState().getBlock()
+												|| state.getBlock() == MichrosiaLeavesBlock.block.getDefaultState().getBlock()) {
+											setTreeBlockState(changedBlocks, world, blockpos, MichrosiaLeavesBlock.block.getDefaultState(), bbox);
 										}
 									}
 								}
@@ -173,8 +172,8 @@ public class MichrosiaBiomeBiome extends MichrosiaElements.ModElement {
 							state = world.getBlockState(genhPos);
 							setTreeBlockState(changedBlocks, world, genhPos, MichrosiaLogBlock.block.getDefaultState(), bbox);
 							if (state.getBlock().isAir(state, world, genhPos) || state.getMaterial().blocksMovement() || state.isIn(BlockTags.LEAVES)
-									|| state.getBlock() == MichrosiaLeavesBlock.block.getDefaultState().getBlock()
-									|| state.getBlock() == Blocks.AIR.getDefaultState().getBlock()) {
+									|| state.getBlock() == Blocks.AIR.getDefaultState().getBlock()
+									|| state.getBlock() == MichrosiaLeavesBlock.block.getDefaultState().getBlock()) {
 							}
 						}
 						if (rand.nextInt(4) == 0 && height > 5) {
@@ -199,17 +198,18 @@ public class MichrosiaBiomeBiome extends MichrosiaElements.ModElement {
 		}
 
 		private void addVines(IWorld world, BlockPos pos, Set<BlockPos> changedBlocks, MutableBoundingBox bbox) {
-			setTreeBlockState(changedBlocks, world, pos, MichrosiaLeavesBlock.block.getDefaultState(), bbox);
+			setTreeBlockState(changedBlocks, world, pos, Blocks.AIR.getDefaultState(), bbox);
 			int i = 5;
 			for (BlockPos blockpos = pos.down(); world.isAirBlock(blockpos) && i > 0; --i) {
-				setTreeBlockState(changedBlocks, world, blockpos, MichrosiaLeavesBlock.block.getDefaultState(), bbox);
+				setTreeBlockState(changedBlocks, world, blockpos, Blocks.AIR.getDefaultState(), bbox);
 				blockpos = blockpos.down();
 			}
 		}
 
 		private boolean canGrowInto(Block blockType) {
 			return blockType.getDefaultState().getMaterial() == Material.AIR || blockType == MichrosiaLogBlock.block.getDefaultState().getBlock()
-					|| blockType == Blocks.AIR.getDefaultState().getBlock() || blockType == MichrosiaGrassBlock.block.getDefaultState().getBlock()
+					|| blockType == MichrosiaLeavesBlock.block.getDefaultState().getBlock()
+					|| blockType == MichrosiaGrassBlock.block.getDefaultState().getBlock()
 					|| blockType == MichrosiaDirtBlock.block.getDefaultState().getBlock();
 		}
 
