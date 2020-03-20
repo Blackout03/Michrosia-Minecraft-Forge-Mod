@@ -1,0 +1,7 @@
+{
+  "parent": "block/fence_inventory",
+  "textures": {
+    "texture": "michrosia:blocks/michrosia_planks",
+    "particle": "michrosia:blocks/michrosia_planks"
+  }
+}

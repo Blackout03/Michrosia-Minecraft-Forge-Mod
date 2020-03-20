@@ -58,13 +58,13 @@ public class MichrosiaLeavesBlock extends MichrosiaElements.ModElement {
 		}
 
 		@Override
-		public boolean isFlammable(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
-			return true;
+		public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
+			return 60;
 		}
 
 		@Override
 		public ItemStack getPickBlock(BlockState state, RayTraceResult target, IBlockReader world, BlockPos pos, PlayerEntity player) {
-			return new ItemStack(Blocks.AIR, (int) (1));
+			return new ItemStack(MichrosiaLeavesBlock.block, (int) (1));
 		}
 
 		@Override

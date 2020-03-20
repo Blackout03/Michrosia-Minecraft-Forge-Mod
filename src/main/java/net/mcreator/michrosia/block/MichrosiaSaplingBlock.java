@@ -59,11 +59,6 @@ public class MichrosiaSaplingBlock extends MichrosiaElements.ModElement {
 		}
 
 		@Override
-		public boolean isFlammable(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
-			return true;
-		}
-
-		@Override
 		public MaterialColor getMaterialColor(BlockState state, IBlockReader blockAccess, BlockPos pos) {
 			return MaterialColor.PURPLE;
 		}

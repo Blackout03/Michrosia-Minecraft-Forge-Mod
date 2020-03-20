@@ -51,7 +51,7 @@ public class PlutoniumOreBlock extends MichrosiaElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1f, 10f).lightValue(0).harvestLevel(2)
+			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(3f, 6f).lightValue(0).harvestLevel(2)
 					.harvestTool(ToolType.PICKAXE));
 			setRegistryName("plutoniumore");
 		}

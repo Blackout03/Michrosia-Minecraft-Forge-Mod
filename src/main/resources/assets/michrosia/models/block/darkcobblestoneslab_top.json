@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab_top",
+  "textures": {
+    "bottom": "michrosia:blocks/darkcobblestone2",
+    "top": "michrosia:blocks/darkcobblestone2",
+    "side": "michrosia:blocks/darkcobblestone2"
+  }
+}

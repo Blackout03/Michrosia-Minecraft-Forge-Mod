@@ -86,8 +86,8 @@ public class MichrosiaLogBlock extends MichrosiaElements.ModElement {
 		}
 
 		@Override
-		public boolean isFlammable(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
-			return true;
+		public int getFlammability(BlockState state, IBlockReader world, BlockPos pos, Direction face) {
+			return 20;
 		}
 
 		@Override

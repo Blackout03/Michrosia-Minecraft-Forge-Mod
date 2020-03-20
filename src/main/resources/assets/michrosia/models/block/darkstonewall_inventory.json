@@ -1,0 +1,7 @@
+{
+  "parent": "block/wall_inventory",
+  "textures": {
+    "wall": "michrosia:blocks/darkstone2",
+    "particle": "michrosia:blocks/darkstone2"
+  }
+}

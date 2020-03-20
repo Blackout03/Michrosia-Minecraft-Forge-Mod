@@ -620,6 +620,70 @@
       "compiles": true,
       "locked_code": false,
       "ids": {}
+    },
+    {
+      "name": "MichrosiaPlanksFence",
+      "type": "block",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "DarkCobblestoneWall",
+      "type": "block",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "DarkstoneWall",
+      "type": "block",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "MichrosiaPlanksTrapDoor",
+      "type": "block",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "DarkstoneSlab",
+      "type": "block",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "DarkCobblestoneSlab",
+      "type": "block",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "DarkstoneStairs",
+      "type": "block",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "DarkCobblestoneStairs",
+      "type": "block",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
     }
   ],
   "variable_elements": [],
@@ -630,16 +694,22 @@
       "biome.michrosia.michrosiabiome": "Michrosia",
       "block.michrosia.reprocessorpartmain": "Main Reprocessor Part",
       "block.michrosia.michrosiawood": "Michrosia Wood",
+      "block.michrosia.darkcobblestonestairs": "Dark Cobblestone Stairs",
+      "block.michrosia.darkstonestairs": "Darkstone Stairs",
       "block.michrosia.reprocessorpart": "Reprocessor Part",
       "block.michrosia.michrosialog": "Michrosia Log",
       "tile.plutoniumore.name": "Plutonium Ore",
       "block.michrosia.michrosiaplanksslab": "Michrosia Planks Slab",
       "item.michrosia.plutoniumingot": "Plutonium Ingot",
+      "block.michrosia.darkstoneslab": "Darkstone Slab",
       "tile.michrosiadirt.name": "Michrosia Dirt",
       "block.michrosia.michrosiaplanks": "Michrosia Planks",
       "tile.darkcobblestone.name": "Darkcobblestone",
+      "block.michrosia.michrosiaplanksfence": "Michrosia Planks Fence",
       "block.michrosia.strippedmichrosialog": "Stripped Michrosia Log",
+      "block.michrosia.michrosiaplankstrapdoor": "Michrosia Planks Trap Door",
       "itemGroup.tabmichrosiatab": "Michrosia Tab",
+      "block.michrosia.darkstonewall": "Darkstone Wall",
       "item.michrosia.plutoniumnugget": "Plutonium Nugget",
       "item.plutoniumnugget.name": "Plutonium Nugget",
       "block.michrosia.michrosiaplanksstairs": "Michrosia Planks Stairs",
@@ -650,11 +720,13 @@
       "block.michrosia.michrosiadirt": "Michrosia Dirt",
       "block.michrosia.strippedmichrosiawood": "Stripped Michrosia Wood",
       "block.michrosia.michrosiagrass": "Michrosia Grass",
+      "block.michrosia.darkcobblestoneslab": "Dark Cobblestone Slab",
       "block.michrosia.darkstone": "Darkstone",
       "block.michrosia.darkstone2": "Darkstone",
       "block.michrosia.darkcobblestone": "Darkcobblestone",
       "block.michrosia.plutoniumore": "Plutonium Ore",
       "item.plutoniumingot.name": "Plutonium Ingot",
+      "block.michrosia.darkcobblestonewall": "Dark Cobblestone Wall",
       "tile.plutoniumblock.name": "Plutonium Block",
       "block.michrosia.michrosialeaves": "Michrosia Leaves"
     }
@@ -677,5 +749,5 @@
     "modElementsPackage": "net.mcreator.michrosia",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202000211618
+  "mcreatorVersion": 202000212518
 }

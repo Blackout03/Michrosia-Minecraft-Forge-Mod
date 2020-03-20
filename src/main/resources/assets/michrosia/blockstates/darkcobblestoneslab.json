@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "michrosia:block/darkcobblestoneslab"
+    },
+    "type=top": {
+      "model": "michrosia:block/darkcobblestoneslab_top"
+    },
+    "type=double": {
+      "model": "michrosia:block/darkcobblestoneslab_full"
+    }
+  }
+}

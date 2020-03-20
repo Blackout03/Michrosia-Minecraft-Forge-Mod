@@ -38,18 +38,22 @@
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canProvidePower": false,
-    "lightOpacity": 255,
+    "lightOpacity": 0,
     "material": {
       "value": "IRON"
     },
     "tickRate": 10,
     "tickRandomly": false,
     "isReplaceable": false,
-    "isFlammable": false,
     "colorOnMap": "BLUE",
     "creativePickItem": {
       "value": ""
     },
+    "flammability": 0,
+    "fireSpreadSpeed": 0,
+    "isLadder": false,
+    "slipperiness": 0.6,
+    "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "soundOnStep": {
       "value": "METAL"

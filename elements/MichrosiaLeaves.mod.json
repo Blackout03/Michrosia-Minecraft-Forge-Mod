@@ -38,18 +38,22 @@
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canProvidePower": false,
-    "lightOpacity": 1,
+    "lightOpacity": 255,
     "material": {
       "value": "LEAVES"
     },
     "tickRate": 10,
     "tickRandomly": false,
     "isReplaceable": false,
-    "isFlammable": true,
     "colorOnMap": "PURPLE",
     "creativePickItem": {
-      "value": "Blocks.AIR"
+      "value": "CUSTOM:MichrosiaLeaves"
     },
+    "flammability": 60,
+    "fireSpreadSpeed": 0,
+    "isLadder": false,
+    "slipperiness": 0.6,
+    "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "soundOnStep": {
       "value": "PLANT"

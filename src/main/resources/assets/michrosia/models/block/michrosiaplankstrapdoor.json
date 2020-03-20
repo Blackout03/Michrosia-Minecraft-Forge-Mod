@@ -1,0 +1,7 @@
+{
+  "parent": "block/template_orientable_trapdoor_bottom",
+  "textures": {
+    "texture": "michrosia:blocks/michrosia_planks",
+    "particle": "michrosia:blocks/michrosia_planks"
+  }
+}
