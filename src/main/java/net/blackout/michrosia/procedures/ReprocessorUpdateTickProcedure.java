@@ -16,7 +16,7 @@ import net.blackout.michrosia.MichrosiaElements;
 @MichrosiaElements.ModElement.Tag
 public class ReprocessorUpdateTickProcedure extends MichrosiaElements.ModElement {
 	public ReprocessorUpdateTickProcedure(MichrosiaElements instance) {
-		super(instance, 44);
+		super(instance, 45);
 	}
 
 	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {

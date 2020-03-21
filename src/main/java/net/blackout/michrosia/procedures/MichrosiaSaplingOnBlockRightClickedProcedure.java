@@ -22,7 +22,7 @@ import net.blackout.michrosia.MichrosiaElements;
 @MichrosiaElements.ModElement.Tag
 public class MichrosiaSaplingOnBlockRightClickedProcedure extends MichrosiaElements.ModElement {
 	public MichrosiaSaplingOnBlockRightClickedProcedure(MichrosiaElements instance) {
-		super(instance, 49);
+		super(instance, 50);
 	}
 
 	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {

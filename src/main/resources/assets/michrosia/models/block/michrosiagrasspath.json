@@ -1,0 +1,10 @@
+{
+  "parent": "michrosia:custom/michrosiagrasspath",
+  "textures": {
+    "all": "michrosia:blocks/grass_path_michrosia_top",
+    "particle": "michrosia:blocks/grass_path_michrosia_top",
+    "0": "michrosia:blocks/grass_michrosia_bottom",
+    "1": "michrosia:blocks/grass_path_michrosia_top",
+    "2": "michrosia:blocks/grass_path_michrosia_side"
+  }
+}

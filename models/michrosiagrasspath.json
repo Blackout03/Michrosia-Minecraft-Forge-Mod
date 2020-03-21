@@ -1,0 +1,55 @@
+{
+	"textures": {
+		"0": "michrosia:Michrosia/grass_path_michrosia_bottom",
+		"1": "michrosia:Michrosia/grass_path_michrosia_top",
+		"2": "michrosia:Michrosia/grass_path_michrosia_side",
+		"particle": "michrosia:Michrosia/grass_path_michrosia_bottom"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 14.5, 16],
+			"faces": {
+				"north": { "uv": [ 0, 1, 16, 16 ], "texture": "#2" },
+				"south": { "uv": [ 0, 1, 16, 16 ], "texture": "#2" },
+				"west":  { "uv": [ 0, 1, 16, 16 ], "texture": "#2" },
+				"east":  { "uv": [ 0, 1, 16, 16 ], "texture": "#2" },
+				"down":  { "uv": [ 0, 0, 16, 16 ], "texture": "#0" },
+				"up":    { "uv": [ 0, 0, 16, 16 ], "texture": "#1" }
+			}
+		}
+	],
+	    "gui_light": "side",
+	    "display": {
+	        "gui": {
+	            "rotation": [ 30, 225, 0 ],
+	            "translation": [ 0, 0, 0],
+	            "scale":[ 0.625, 0.625, 0.625 ]
+	        },
+	        "ground": {
+	            "rotation": [ 0, 0, 0 ],
+	            "translation": [ 0, 3, 0],
+	            "scale":[ 0.25, 0.25, 0.25 ]
+	        },
+	        "fixed": {
+	            "rotation": [ 0, 0, 0 ],
+	            "translation": [ 0, 0, 0],
+	            "scale":[ 0.5, 0.5, 0.5 ]
+	        },
+	        "thirdperson_righthand": {
+	            "rotation": [ 75, 45, 0 ],
+	            "translation": [ 0, 2.5, 0],
+	            "scale": [ 0.375, 0.375, 0.375 ]
+	        },
+	        "firstperson_righthand": {
+	            "rotation": [ 0, 45, 0 ],
+	            "translation": [ 0, 0, 0 ],
+	            "scale": [ 0.40, 0.40, 0.40 ]
+	        },
+	        "firstperson_lefthand": {
+	            "rotation": [ 0, 225, 0 ],
+	            "translation": [ 0, 0, 0 ],
+	            "scale": [ 0.40, 0.40, 0.40 ]
+	        }
+	    }
+	}

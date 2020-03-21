@@ -13,7 +13,7 @@ import net.blackout.michrosia.MichrosiaElements;
 @MichrosiaElements.ModElement.Tag
 public class MichrosiaTabItemGroup extends MichrosiaElements.ModElement {
 	public MichrosiaTabItemGroup(MichrosiaElements instance) {
-		super(instance, 38);
+		super(instance, 39);
 	}
 
 	@Override

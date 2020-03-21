@@ -18,7 +18,7 @@ import net.blackout.michrosia.MichrosiaElements;
 @MichrosiaElements.ModElement.Tag
 public class MichrosiaSaplingUpdateTickProcedure extends MichrosiaElements.ModElement {
 	public MichrosiaSaplingUpdateTickProcedure(MichrosiaElements instance) {
-		super(instance, 48);
+		super(instance, 49);
 	}
 
 	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {

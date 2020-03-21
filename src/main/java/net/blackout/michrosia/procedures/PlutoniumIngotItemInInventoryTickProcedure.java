@@ -10,7 +10,7 @@ import net.blackout.michrosia.MichrosiaElements;
 @MichrosiaElements.ModElement.Tag
 public class PlutoniumIngotItemInInventoryTickProcedure extends MichrosiaElements.ModElement {
 	public PlutoniumIngotItemInInventoryTickProcedure(MichrosiaElements instance) {
-		super(instance, 28);
+		super(instance, 29);
 	}
 
 	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {

@@ -31,7 +31,7 @@ public class MichrosiaPlanksTrapDoorBlock extends MichrosiaElements.ModElement {
 	@ObjectHolder("michrosia:michrosiaplankstrapdoor")
 	public static final Block block = null;
 	public MichrosiaPlanksTrapDoorBlock(MichrosiaElements instance) {
-		super(instance, 11);
+		super(instance, 12);
 	}
 
 	@Override

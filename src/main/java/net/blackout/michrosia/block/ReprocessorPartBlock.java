@@ -27,7 +27,7 @@ public class ReprocessorPartBlock extends MichrosiaElements.ModElement {
 	@ObjectHolder("michrosia:reprocessorpart")
 	public static final Block block = null;
 	public ReprocessorPartBlock(MichrosiaElements instance) {
-		super(instance, 27);
+		super(instance, 28);
 	}
 
 	@Override

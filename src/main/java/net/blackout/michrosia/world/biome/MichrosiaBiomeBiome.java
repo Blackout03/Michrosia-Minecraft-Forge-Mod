@@ -5,18 +5,13 @@ import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.common.BiomeManager;
 import net.minecraftforge.common.BiomeDictionary;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
 import net.minecraft.world.gen.placement.Placement;
-import net.minecraft.world.gen.placement.FrequencyConfig;
 import net.minecraft.world.gen.placement.AtSurfaceWithExtraConfig;
 import net.minecraft.world.gen.feature.NoFeatureConfig;
 import net.minecraft.world.gen.feature.IFeatureConfig;
-import net.minecraft.world.gen.feature.GrassFeatureConfig;
-import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.AbstractTreeFeature;
 import net.minecraft.world.gen.IWorldGenerationReader;
 import net.minecraft.world.gen.GenerationStage;
@@ -49,7 +44,7 @@ public class MichrosiaBiomeBiome extends MichrosiaElements.ModElement {
 	@ObjectHolder("michrosia:michrosiabiome")
 	public static final CustomBiome biome = null;
 	public MichrosiaBiomeBiome(MichrosiaElements instance) {
-		super(instance, 36);
+		super(instance, 37);
 	}
 
 	@Override
@@ -66,7 +61,7 @@ public class MichrosiaBiomeBiome extends MichrosiaElements.ModElement {
 	static class CustomBiome extends Biome {
 		public CustomBiome() {
 			super(new Biome.Builder().downfall(0.7000000000000001f).depth(0.3f).scale(0.75f).temperature(0.6f).precipitation(Biome.RainType.RAIN)
-					.category(Biome.Category.NONE).waterColor(-65536).waterFogColor(-65536)
+					.category(Biome.Category.NONE).waterColor(4159204).waterFogColor(329011)
 					.surfaceBuilder(SurfaceBuilder.DEFAULT, new SurfaceBuilderConfig(MichrosiaGrassBlock.block.getDefaultState(),
 							MichrosiaDirtBlock.block.getDefaultState(), MichrosiaDirtBlock.block.getDefaultState())));
 			setRegistryName("michrosiabiome");
@@ -75,33 +70,11 @@ public class MichrosiaBiomeBiome extends MichrosiaElements.ModElement {
 			DefaultBiomeFeatures.addMonsterRooms(this);
 			DefaultBiomeFeatures.addOres(this);
 			DefaultBiomeFeatures.addLakes(this);
-			addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Biome.createDecoratedFeature(Feature.DEFAULT_FLOWER,
-					IFeatureConfig.NO_FEATURE_CONFIG, Placement.COUNT_HEIGHTMAP_32, new FrequencyConfig(10)));
-			addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Biome.createDecoratedFeature(Feature.GRASS,
-					new GrassFeatureConfig(Blocks.GRASS.getDefaultState()), Placement.COUNT_HEIGHTMAP_DOUBLE, new FrequencyConfig(10)));
 			addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Biome.createDecoratedFeature(new CustomTreeFeature(),
-					IFeatureConfig.NO_FEATURE_CONFIG, Placement.COUNT_EXTRA_HEIGHTMAP, new AtSurfaceWithExtraConfig(10, 0.1F, 1)));
+					IFeatureConfig.NO_FEATURE_CONFIG, Placement.COUNT_EXTRA_HEIGHTMAP, new AtSurfaceWithExtraConfig(5, 0.1F, 1)));
 			this.addSpawn(EntityClassification.CREATURE, new Biome.SpawnListEntry(EntityType.WOLF, 15, 1, 5));
 			this.addSpawn(EntityClassification.CREATURE, new Biome.SpawnListEntry(EntityType.CAT, 15, 1, 5));
 			this.addSpawn(EntityClassification.CREATURE, new Biome.SpawnListEntry(EntityType.FOX, 15, 1, 5));
-		}
-
-		@OnlyIn(Dist.CLIENT)
-		@Override
-		public int getGrassColor(BlockPos pos) {
-			return -65536;
-		}
-
-		@OnlyIn(Dist.CLIENT)
-		@Override
-		public int getFoliageColor(BlockPos pos) {
-			return -65536;
-		}
-
-		@OnlyIn(Dist.CLIENT)
-		@Override
-		public int getSkyColorByTemp(float currentTemperature) {
-			return -16750849;
 		}
 	}
 

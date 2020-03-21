@@ -43,7 +43,7 @@ public class ReprocessorGUIGui extends MichrosiaElements.ModElement {
 	public static HashMap guistate = new HashMap();
 	private static ContainerType<GuiContainerMod> containerType = null;
 	public ReprocessorGUIGui(MichrosiaElements instance) {
-		super(instance, 42);
+		super(instance, 43);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,

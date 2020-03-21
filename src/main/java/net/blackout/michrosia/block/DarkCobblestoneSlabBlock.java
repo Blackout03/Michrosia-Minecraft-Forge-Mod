@@ -32,7 +32,7 @@ public class DarkCobblestoneSlabBlock extends MichrosiaElements.ModElement {
 	@ObjectHolder("michrosia:darkcobblestoneslab")
 	public static final Block block = null;
 	public DarkCobblestoneSlabBlock(MichrosiaElements instance) {
-		super(instance, 20);
+		super(instance, 21);
 	}
 
 	@Override

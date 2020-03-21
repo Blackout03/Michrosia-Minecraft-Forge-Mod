@@ -10,7 +10,7 @@ import net.blackout.michrosia.MichrosiaElements;
 @MichrosiaElements.ModElement.Tag
 public class PlutoniumBlockEntityCollidesInTheBlockProcedure extends MichrosiaElements.ModElement {
 	public PlutoniumBlockEntityCollidesInTheBlockProcedure(MichrosiaElements instance) {
-		super(instance, 32);
+		super(instance, 33);
 	}
 
 	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {

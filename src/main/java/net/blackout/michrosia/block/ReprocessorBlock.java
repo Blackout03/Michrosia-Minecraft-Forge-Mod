@@ -74,7 +74,7 @@ public class ReprocessorBlock extends MichrosiaElements.ModElement {
 	@ObjectHolder("michrosia:reprocessor")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
 	public ReprocessorBlock(MichrosiaElements instance) {
-		super(instance, 41);
+		super(instance, 42);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
 

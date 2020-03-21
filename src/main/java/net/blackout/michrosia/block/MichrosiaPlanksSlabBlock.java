@@ -33,7 +33,7 @@ public class MichrosiaPlanksSlabBlock extends MichrosiaElements.ModElement {
 	@ObjectHolder("michrosia:michrosiaplanksslab")
 	public static final Block block = null;
 	public MichrosiaPlanksSlabBlock(MichrosiaElements instance) {
-		super(instance, 9);
+		super(instance, 10);
 	}
 
 	@Override

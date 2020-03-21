@@ -10,7 +10,7 @@ import net.blackout.michrosia.MichrosiaElements;
 @MichrosiaElements.ModElement.Tag
 public class MichrosiaLeavesBlockDestroyedByPlayerProcedure extends MichrosiaElements.ModElement {
 	public MichrosiaLeavesBlockDestroyedByPlayerProcedure(MichrosiaElements instance) {
-		super(instance, 45);
+		super(instance, 46);
 	}
 
 	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {

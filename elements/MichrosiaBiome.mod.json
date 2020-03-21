@@ -26,22 +26,22 @@
     "treeFruits": {
       "value": "Blocks.AIR"
     },
-    "customColors": true,
+    "customColors": false,
     "airColor": {
       "value": -16750849,
       "falpha": 0.0
     },
     "grassColor": {
-      "value": -65536,
+      "value": -1,
       "falpha": 0.0
     },
     "waterColor": {
-      "value": -65536,
+      "value": -1,
       "falpha": 0.0
     },
-    "treesPerChunk": 10,
-    "grassPerChunk": 10,
-    "flowersPerChunk": 10,
+    "treesPerChunk": 5,
+    "grassPerChunk": 0,
+    "flowersPerChunk": 0,
     "mushroomsPerChunk": 0,
     "bigMushroomsChunk": 0,
     "sandPathcesPerChunk": 0,

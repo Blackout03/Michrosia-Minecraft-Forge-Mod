@@ -13,36 +13,36 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.block.Blocks;
 
-import net.blackout.michrosia.block.StrippedMichrosiaLogBlock;
-import net.blackout.michrosia.block.MichrosiaLogBlock;
+import net.blackout.michrosia.block.MichrosiaGrassPathBlock;
+import net.blackout.michrosia.block.MichrosiaGrassBlock;
 import net.blackout.michrosia.MichrosiaElements;
 
 @MichrosiaElements.ModElement.Tag
-public class MichrosiaLogOnBlockRightClickedProcedure extends MichrosiaElements.ModElement {
-	public MichrosiaLogOnBlockRightClickedProcedure(MichrosiaElements instance) {
-		super(instance, 53);
+public class MichrosiaGrassOnBlockRightClickedProcedure extends MichrosiaElements.ModElement {
+	public MichrosiaGrassOnBlockRightClickedProcedure(MichrosiaElements instance) {
+		super(instance, 60);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
 	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
-			System.err.println("Failed to load dependency entity for procedure MichrosiaLogOnBlockRightClicked!");
+			System.err.println("Failed to load dependency entity for procedure MichrosiaGrassOnBlockRightClicked!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
-			System.err.println("Failed to load dependency x for procedure MichrosiaLogOnBlockRightClicked!");
+			System.err.println("Failed to load dependency x for procedure MichrosiaGrassOnBlockRightClicked!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
-			System.err.println("Failed to load dependency y for procedure MichrosiaLogOnBlockRightClicked!");
+			System.err.println("Failed to load dependency y for procedure MichrosiaGrassOnBlockRightClicked!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
-			System.err.println("Failed to load dependency z for procedure MichrosiaLogOnBlockRightClicked!");
+			System.err.println("Failed to load dependency z for procedure MichrosiaGrassOnBlockRightClicked!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
-			System.err.println("Failed to load dependency world for procedure MichrosiaLogOnBlockRightClicked!");
+			System.err.println("Failed to load dependency world for procedure MichrosiaGrassOnBlockRightClicked!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -50,19 +50,19 @@ public class MichrosiaLogOnBlockRightClickedProcedure extends MichrosiaElements.
 		int y = (int) dependencies.get("y");
 		int z = (int) dependencies.get("z");
 		World world = (World) dependencies.get("world");
-		if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == MichrosiaLogBlock.block.getDefaultState().getBlock())) {
+		if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == MichrosiaGrassBlock.block.getDefaultState().getBlock())) {
 			if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == new ItemStack(Items.WOODEN_AXE, (int) (1)).getItem())
+					.getItem() == new ItemStack(Items.WOODEN_SHOVEL, (int) (1)).getItem())
 					|| ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-							.getItem() == new ItemStack(Items.STONE_AXE, (int) (1)).getItem())
+							.getItem() == new ItemStack(Items.STONE_SHOVEL, (int) (1)).getItem())
 							|| ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-									.getItem() == new ItemStack(Items.IRON_AXE, (int) (1)).getItem())
+									.getItem() == new ItemStack(Items.IRON_SHOVEL, (int) (1)).getItem())
 									|| ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-											.getItem() == new ItemStack(Items.GOLDEN_AXE, (int) (1)).getItem())
+											.getItem() == new ItemStack(Items.GOLDEN_SHOVEL, (int) (1)).getItem())
 											|| (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-													.getItem() == new ItemStack(Items.DIAMOND_AXE, (int) (1)).getItem())))))) {
+													.getItem() == new ItemStack(Items.DIAMOND_SHOVEL, (int) (1)).getItem())))))) {
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), Blocks.AIR.getDefaultState(), 3);
-				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), StrippedMichrosiaLogBlock.block.getDefaultState(), 3);
+				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), MichrosiaGrassPathBlock.block.getDefaultState(), 3);
 			}
 		}
 	}

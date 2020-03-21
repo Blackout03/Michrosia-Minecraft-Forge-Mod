@@ -37,7 +37,7 @@ public class MichrosiaSaplingBlock extends MichrosiaElements.ModElement {
 	@ObjectHolder("michrosia:michrosiasapling")
 	public static final Block block = null;
 	public MichrosiaSaplingBlock(MichrosiaElements instance) {
-		super(instance, 13);
+		super(instance, 14);
 	}
 
 	@Override
