@@ -93,7 +93,7 @@ public class PlutoniumOreBlock extends MichrosiaElements.ModElement {
 				if (blockAt.getBlock() == DarkstoneBlock.block.getDefaultState().getBlock())
 					blockCriteria = true;
 				return blockCriteria;
-			}), block.getDefaultState(), 16), Placement.COUNT_RANGE, new CountRangeConfig(32, 0, 0, 140)));
+			}), block.getDefaultState(), 12), Placement.COUNT_RANGE, new CountRangeConfig(24, 0, 0, 140)));
 		}
 	}
 }

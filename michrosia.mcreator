@@ -166,7 +166,7 @@
       "type": "biome",
       "sortid": 37,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "ids": {}
     },
     {

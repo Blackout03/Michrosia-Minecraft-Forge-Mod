@@ -60,7 +60,7 @@ public class MichrosiaBiomeBiome extends MichrosiaElements.ModElement {
 	}
 	static class CustomBiome extends Biome {
 		public CustomBiome() {
-			super(new Biome.Builder().downfall(0.4f).depth(2f).scale(0.2f).temperature(0.6f).precipitation(Biome.RainType.RAIN)
+			super(new Biome.Builder().downfall(0.3f).depth(2.6f).scale(0.2f).temperature(0.5f).precipitation(Biome.RainType.RAIN)
 					.category(Biome.Category.NONE).waterColor(4159204).waterFogColor(329011)
 					.surfaceBuilder(SurfaceBuilder.DEFAULT, new SurfaceBuilderConfig(MichrosiaGrassBlock.block.getDefaultState(),
 							MichrosiaDirtBlock.block.getDefaultState(), MichrosiaDirtBlock.block.getDefaultState())));

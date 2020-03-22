@@ -86,7 +86,7 @@ public class DarkcobblestoneBlock extends MichrosiaElements.ModElement {
 				if (blockAt.getBlock() == DarkstoneBlock.block.getDefaultState().getBlock())
 					blockCriteria = true;
 				return blockCriteria;
-			}), block.getDefaultState(), 16), Placement.COUNT_RANGE, new CountRangeConfig(16, 0, 0, 110)));
+			}), block.getDefaultState(), 16), Placement.COUNT_RANGE, new CountRangeConfig(32, 0, 0, 140)));
 		}
 	}
 }

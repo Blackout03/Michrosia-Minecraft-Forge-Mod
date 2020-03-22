@@ -90,8 +90,8 @@
         "value": "CUSTOM:Darkstone"
       }
     ],
-    "frequencyPerChunks": 32,
-    "frequencyOnChunk": 16,
+    "frequencyPerChunks": 24,
+    "frequencyOnChunk": 12,
     "minGenerateHeight": 0,
     "maxGenerateHeight": 140
   }
