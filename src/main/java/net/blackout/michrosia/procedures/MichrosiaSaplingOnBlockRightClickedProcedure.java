@@ -56,8 +56,8 @@ public class MichrosiaSaplingOnBlockRightClickedProcedure extends MichrosiaEleme
 			if (entity instanceof PlayerEntity)
 				((PlayerEntity) entity).inventory.clearMatchingItems(p -> new ItemStack(Items.BONE_MEAL, (int) (1)).getItem() == p.getItem(),
 						(int) 1);
-			for (int _ct = 0; _ct < 5; _ct++) {
-				world.addOptionalParticle(ParticleTypes.HAPPY_VILLAGER, x, y, z, 1, 1, 1);
+			for (int _ct = 0; _ct < 30; _ct++) {
+				world.addOptionalParticle(ParticleTypes.HAPPY_VILLAGER, x, y, z, 3, 3, 3);
 			}
 			if ((Math.random() <= 0.05)) {
 				if ((((world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getBlock() == Blocks.AIR.getDefaultState().getBlock())

@@ -49,10 +49,10 @@
     "reedsPerChunk": 0,
     "cactiPerChunk": 0,
     "deadBushesPerChunk": 0,
-    "rainingPossibility": 0.7000000000000001,
+    "rainingPossibility": 0.4,
     "temperature": 0.6,
-    "baseHeight": 0.3,
-    "heightVariation": 0.75,
+    "baseHeight": 2.0,
+    "heightVariation": 0.2,
     "spawnBiome": true,
     "biomeWeight": 1024,
     "biomeType": "WARM",
@@ -67,12 +67,6 @@
     ],
     "spawnList": [
       {
-        "value": "EntityAnimal"
-      },
-      {
-        "value": "EntityMob"
-      },
-      {
         "value": "EntityWolf"
       },
       {
@@ -80,6 +74,36 @@
       },
       {
         "value": "EntityFox"
+      },
+      {
+        "value": "EntityZombie"
+      },
+      {
+        "value": "EntityZombieVillager"
+      },
+      {
+        "value": "EntityCreeper"
+      },
+      {
+        "value": "EntityWitch"
+      },
+      {
+        "value": "EntityRabbit"
+      },
+      {
+        "value": "EntitySpider"
+      },
+      {
+        "value": "EntitySkeleton"
+      },
+      {
+        "value": "EntityPig"
+      },
+      {
+        "value": "EntityCow"
+      },
+      {
+        "value": "EntitySheep"
       }
     ]
   }
