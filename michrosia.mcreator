@@ -788,6 +788,14 @@
       "compiles": true,
       "locked_code": false,
       "ids": {}
+    },
+    {
+      "name": "Penguin",
+      "type": "mob",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
     }
   ],
   "variable_elements": [],
@@ -815,9 +823,11 @@
       "block.michrosia.michrosiaplankstrapdoor": "Michrosia Planks Trap Door",
       "itemGroup.tabmichrosiatab": "Michrosia Tab",
       "block.michrosia.darkstonewall": "Darkstone Wall",
+      "item.michrosia.penguin": "Penguin Spawn Egg",
       "item.michrosia.plutoniumnugget": "Plutonium Nugget",
       "item.plutoniumnugget.name": "Plutonium Nugget",
       "block.michrosia.michrosiaplanksstairs": "Michrosia Planks Stairs",
+      "entity.michrosia.penguin": "Penguin",
       "block.michrosia.michrosiasapling": "Michrosia Sapling",
       "tile.michrosiagrass.name": "Michrosia Grass",
       "tile.darkstone.name": "Darkstone",
