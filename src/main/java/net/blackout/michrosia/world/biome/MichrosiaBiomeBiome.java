@@ -30,7 +30,6 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
-import net.blackout.michrosia.entity.PenguinEntity;
 import net.blackout.michrosia.block.MichrosiaLogBlock;
 import net.blackout.michrosia.block.MichrosiaLeavesBlock;
 import net.blackout.michrosia.block.MichrosiaGrassBlock;
@@ -79,10 +78,9 @@ public class MichrosiaBiomeBiome extends MichrosiaElements.ModElement {
 			this.addSpawn(EntityClassification.MONSTER, new Biome.SpawnListEntry(EntityType.ZOMBIE_VILLAGER, 10, 1, 1));
 			this.addSpawn(EntityClassification.MONSTER, new Biome.SpawnListEntry(EntityType.ENDERMAN, 10, 1, 4));
 			this.addSpawn(EntityClassification.MONSTER, new Biome.SpawnListEntry(EntityType.WITCH, 5, 1, 1));
-			this.addSpawn(EntityClassification.CREATURE, new Biome.SpawnListEntry(EntityType.PIG, 25, 4, 4));
-			this.addSpawn(EntityClassification.CREATURE, new Biome.SpawnListEntry(EntityType.COW, 25, 4, 4));
-			this.addSpawn(EntityClassification.CREATURE, new Biome.SpawnListEntry(EntityType.SHEEP, 25, 4, 4));
-			this.addSpawn(EntityClassification.CREATURE, new Biome.SpawnListEntry(PenguinEntity.entity, 25, 4, 4));
+			this.addSpawn(EntityClassification.CREATURE, new Biome.SpawnListEntry(EntityType.PIG, 10, 4, 4));
+			this.addSpawn(EntityClassification.CREATURE, new Biome.SpawnListEntry(EntityType.COW, 8, 4, 4));
+			this.addSpawn(EntityClassification.CREATURE, new Biome.SpawnListEntry(EntityType.SHEEP, 12, 4, 4));
 		}
 	}
 

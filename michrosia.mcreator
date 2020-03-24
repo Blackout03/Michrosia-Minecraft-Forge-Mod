@@ -790,9 +790,65 @@
       "ids": {}
     },
     {
-      "name": "Penguin",
-      "type": "mob",
-      "sortid": 64,
+      "name": "LeavesBlockTag",
+      "type": "tag",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "LeavesItemTag",
+      "type": "tag",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "SaplingsBlockTag",
+      "type": "tag",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "SaplingsItemTag",
+      "type": "tag",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "FencesBlockTag",
+      "type": "tag",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "FencesItemTag",
+      "type": "tag",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "WallsBlockTag",
+      "type": "tag",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "WallsItemTag",
+      "type": "tag",
+      "sortid": 72,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -823,11 +879,9 @@
       "block.michrosia.michrosiaplankstrapdoor": "Michrosia Planks Trap Door",
       "itemGroup.tabmichrosiatab": "Michrosia Tab",
       "block.michrosia.darkstonewall": "Darkstone Wall",
-      "item.michrosia.penguin": "Penguin Spawn Egg",
       "item.michrosia.plutoniumnugget": "Plutonium Nugget",
       "item.plutoniumnugget.name": "Plutonium Nugget",
       "block.michrosia.michrosiaplanksstairs": "Michrosia Planks Stairs",
-      "entity.michrosia.penguin": "Penguin",
       "block.michrosia.michrosiasapling": "Michrosia Sapling",
       "tile.michrosiagrass.name": "Michrosia Grass",
       "tile.darkstone.name": "Darkstone",

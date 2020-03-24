@@ -1,0 +1,16 @@
+{
+  "_fv": 6,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:MichrosiaPlanksFence"
+      }
+    ],
+    "functions": [],
+    "name": "fences",
+    "namespace": "minecraft"
+  }
+}

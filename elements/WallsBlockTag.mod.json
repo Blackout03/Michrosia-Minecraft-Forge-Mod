@@ -1,0 +1,19 @@
+{
+  "_fv": 6,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:DarkCobblestoneWall"
+      },
+      {
+        "value": "CUSTOM:DarkstoneWall"
+      }
+    ],
+    "functions": [],
+    "name": "walls",
+    "namespace": "minecraft"
+  }
+}

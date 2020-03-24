@@ -40,7 +40,7 @@ public class MichrosiaGrassBlock extends MichrosiaElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ORGANIC).sound(SoundType.GROUND).hardnessAndResistance(0f, 3f).lightValue(0).harvestLevel(1)
+			super(Block.Properties.create(Material.ORGANIC).sound(SoundType.GROUND).hardnessAndResistance(0.5f, 0.5f).lightValue(0).harvestLevel(1)
 					.harvestTool(ToolType.SHOVEL));
 			setRegistryName("michrosiagrass");
 		}

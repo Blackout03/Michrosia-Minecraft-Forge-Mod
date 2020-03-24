@@ -1,0 +1,16 @@
+{
+  "_fv": 6,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:MichrosiaLeaves"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "name": "leaves",
+    "namespace": "minecraft"
+  }
+}
