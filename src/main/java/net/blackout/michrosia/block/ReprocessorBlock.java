@@ -104,6 +104,16 @@ public class ReprocessorBlock extends MichrosiaElements.ModElement {
 		}
 
 		@Override
+		public boolean isNormalCube(BlockState state, IBlockReader worldIn, BlockPos pos) {
+			return false;
+		}
+
+		@Override
+		public boolean propagatesSkylightDown(BlockState state, IBlockReader reader, BlockPos pos) {
+			return true;
+		}
+
+		@Override
 		public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
 			switch ((Direction) state.get(FACING)) {
 				case UP :

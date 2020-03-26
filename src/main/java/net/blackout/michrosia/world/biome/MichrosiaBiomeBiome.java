@@ -10,8 +10,13 @@ import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig;
 import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraft.world.gen.placement.AtSurfaceWithExtraConfig;
+import net.minecraft.world.gen.feature.structure.VillageConfig;
+import net.minecraft.world.gen.feature.structure.PillagerOutpostConfig;
+import net.minecraft.world.gen.feature.structure.MineshaftStructure;
+import net.minecraft.world.gen.feature.structure.MineshaftConfig;
 import net.minecraft.world.gen.feature.NoFeatureConfig;
 import net.minecraft.world.gen.feature.IFeatureConfig;
+import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.AbstractTreeFeature;
 import net.minecraft.world.gen.IWorldGenerationReader;
 import net.minecraft.world.gen.GenerationStage;
@@ -35,6 +40,7 @@ import net.blackout.michrosia.block.MichrosiaLeavesBlock;
 import net.blackout.michrosia.block.MichrosiaGrassBlock;
 import net.blackout.michrosia.block.MichrosiaDirtBlock;
 import net.blackout.michrosia.MichrosiaElements;
+import net.blackout.michrosia.MichrosiaBiomeFeatures;
 
 import java.util.Set;
 import java.util.Random;
@@ -60,15 +66,24 @@ public class MichrosiaBiomeBiome extends MichrosiaElements.ModElement {
 	}
 	static class CustomBiome extends Biome {
 		public CustomBiome() {
-			super(new Biome.Builder().downfall(0.3f).depth(2.6f).scale(0.0f).temperature(0.8f).precipitation(Biome.RainType.RAIN)
+			super(new Biome.Builder().downfall(0.3f).depth(2.4f).scale(0.0f).temperature(0.8f).precipitation(Biome.RainType.RAIN)
 					.category(Biome.Category.PLAINS).waterColor(4159204).waterFogColor(329011).parent("plains")
 					.surfaceBuilder(SurfaceBuilder.DEFAULT, new SurfaceBuilderConfig(MichrosiaGrassBlock.block.getDefaultState(),
 							MichrosiaDirtBlock.block.getDefaultState(), MichrosiaDirtBlock.block.getDefaultState())));
+			this.addStructure(Feature.VILLAGE, new VillageConfig("village/plains/town_centers", 6));
+			this.addStructure(Feature.PILLAGER_OUTPOST, new PillagerOutpostConfig(0.004D));
+			this.addStructure(Feature.MINESHAFT, new MineshaftConfig(0.004D, MineshaftStructure.Type.NORMAL));
+			this.addStructure(Feature.STRONGHOLD, IFeatureConfig.NO_FEATURE_CONFIG);
 			setRegistryName("michrosiabiome");
 			DefaultBiomeFeatures.addCarvers(this);
 			DefaultBiomeFeatures.addStructures(this);
 			DefaultBiomeFeatures.addMonsterRooms(this);
 			DefaultBiomeFeatures.addOres(this);
+			DefaultBiomeFeatures.addReedsAndPumpkins(this);
+			DefaultBiomeFeatures.addDoubleFlowers(this);
+			DefaultBiomeFeatures.addFossils(this);
+			MichrosiaBiomeFeatures.addMichrosiaVegetation(this);
+			MichrosiaBiomeFeatures.addExtraDiamondOre(this);
 			addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Biome.createDecoratedFeature(new CustomTreeFeature(),
 					IFeatureConfig.NO_FEATURE_CONFIG, Placement.COUNT_EXTRA_HEIGHTMAP, new AtSurfaceWithExtraConfig(2, 2.1F, 1)));
 			this.addSpawn(EntityClassification.MONSTER, new Biome.SpawnListEntry(EntityType.SPIDER, 100, 4, 4));
@@ -78,9 +93,9 @@ public class MichrosiaBiomeBiome extends MichrosiaElements.ModElement {
 			this.addSpawn(EntityClassification.MONSTER, new Biome.SpawnListEntry(EntityType.ZOMBIE_VILLAGER, 10, 1, 1));
 			this.addSpawn(EntityClassification.MONSTER, new Biome.SpawnListEntry(EntityType.ENDERMAN, 10, 1, 4));
 			this.addSpawn(EntityClassification.MONSTER, new Biome.SpawnListEntry(EntityType.WITCH, 5, 1, 1));
-			this.addSpawn(EntityClassification.CREATURE, new Biome.SpawnListEntry(EntityType.PIG, 10, 4, 4));
-			this.addSpawn(EntityClassification.CREATURE, new Biome.SpawnListEntry(EntityType.COW, 8, 4, 4));
-			this.addSpawn(EntityClassification.CREATURE, new Biome.SpawnListEntry(EntityType.SHEEP, 12, 4, 4));
+			this.addSpawn(EntityClassification.CREATURE, new Biome.SpawnListEntry(EntityType.PIG, 100, 4, 4));
+			this.addSpawn(EntityClassification.CREATURE, new Biome.SpawnListEntry(EntityType.COW, 80, 4, 4));
+			this.addSpawn(EntityClassification.CREATURE, new Biome.SpawnListEntry(EntityType.SHEEP, 120, 4, 4));
 		}
 	}
 

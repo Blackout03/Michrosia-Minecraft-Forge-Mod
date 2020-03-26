@@ -138,19 +138,11 @@
       "ids": {}
     },
     {
-      "name": "Plutonium",
-      "type": "tag",
-      "sortid": 36,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
       "name": "MichrosiaGrass",
       "type": "block",
       "sortid": 1,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "ids": {}
     },
     {
@@ -852,6 +844,14 @@
       "compiles": true,
       "locked_code": false,
       "ids": {}
+    },
+    {
+      "name": "MichrosiaBiomeFeatures",
+      "type": "code",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {}
     }
   ],
   "variable_elements": [],
@@ -918,5 +918,5 @@
     "modElementsPackage": "net.blackout.michrosia",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202000212518
+  "mcreatorVersion": 202000213314
 }

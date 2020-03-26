@@ -38,7 +38,7 @@
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": true,
     "canProvidePower": false,
-    "lightOpacity": 0,
+    "lightOpacity": 255,
     "material": {
       "value": "GRASS"
     },

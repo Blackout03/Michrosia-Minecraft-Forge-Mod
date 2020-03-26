@@ -15,6 +15,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
+import net.minecraft.block.GrassBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
@@ -38,7 +39,7 @@ public class MichrosiaGrassBlock extends MichrosiaElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(MichrosiaTabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
-	public static class CustomBlock extends Block {
+	public static class CustomBlock extends GrassBlock {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ORGANIC).sound(SoundType.GROUND).hardnessAndResistance(0.5f, 0.5f).lightValue(0).harvestLevel(1)
 					.harvestTool(ToolType.SHOVEL));
