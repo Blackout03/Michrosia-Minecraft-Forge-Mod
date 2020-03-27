@@ -80,7 +80,7 @@ public class MichrosiaGrassShort2Block extends MichrosiaElements.ModElement {
 			if (!biomeCriteria)
 				continue;
 			biome.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION,
-					Biome.createDecoratedFeature(feature, IFeatureConfig.NO_FEATURE_CONFIG, Placement.COUNT_HEIGHTMAP_32, new FrequencyConfig(5)));
+					Biome.createDecoratedFeature(feature, IFeatureConfig.NO_FEATURE_CONFIG, Placement.COUNT_HEIGHTMAP_32, new FrequencyConfig(20)));
 		}
 	}
 	public static class BlockCustomFlower extends FlowerBlock {
