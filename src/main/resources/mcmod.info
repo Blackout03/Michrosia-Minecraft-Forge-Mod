@@ -3,15 +3,14 @@
     "modid": "michrosia",
     "name": "Michrosia",
     "description": "",
-    "version": "1.0.0",
+    "version": "vB1.0.0",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "logoFile": "assets/michrosia/textures/michrosiagrass.png",
     "mcversion": "1.14.4",
-    "url": "https://mcreator.net",
+    "url": "https://www.blackout03.c1.biz/mcreator/mods/",
     "updateUrl": "",
     "authorList": [
-      "Blackout03",
-      "MCreator"
+      "Blackout03"
     ],
     "dependencies": [],
     "dependants": [],
