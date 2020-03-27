@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "michrosia:reprocessorpart"
+    },
+    "title": {
+      "translate": "advancements.advancementcraftreprocessorpart.title"
+    },
+    "description": {
+      "translate": "advancements.advancementcraftreprocessorpart.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "advancementcraftreprocessorpart": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "michrosia:reprocessorpart",
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "michrosia:advancementadvancemichrosiabiome"
+}

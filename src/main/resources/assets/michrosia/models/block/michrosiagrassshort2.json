@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "michrosia:blocks/michrosia_grass_short2",
+    "particle": "michrosia:blocks/michrosia_grass_short2"
+  }
+}

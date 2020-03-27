@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "michrosia:reprocessorpartmain"
+    },
+    "title": {
+      "translate": "advancements.advancementbuildthereprocessor.title"
+    },
+    "description": {
+      "translate": "advancements.advancementbuildthereprocessor.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "advancementbuildthereprocessor": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "michrosia:advancementcraftreprocessorpart"
+}
