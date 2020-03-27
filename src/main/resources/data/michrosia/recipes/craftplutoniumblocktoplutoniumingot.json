@@ -1,0 +1,16 @@
+{
+  "group": "plutonium",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0"
+  ],
+  "key": {
+    "0": {
+      "item": "michrosia:plutoniumblock"
+    }
+  },
+  "result": {
+    "item": "michrosia:plutoniumingot",
+    "count": 9
+  }
+}

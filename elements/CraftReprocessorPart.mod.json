@@ -1,0 +1,45 @@
+{
+  "_fv": 6,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "recipeRetstackSize": 1,
+    "group": "reprocessor",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:Darkstone"
+      },
+      {
+        "value": "Blocks.STONE#0"
+      },
+      {
+        "value": "CUSTOM:Darkstone"
+      },
+      {
+        "value": "Blocks.STONE#0"
+      },
+      {
+        "value": "Items.REDSTONE"
+      },
+      {
+        "value": "Blocks.STONE#0"
+      },
+      {
+        "value": "CUSTOM:Darkstone"
+      },
+      {
+        "value": "Blocks.STONE#0"
+      },
+      {
+        "value": "CUSTOM:Darkstone"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:ReprocessorPart"
+    },
+    "name": "craftreprocessorpart",
+    "namespace": "mod"
+  }
+}

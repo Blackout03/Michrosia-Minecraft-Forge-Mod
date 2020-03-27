@@ -1,7 +1,7 @@
 {
-  "group": "michrosia",
-  "type": "minecraft:smelting",
-  "experience": 0,
+  "group": "plutonium",
+  "type": "minecraft:blasting",
+  "experience": 5,
   "ingredient": {
     "item": "michrosia:plutoniumore"
   },

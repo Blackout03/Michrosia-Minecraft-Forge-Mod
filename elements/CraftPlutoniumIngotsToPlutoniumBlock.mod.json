@@ -1,0 +1,45 @@
+{
+  "_fv": 6,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "recipeRetstackSize": 1,
+    "group": "plutonium",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:PlutoniumIngot"
+      },
+      {
+        "value": "CUSTOM:PlutoniumIngot"
+      },
+      {
+        "value": "CUSTOM:PlutoniumIngot"
+      },
+      {
+        "value": "CUSTOM:PlutoniumIngot"
+      },
+      {
+        "value": "CUSTOM:PlutoniumIngot"
+      },
+      {
+        "value": "CUSTOM:PlutoniumIngot"
+      },
+      {
+        "value": "CUSTOM:PlutoniumIngot"
+      },
+      {
+        "value": "CUSTOM:PlutoniumIngot"
+      },
+      {
+        "value": "CUSTOM:PlutoniumIngot"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:PlutoniumBlock"
+    },
+    "name": "craftplutoniumingotstoplutoniumblock",
+    "namespace": "mod"
+  }
+}

@@ -4,24 +4,15 @@
   "definition": {
     "recipeType": "Crafting",
     "xpReward": 0.0,
-    "recipeRetstackSize": 4,
+    "recipeRetstackSize": 3,
     "group": "michrosia",
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "CUSTOM:MichrosiaPlanks"
-      },
-      {
         "value": ""
       },
       {
         "value": ""
-      },
-      {
-        "value": "CUSTOM:MichrosiaPlanks"
-      },
-      {
-        "value": "CUSTOM:MichrosiaPlanks"
       },
       {
         "value": ""
@@ -30,16 +21,25 @@
         "value": "CUSTOM:MichrosiaPlanks"
       },
       {
+        "value": "Items.STICK"
+      },
+      {
         "value": "CUSTOM:MichrosiaPlanks"
+      },
+      {
+        "value": "CUSTOM:MichrosiaPlanks"
+      },
+      {
+        "value": "Items.STICK"
       },
       {
         "value": "CUSTOM:MichrosiaPlanks"
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:MichrosiaPlanksStairs"
+      "value": "CUSTOM:MichrosiaPlanksFence"
     },
-    "name": "craftmichrosiaplankstomichrosiastairs",
+    "name": "craftmichrosiaplankstomichrosiafences",
     "namespace": "mod"
   }
 }

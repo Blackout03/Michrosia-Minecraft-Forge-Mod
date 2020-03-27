@@ -1,0 +1,22 @@
+{
+  "group": "darkstone",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "michrosia:darkstone"
+    },
+    "1": {
+      "item": "michrosia:darkstone"
+    },
+    "2": {
+      "item": "michrosia:darkstone"
+    }
+  },
+  "result": {
+    "item": "michrosia:darkstoneslab",
+    "count": 6
+  }
+}

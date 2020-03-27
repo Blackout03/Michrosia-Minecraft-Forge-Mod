@@ -1,0 +1,42 @@
+{
+  "group": "plutonium",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "michrosia:plutoniumingot"
+    },
+    "1": {
+      "item": "michrosia:plutoniumingot"
+    },
+    "2": {
+      "item": "michrosia:plutoniumingot"
+    },
+    "3": {
+      "item": "michrosia:plutoniumingot"
+    },
+    "4": {
+      "item": "michrosia:plutoniumingot"
+    },
+    "5": {
+      "item": "michrosia:plutoniumingot"
+    },
+    "6": {
+      "item": "michrosia:plutoniumingot"
+    },
+    "7": {
+      "item": "michrosia:plutoniumingot"
+    },
+    "8": {
+      "item": "michrosia:plutoniumingot"
+    }
+  },
+  "result": {
+    "item": "michrosia:plutoniumblock",
+    "count": 1
+  }
+}

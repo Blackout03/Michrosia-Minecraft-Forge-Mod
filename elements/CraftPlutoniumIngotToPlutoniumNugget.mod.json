@@ -4,12 +4,15 @@
   "definition": {
     "recipeType": "Crafting",
     "xpReward": 0.0,
-    "recipeRetstackSize": 4,
-    "group": "michrosia",
+    "recipeRetstackSize": 9,
+    "group": "plutonium",
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "CUSTOM:MichrosiaPlanks"
+        "value": ""
+      },
+      {
+        "value": ""
       },
       {
         "value": ""
@@ -18,28 +21,25 @@
         "value": ""
       },
       {
-        "value": "CUSTOM:MichrosiaPlanks"
-      },
-      {
-        "value": "CUSTOM:MichrosiaPlanks"
+        "value": "CUSTOM:PlutoniumIngot"
       },
       {
         "value": ""
       },
       {
-        "value": "CUSTOM:MichrosiaPlanks"
+        "value": ""
       },
       {
-        "value": "CUSTOM:MichrosiaPlanks"
+        "value": ""
       },
       {
-        "value": "CUSTOM:MichrosiaPlanks"
+        "value": ""
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:MichrosiaPlanksStairs"
+      "value": "CUSTOM:PlutoniumNugget"
     },
-    "name": "craftmichrosiaplankstomichrosiastairs",
+    "name": "craftplutoniumingottoplutoniumnugget",
     "namespace": "mod"
   }
 }

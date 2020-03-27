@@ -1,0 +1,32 @@
+{
+  "group": "michrosia",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345"
+  ],
+  "key": {
+    "0": {
+      "item": "michrosia:michrosiaplanks"
+    },
+    "1": {
+      "item": "minecraft:stick"
+    },
+    "2": {
+      "item": "michrosia:michrosiaplanks"
+    },
+    "3": {
+      "item": "michrosia:michrosiaplanks"
+    },
+    "4": {
+      "item": "minecraft:stick"
+    },
+    "5": {
+      "item": "michrosia:michrosiaplanks"
+    }
+  },
+  "result": {
+    "item": "michrosia:michrosiaplanksfence",
+    "count": 3
+  }
+}

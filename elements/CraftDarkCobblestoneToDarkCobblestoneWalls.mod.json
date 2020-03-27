@@ -5,7 +5,7 @@
     "recipeType": "Crafting",
     "xpReward": 0.0,
     "recipeRetstackSize": 6,
-    "group": "michrosia",
+    "group": "darkstone",
     "recipeShapeless": false,
     "recipeSlots": [
       {
@@ -18,28 +18,28 @@
         "value": ""
       },
       {
-        "value": ""
+        "value": "CUSTOM:Darkcobblestone"
       },
       {
-        "value": ""
+        "value": "CUSTOM:Darkcobblestone"
       },
       {
-        "value": ""
+        "value": "CUSTOM:Darkcobblestone"
       },
       {
-        "value": "CUSTOM:MichrosiaPlanks"
+        "value": "CUSTOM:Darkcobblestone"
       },
       {
-        "value": "CUSTOM:MichrosiaPlanks"
+        "value": "CUSTOM:Darkcobblestone"
       },
       {
-        "value": "CUSTOM:MichrosiaPlanks"
+        "value": "CUSTOM:Darkcobblestone"
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:MichrosiaPlanksSlab"
+      "value": "CUSTOM:DarkCobblestoneWall"
     },
-    "name": "craftmichrosiaplankstomichrosiaslabs",
+    "name": "craftdarkcobblestonetodarkcobblestonewalls",
     "namespace": "mod"
   }
 }

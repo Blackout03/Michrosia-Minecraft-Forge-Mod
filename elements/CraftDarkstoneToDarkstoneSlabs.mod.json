@@ -4,12 +4,15 @@
   "definition": {
     "recipeType": "Crafting",
     "xpReward": 0.0,
-    "recipeRetstackSize": 4,
-    "group": "michrosia",
+    "recipeRetstackSize": 6,
+    "group": "darkstone",
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "CUSTOM:MichrosiaPlanks"
+        "value": ""
+      },
+      {
+        "value": ""
       },
       {
         "value": ""
@@ -18,28 +21,25 @@
         "value": ""
       },
       {
-        "value": "CUSTOM:MichrosiaPlanks"
-      },
-      {
-        "value": "CUSTOM:MichrosiaPlanks"
+        "value": ""
       },
       {
         "value": ""
       },
       {
-        "value": "CUSTOM:MichrosiaPlanks"
+        "value": "CUSTOM:Darkstone"
       },
       {
-        "value": "CUSTOM:MichrosiaPlanks"
+        "value": "CUSTOM:Darkstone"
       },
       {
-        "value": "CUSTOM:MichrosiaPlanks"
+        "value": "CUSTOM:Darkstone"
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:MichrosiaPlanksStairs"
+      "value": "CUSTOM:DarkstoneSlab"
     },
-    "name": "craftmichrosiaplankstomichrosiastairs",
+    "name": "craftdarkstonetodarkstoneslabs",
     "namespace": "mod"
   }
 }

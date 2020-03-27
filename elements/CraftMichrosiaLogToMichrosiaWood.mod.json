@@ -5,6 +5,7 @@
     "recipeType": "Crafting",
     "xpReward": 0.0,
     "recipeRetstackSize": 3,
+    "group": "michrosia",
     "recipeShapeless": true,
     "recipeSlots": [
       {

@@ -1,0 +1,32 @@
+{
+  "group": "darkstone",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345"
+  ],
+  "key": {
+    "0": {
+      "item": "michrosia:darkstone"
+    },
+    "1": {
+      "item": "michrosia:darkstone"
+    },
+    "2": {
+      "item": "michrosia:darkstone"
+    },
+    "3": {
+      "item": "michrosia:darkstone"
+    },
+    "4": {
+      "item": "michrosia:darkstone"
+    },
+    "5": {
+      "item": "michrosia:darkstone"
+    }
+  },
+  "result": {
+    "item": "michrosia:darkstonewall",
+    "count": 6
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "group": "darkstone",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0  ",
+    "34 ",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "michrosia:darkcobblestone"
+    },
+    "3": {
+      "item": "michrosia:darkcobblestone"
+    },
+    "4": {
+      "item": "michrosia:darkcobblestone"
+    },
+    "6": {
+      "item": "michrosia:darkcobblestone"
+    },
+    "7": {
+      "item": "michrosia:darkcobblestone"
+    },
+    "8": {
+      "item": "michrosia:darkcobblestone"
+    }
+  },
+  "result": {
+    "item": "michrosia:darkcobblestonestairs",
+    "count": 4
+  }
+}
