@@ -1,0 +1,19 @@
+{
+  "_fv": 6,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:MichrosiaDirt"
+      },
+      {
+        "value": "CUSTOM:MichrosiaGrass"
+      }
+    ],
+    "functions": [],
+    "name": "bad_beacon_base",
+    "namespace": "mod"
+  }
+}

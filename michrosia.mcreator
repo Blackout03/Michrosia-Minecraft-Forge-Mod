@@ -142,7 +142,7 @@
       "type": "block",
       "sortid": 1,
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "ids": {}
     },
     {
@@ -1047,6 +1047,14 @@
       "sortid": 101,
       "compiles": true,
       "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "TagBadBeaconBase",
+      "type": "tag",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": true,
       "ids": {}
     }
   ],

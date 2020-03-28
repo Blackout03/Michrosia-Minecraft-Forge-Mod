@@ -49,8 +49,27 @@ minecraft {
     }
 }
 
+repositories {
+    jcenter()
+    mavenLocal()
+
+    maven { // JustEnoughItems
+        url = "https://dvs1.progwml6.com/files/maven/"
+    }
+    maven { // JustEnoughResources
+        name "bintray-way2muchnoise"
+        url "https://dl.bintray.com/way2muchnoise/dev"
+    }
+    maven { // CurseForge
+        name = "CurseForge"
+        url = "https://minecraft.curseforge.com/api/maven/"
+    }
+}
+
 dependencies {
     minecraft 'net.minecraftforge:forge:1.14.4-28.2.3'
+
+    compile 'filters:Filters:1.1.1:1.14.4'
 }
 
 apply from: 'mcreator.gradle'
