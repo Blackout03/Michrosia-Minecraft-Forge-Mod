@@ -18,7 +18,7 @@ public class MichrosiaTabItemGroup extends MichrosiaElements.ModElement {
 
 	@Override
 	public void initElements() {
-		tab = new ItemGroup("tabmichrosiatab") {
+		tab = new ItemGroup("tabmichrosia") {
 			@OnlyIn(Dist.CLIENT)
 			@Override
 			public ItemStack createIcon() {

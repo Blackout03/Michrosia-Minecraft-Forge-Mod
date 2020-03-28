@@ -17,6 +17,7 @@ import java.util.function.Supplier;
 public class MichrosiaVariables {
 	public static class WorldVariables extends WorldSavedData {
 		public static final String DATA_NAME = "michrosia_worldvars";
+		public boolean First_Join = true;
 		public WorldVariables() {
 			super(DATA_NAME);
 		}
@@ -27,10 +28,12 @@ public class MichrosiaVariables {
 
 		@Override
 		public void read(CompoundNBT nbt) {
+			First_Join = nbt.getBoolean("First_Join");
 		}
 
 		@Override
 		public CompoundNBT write(CompoundNBT nbt) {
+			nbt.putBoolean("First_Join", First_Join);
 			return nbt;
 		}
 

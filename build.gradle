@@ -1,6 +1,8 @@
 buildscript {
     repositories {
-        maven { url = 'https://files.minecraftforge.net/maven' }
+        maven {
+        	url = 'https://files.minecraftforge.net/maven'
+        }
         jcenter()
         mavenCentral()
     }
@@ -11,9 +13,10 @@ buildscript {
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 
-version = '1.0'
-group = 'com.yourname.modid'
-archivesBaseName = 'modid'
+def modName = project.name
+version = "${project.version}-${project.mcVersion}"
+group = project.group
+archivesBaseName = project.modId
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
 
@@ -64,12 +67,20 @@ repositories {
         name = "CurseForge"
         url = "https://minecraft.curseforge.com/api/maven/"
     }
+    maven {  // Patchouli
+        url 'https://maven.blamejared.com'
+    }
 }
 
 dependencies {
     minecraft 'net.minecraftforge:forge:1.14.4-28.2.3'
 
-    compile 'filters:Filters:1.1.1:1.14.4'
+    compileOnly fg.deobf("mezz.jei:jei-${project.mcVersion}:${project.jeiVersion}:api")
+    runtimeOnly fg.deobf("mezz.jei:jei-${project.mcVersion}:${project.jeiVersion}")
+
+    compile "jeresources:JustEnoughResources-${project.mcVersion}:${project.jerVersion}"
+
+    runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:${project.mcVersion}-${project.patchouliVersion}")
 }
 
 apply from: 'mcreator.gradle'

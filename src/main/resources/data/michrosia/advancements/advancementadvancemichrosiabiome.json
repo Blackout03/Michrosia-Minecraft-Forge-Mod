@@ -1,6 +1,5 @@
 {
   "display": {
-    "background": "michrosia:textures/advancement.png",
     "icon": {
       "item": "michrosia:michrosiagrass"
     },
@@ -25,5 +24,6 @@
   },
   "rewards": {
     "experience": 10
-  }
+  },
+  "parent": "michrosia:advancementjoinworldmichrosia"
 }

@@ -18,7 +18,7 @@
     "rewardXP": 10,
     "achievementType": "task",
     "parent": {
-      "value": "No parent: root"
+      "value": "CUSTOM:AdvancementJoinWorldMichrosia"
     },
     "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"biome_entered\" x=\"20\" y=\"66\"><field name=\"biome\">CUSTOM:MichrosiaBiome</field><next><block type=\"advancement_trigger\" deletable=\"false\"/></next></block></xml>"
   }

@@ -1,0 +1,19 @@
+{
+  "group": "patchouli",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:book"
+    },
+    {
+      "item": "michrosia:michrosiadirt"
+    }
+  ],
+  "result": {
+	"item": "patchouli:guide_book",
+	"nbt": {
+    	"patchouli:book": "michrosia:michrosia_guide"
+	},
+    "count": 1
+  }
+}

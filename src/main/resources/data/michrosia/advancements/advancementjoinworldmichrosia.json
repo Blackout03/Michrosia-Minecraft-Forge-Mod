@@ -1,0 +1,26 @@
+{
+  "display": {
+    "background": "michrosia:textures/advancement.png",
+    "icon": {
+      "item": "michrosia:michrosiagrass"
+    },
+    "title": {
+      "translate": "advancements.advancementjoinworldmichrosia.title"
+    },
+    "description": {
+      "translate": "advancements.advancementjoinworldmichrosia.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "advancementjoinworldmichrosia": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 0
+  }
+}

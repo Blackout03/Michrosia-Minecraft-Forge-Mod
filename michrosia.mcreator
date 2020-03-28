@@ -175,7 +175,8 @@
       "sortid": 39,
       "compiles": true,
       "locked_code": false,
-      "ids": {}
+      "ids": {},
+      "registry_name": "michrosia"
     },
     {
       "name": "ReprocessorPartMain",
@@ -1056,9 +1057,96 @@
       "compiles": true,
       "locked_code": true,
       "ids": {}
+    },
+    {
+      "name": "ThankYouMessage",
+      "type": "procedure",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AdvancementJoinWorldMichrosia",
+      "type": "achievement",
+      "sortid": 105,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "JoinWorldMichrosiaAdvancement",
+      "type": "procedure",
+      "sortid": 106,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PatchouliBookRecipe",
+      "type": "recipe",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {}
+    },
+    {
+      "name": "JoinWorldPatchouliBook",
+      "type": "procedure",
+      "sortid": 108,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
-  "variable_elements": [],
+  "variable_elements": [
+    {
+      "name": "First_Join",
+      "type": "logic",
+      "scope": "world",
+      "value": "true"
+    }
+  ],
   "sound_elements": [],
   "language_map": {
     "en_us": {
@@ -1070,12 +1158,14 @@
       "tile.plutoniumore.name": "Plutonium Ore",
       "item.michrosia.plutoniumingot": "Plutonium Ingot",
       "tile.michrosiadirt.name": "Michrosia Dirt",
+      "advancements.advancementjoinworldmichrosia.title": "Michrosia",
       "advancements.advancementbuildthereprocessor.title": "Reprocessing.",
       "block.michrosia.michrosiagrasspath": "Michrosia Grass Path",
       "block.michrosia.strippedmichrosialog": "Stripped Michrosia Log",
+      "itemGroup.tabmichrosia": "Michrosia",
       "block.michrosia.michrosiaplankstrapdoor": "Michrosia Trap Door",
-      "itemGroup.tabmichrosiatab": "Michrosia Tab",
       "advancements.advancementbuildthereprocessor.descr": "Build the Reprocessor.",
+      "advancements.advancementjoinworldmichrosia.descr": "Join a world with Michrosia Installed",
       "block.michrosia.michrosiaplanksstairs": "Michrosia Stairs",
       "item.plutoniumnugget.name": "Plutonium Nugget",
       "block.michrosia.michrosiasapling": "Michrosia Sapling",
