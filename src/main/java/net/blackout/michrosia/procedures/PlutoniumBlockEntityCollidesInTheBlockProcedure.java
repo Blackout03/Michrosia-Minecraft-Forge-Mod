@@ -20,6 +20,6 @@ public class PlutoniumBlockEntityCollidesInTheBlockProcedure extends MichrosiaEl
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		if (entity instanceof LivingEntity)
-			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.POISON, (int) 60, (int) 3, (false), (false)));
+			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.POISON, (int) 60, (int) 3, (true), (false)));
 	}
 }

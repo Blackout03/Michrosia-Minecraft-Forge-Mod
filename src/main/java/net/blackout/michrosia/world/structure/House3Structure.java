@@ -47,7 +47,7 @@ public class House3Structure extends MichrosiaElements.ModElement {
 					dimensionCriteria = true;
 				if (!dimensionCriteria)
 					return false;
-				if ((random.nextInt(1000000) + 1) <= 500) {
+				if ((random.nextInt(1000000) + 1) <= 300) {
 					int count = random.nextInt(1) + 1;
 					for (int a = 0; a < count; a++) {
 						int i = ci + random.nextInt(16) + 8;

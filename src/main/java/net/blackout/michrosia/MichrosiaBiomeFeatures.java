@@ -23,11 +23,4 @@ public class MichrosiaBiomeFeatures {
 		biomeIn.addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Biome.createDecoratedFeature(Feature.FOREST_FLOWER,
 				IFeatureConfig.NO_FEATURE_CONFIG, Placement.COUNT_HEIGHTMAP_32, new FrequencyConfig(1)));
 	}
-
-	public static void addExtraDiamondOre(Biome biomeIn) {
-		biomeIn.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES,
-				Biome.createDecoratedFeature(Feature.ORE,
-						new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, Blocks.DIAMOND_ORE.getDefaultState(), 8),
-						Placement.COUNT_RANGE, new CountRangeConfig(3, 2, 2, 24)));
-	}
 }

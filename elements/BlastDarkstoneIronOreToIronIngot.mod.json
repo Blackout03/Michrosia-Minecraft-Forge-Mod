@@ -1,0 +1,19 @@
+{
+  "_fv": 6,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Blasting",
+    "xpReward": 5.0,
+    "recipeRetstackSize": 1,
+    "group": "iron",
+    "recipeShapeless": false,
+    "blastingInputStack": {
+      "value": "CUSTOM:DarkstoneIronOre"
+    },
+    "blastingReturnStack": {
+      "value": "Items.IRON_INGOT"
+    },
+    "name": "blastdarkstoneironoretoironingot",
+    "namespace": "mod"
+  }
+}

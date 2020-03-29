@@ -36,11 +36,11 @@ import java.util.List;
 import java.util.Collections;
 
 @MichrosiaElements.ModElement.Tag
-public class PlutoniumOreBlock extends MichrosiaElements.ModElement {
-	@ObjectHolder("michrosia:plutoniumore")
+public class DarkstoneIronOreBlock extends MichrosiaElements.ModElement {
+	@ObjectHolder("michrosia:darkstoneironore")
 	public static final Block block = null;
-	public PlutoniumOreBlock(MichrosiaElements instance) {
-		super(instance, 23);
+	public DarkstoneIronOreBlock(MichrosiaElements instance) {
+		super(instance, 110);
 	}
 
 	@Override
@@ -51,9 +51,9 @@ public class PlutoniumOreBlock extends MichrosiaElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(3f, 6f).lightValue(0).harvestLevel(2)
+			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(3f, 3f).lightValue(0).harvestLevel(1)
 					.harvestTool(ToolType.PICKAXE));
-			setRegistryName("plutoniumore");
+			setRegistryName("darkstoneironore");
 		}
 
 		@Override
@@ -88,12 +88,12 @@ public class PlutoniumOreBlock extends MichrosiaElements.ModElement {
 						return false;
 					return super.place(world, generator, rand, pos, config);
 				}
-			}, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("plutoniumore", "plutoniumore", blockAt -> {
+			}, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("darkstoneironore", "darkstoneironore", blockAt -> {
 				boolean blockCriteria = false;
 				if (blockAt.getBlock() == DarkstoneBlock.block.getDefaultState().getBlock())
 					blockCriteria = true;
 				return blockCriteria;
-			}), block.getDefaultState(), 4), Placement.COUNT_RANGE, new CountRangeConfig(8, 0, 0, 92)));
+			}), block.getDefaultState(), 12), Placement.COUNT_RANGE, new CountRangeConfig(16, 0, 0, 92)));
 		}
 	}
 }

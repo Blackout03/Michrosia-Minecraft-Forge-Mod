@@ -20,6 +20,6 @@ public class PlutoniumIngotMobIsHitWithItemProcedure extends MichrosiaElements.M
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		if (entity instanceof LivingEntity)
-			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.POISON, (int) 40, (int) 0, (false), (false)));
+			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.POISON, (int) 40, (int) 0, (true), (false)));
 	}
 }

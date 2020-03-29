@@ -48,7 +48,7 @@ public class PlutoniumBlockBlock extends MichrosiaElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(5f, 6f).lightValue(0).harvestLevel(1)
+			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(5f, 6f).lightValue(0).harvestLevel(2)
 					.harvestTool(ToolType.PICKAXE));
 			setRegistryName("plutoniumblock");
 		}
@@ -57,7 +57,7 @@ public class PlutoniumBlockBlock extends MichrosiaElements.ModElement {
 		@OnlyIn(Dist.CLIENT)
 		public void addInformation(ItemStack itemstack, IBlockReader world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent("Radioactive"));
+			list.add(new StringTextComponent("\u00A73\u00A7lRadioactive"));
 		}
 
 		@Override

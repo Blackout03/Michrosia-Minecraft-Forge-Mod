@@ -11,6 +11,7 @@ import net.minecraft.block.Blocks;
 import net.blackout.michrosia.item.PlutoniumNuggetItem;
 import net.blackout.michrosia.item.PlutoniumIngotItem;
 import net.blackout.michrosia.block.PlutoniumOreBlock;
+import net.blackout.michrosia.block.DarkstoneIronOreBlock;
 import net.blackout.michrosia.MichrosiaElements;
 
 @MichrosiaElements.ModElement.Tag
@@ -404,7 +405,7 @@ public class ReprocessorUpdateTickProcedure extends MichrosiaElements.ModElement
 							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == new ItemStack(PlutoniumIngotItem.block, (int) (1))
+				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == new ItemStack(PlutoniumNuggetItem.block, (int) (1))
 						.getItem())) || ((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								TileEntity inv = world.getTileEntity(pos);
@@ -427,7 +428,88 @@ public class ReprocessorUpdateTickProcedure extends MichrosiaElements.ModElement
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 				if (inv != null && (inv instanceof LockableLootTileEntity))
-					((LockableLootTileEntity) inv).setInventorySlotContents((int) (2), new ItemStack(PlutoniumIngotItem.block, (int) (((new Object() {
+					((LockableLootTileEntity) inv).setInventorySlotContents((int) (2),
+							new ItemStack(PlutoniumNuggetItem.block, (int) (((new Object() {
+								public int getAmount(BlockPos pos, int sltid) {
+									TileEntity inv = world.getTileEntity(pos);
+									if (inv instanceof LockableLootTileEntity) {
+										ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+										if (stack != null)
+											return stack.getCount();
+									}
+									return 0;
+								}
+							}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 3))));
+			}
+		}
+		if ((((new Object() {
+			public int getAmount(BlockPos pos, int sltid) {
+				TileEntity inv = world.getTileEntity(pos);
+				if (inv instanceof LockableLootTileEntity) {
+					ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+					if (stack != null)
+						return stack.getCount();
+				}
+				return 0;
+			}
+		}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) != 64) && ((((new Object() {
+			public ItemStack getItemStack(BlockPos pos, int sltid) {
+				TileEntity inv = world.getTileEntity(pos);
+				if (inv instanceof LockableLootTileEntity)
+					return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+				return ItemStack.EMPTY;
+			}
+		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (0))).getItem() == new ItemStack(DarkstoneIronOreBlock.block, (int) (1))
+				.getItem()) && ((new Object() {
+					public ItemStack getItemStack(BlockPos pos, int sltid) {
+						TileEntity inv = world.getTileEntity(pos);
+						if (inv instanceof LockableLootTileEntity)
+							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						return ItemStack.EMPTY;
+					}
+				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(Items.IRON_INGOT, (int) (1))
+						.getItem()))
+				&& ((((new Object() {
+					public int getAmount(BlockPos pos, int sltid) {
+						TileEntity inv = world.getTileEntity(pos);
+						if (inv instanceof LockableLootTileEntity) {
+							ItemStack stack = ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+							if (stack != null)
+								return stack.getCount();
+						}
+						return 0;
+					}
+				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) <= 62) && ((new Object() {
+					public ItemStack getItemStack(BlockPos pos, int sltid) {
+						TileEntity inv = world.getTileEntity(pos);
+						if (inv instanceof LockableLootTileEntity)
+							return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+						return ItemStack.EMPTY;
+					}
+				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == new ItemStack(Items.IRON_INGOT, (int) (1))
+						.getItem())) || ((new Object() {
+							public ItemStack getItemStack(BlockPos pos, int sltid) {
+								TileEntity inv = world.getTileEntity(pos);
+								if (inv instanceof LockableLootTileEntity)
+									return ((LockableLootTileEntity) inv).getStackInSlot(sltid);
+								return ItemStack.EMPTY;
+							}
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (2))).getItem() == new ItemStack(Blocks.AIR, (int) (1))
+								.getItem()))))) {
+			{
+				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+				if (inv instanceof LockableLootTileEntity)
+					((LockableLootTileEntity) inv).decrStackSize((int) (0), (int) (1));
+			}
+			{
+				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+				if (inv instanceof LockableLootTileEntity)
+					((LockableLootTileEntity) inv).decrStackSize((int) (1), (int) (1));
+			}
+			{
+				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+				if (inv != null && (inv instanceof LockableLootTileEntity))
+					((LockableLootTileEntity) inv).setInventorySlotContents((int) (2), new ItemStack(Items.IRON_INGOT, (int) (((new Object() {
 						public int getAmount(BlockPos pos, int sltid) {
 							TileEntity inv = world.getTileEntity(pos);
 							if (inv instanceof LockableLootTileEntity) {

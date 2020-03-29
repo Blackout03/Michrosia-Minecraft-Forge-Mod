@@ -64,7 +64,7 @@ public class PlutoniumNuggetItem extends MichrosiaElements.ModElement {
 		@Override
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent("Radioactive"));
+			list.add(new StringTextComponent("\u00A73\u00A7lRadioactive"));
 		}
 
 		@Override

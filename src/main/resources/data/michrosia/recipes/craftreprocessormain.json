@@ -8,13 +8,13 @@
   ],
   "key": {
     "0": {
-      "item": "minecraft:iron_ingot"
+      "item": "minecraft:gold_ingot"
     },
     "1": {
-      "item": "minecraft:blue_dye"
+      "item": "minecraft:lapis_lazuli"
     },
     "2": {
-      "item": "minecraft:iron_ingot"
+      "item": "minecraft:gold_ingot"
     },
     "3": {
       "item": "michrosia:reprocessorpart"
@@ -26,13 +26,13 @@
       "item": "michrosia:reprocessorpart"
     },
     "6": {
-      "item": "minecraft:iron_ingot"
+      "item": "minecraft:gold_ingot"
     },
     "7": {
-      "item": "minecraft:blue_dye"
+      "item": "minecraft:lapis_lazuli"
     },
     "8": {
-      "item": "minecraft:iron_ingot"
+      "item": "minecraft:gold_ingot"
     }
   },
   "result": {

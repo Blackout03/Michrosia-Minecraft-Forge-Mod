@@ -54,7 +54,7 @@
       "type": "item",
       "sortid": 25,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "ids": {}
     },
     {
@@ -78,7 +78,7 @@
       "type": "item",
       "sortid": 24,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "ids": {}
     },
     {
@@ -118,7 +118,7 @@
       "type": "block",
       "sortid": 26,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "ids": {}
     },
     {
@@ -739,54 +739,6 @@
       }
     },
     {
-      "name": "GamemodeCCommandExecuted",
-      "type": "procedure",
-      "sortid": 61,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "GamemodeC",
-      "type": "command",
-      "sortid": 61,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "GamemodeSCommandExecuted",
-      "type": "procedure",
-      "sortid": 62,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "GamemodeS",
-      "type": "command",
-      "sortid": 63,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
       "name": "LeavesBlockTag",
       "type": "tag",
       "sortid": 65,
@@ -979,22 +931,6 @@
       "ids": {}
     },
     {
-      "name": "House1",
-      "type": "structure",
-      "sortid": 93,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "House2",
-      "type": "structure",
-      "sortid": 94,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
       "name": "House3",
       "type": "structure",
       "sortid": 95,
@@ -1145,6 +1081,30 @@
       "compiles": true,
       "locked_code": false,
       "ids": {}
+    },
+    {
+      "name": "DarkstoneIronOre",
+      "type": "block",
+      "sortid": 110,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "SmeltDarkstoneIronOreToIronIngot",
+      "type": "recipe",
+      "sortid": 111,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "BlastDarkstoneIronOreToIronIngot",
+      "type": "recipe",
+      "sortid": 112,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
     }
   ],
   "variable_elements": [
@@ -1200,6 +1160,7 @@
       "tile.michrosiagrass.name": "Michrosia Grass",
       "block.michrosia.plutoniumblock": "Plutonium Block",
       "tile.darkstone.name": "Darkstone",
+      "block.michrosia.darkstoneironore": "Iron Ore",
       "block.michrosia.darkstone": "Darkstone",
       "advancements.advancementcraftreprocessorpart.title": "What is a Reprocessor?",
       "block.michrosia.darkstone2": "Darkstone",

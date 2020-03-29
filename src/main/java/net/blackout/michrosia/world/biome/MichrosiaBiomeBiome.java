@@ -83,7 +83,6 @@ public class MichrosiaBiomeBiome extends MichrosiaElements.ModElement {
 			DefaultBiomeFeatures.addDoubleFlowers(this);
 			DefaultBiomeFeatures.addFossils(this);
 			MichrosiaBiomeFeatures.addMichrosiaVegetation(this);
-			MichrosiaBiomeFeatures.addExtraDiamondOre(this);
 			addFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Biome.createDecoratedFeature(new CustomTreeFeature(),
 					IFeatureConfig.NO_FEATURE_CONFIG, Placement.COUNT_EXTRA_HEIGHTMAP, new AtSurfaceWithExtraConfig(2, 2.1F, 1)));
 			this.addSpawn(EntityClassification.MONSTER, new Biome.SpawnListEntry(EntityType.SPIDER, 100, 4, 4));

@@ -23,7 +23,7 @@
       "value": "Blocks.AIR"
     },
     "dropAmount": 0,
-    "isReplaceable": false,
+    "isReplaceable": true,
     "colorOnMap": "RED",
     "creativePickItem": {
       "value": ""

@@ -9,13 +9,13 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "Items.IRON_INGOT"
+        "value": "Items.GOLD_INGOT"
       },
       {
-        "value": "Items.DYE#18"
+        "value": "Items.DYE#4"
       },
       {
-        "value": "Items.IRON_INGOT"
+        "value": "Items.GOLD_INGOT"
       },
       {
         "value": "CUSTOM:ReprocessorPart"
@@ -27,13 +27,13 @@
         "value": "CUSTOM:ReprocessorPart"
       },
       {
-        "value": "Items.IRON_INGOT"
+        "value": "Items.GOLD_INGOT"
       },
       {
-        "value": "Items.DYE#18"
+        "value": "Items.DYE#4"
       },
       {
-        "value": "Items.IRON_INGOT"
+        "value": "Items.GOLD_INGOT"
       }
     ],
     "recipeReturnStack": {
