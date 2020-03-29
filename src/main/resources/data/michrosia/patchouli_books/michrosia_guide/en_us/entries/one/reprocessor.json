@@ -8,27 +8,28 @@
 	"pages": [
 		{
 			"type": "text",
-			"text": "How do you make the Reprocessor?"
+			"text": "Build this multiblock structure than right click the Main Reprocessor Part"
 		},
 		{
 			"type": "multiblock",
 			"multiblock_id": "",
 			"name": "Reprocessor",
-			"text": "Build this multiblock structure than right click the Main Reprocessor Part",
 			"multiblock": {
     		"pattern": [
 					["P"],
 					["M"],
-					["0"]
+					["0"],
+					[" "]
 				],
     		"mapping": {
+					" ": "ANY",
 					"P": "michrosia:reprocessorpart",
 					"0": "michrosia:reprocessorpart",
 					"M": "michrosia:reprocessorpartmain"
 				},
 	    	"symmetrical": true,
-				"offset": [0, 5, 0],
-				"view_offset": [5, 5, 5]
+				"offset": [0, 0, 0],
+				"view_offset": [0, 0, 0]
 			}
 		}
 	]

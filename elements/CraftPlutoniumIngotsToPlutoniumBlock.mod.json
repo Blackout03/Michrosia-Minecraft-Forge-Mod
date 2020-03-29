@@ -9,7 +9,7 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "CUSTOM:PlutoniumIngot"
+        "value": "TAG:plutonium_ingot"
       },
       {
         "value": "CUSTOM:PlutoniumIngot"

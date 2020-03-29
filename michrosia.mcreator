@@ -927,7 +927,7 @@
       "type": "recipe",
       "sortid": 85,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "ids": {}
     },
     {
@@ -935,7 +935,7 @@
       "type": "recipe",
       "sortid": 86,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "ids": {}
     },
     {
@@ -1137,6 +1137,14 @@
           }
         ]
       }
+    },
+    {
+      "name": "PlutoniumIngotItemTag",
+      "type": "tag",
+      "sortid": 109,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
     }
   ],
   "variable_elements": [
