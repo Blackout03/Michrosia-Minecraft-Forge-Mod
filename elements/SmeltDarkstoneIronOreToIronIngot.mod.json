@@ -11,7 +11,7 @@
       "value": "CUSTOM:DarkstoneIronOre"
     },
     "smeltingReturnStack": {
-      "value": "Items.IRON_INGOT"
+      "value": "Items.IRON_NUGGET"
     },
     "name": "smeltdarkstoneironoretoironingot",
     "namespace": "mod"

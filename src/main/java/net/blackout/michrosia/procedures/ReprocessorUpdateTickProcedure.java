@@ -479,7 +479,7 @@ public class ReprocessorUpdateTickProcedure extends MichrosiaElements.ModElement
 						}
 						return 0;
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) <= 62) && ((new Object() {
+				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) <= 63) && ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
 						if (inv instanceof LockableLootTileEntity)
@@ -519,7 +519,7 @@ public class ReprocessorUpdateTickProcedure extends MichrosiaElements.ModElement
 							}
 							return 0;
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 2))));
+					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) + 1))));
 			}
 		}
 	}
