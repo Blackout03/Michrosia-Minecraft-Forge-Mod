@@ -236,6 +236,10 @@
       "metadata": {
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "int"
           },
@@ -987,14 +991,6 @@
       "ids": {}
     },
     {
-      "name": "TagBadBeaconBase",
-      "type": "tag",
-      "sortid": 102,
-      "compiles": true,
-      "locked_code": true,
-      "ids": {}
-    },
-    {
       "name": "ThankYouMessage",
       "type": "procedure",
       "sortid": 104,
@@ -1105,6 +1101,102 @@
       "compiles": true,
       "locked_code": false,
       "ids": {}
+    },
+    {
+      "name": "Apple",
+      "type": "food",
+      "sortid": 113,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "GreenAppleToGoldApple",
+      "type": "recipe",
+      "sortid": 114,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "MichrosiaStick",
+      "type": "item",
+      "sortid": 115,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Wrench",
+      "type": "tool",
+      "sortid": 116,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "ReprocessorPartOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 117,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ReprocessorPartMainOnBlockRightClick",
+      "type": "procedure",
+      "sortid": 118,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -1134,16 +1226,19 @@
       "block.michrosia.michrosiaplankstrapdoor": "Michrosia Trap Door",
       "advancements.advancementbuildthereprocessor.descr": "Build the Reprocessor.",
       "advancements.advancementjoinworldmichrosia.descr": "Join a world with Michrosia Installed",
-      "item.plutoniumnugget.name": "Plutonium Nugget",
       "block.michrosia.michrosiaplanksstairs": "Michrosia Stairs",
+      "item.plutoniumnugget.name": "Plutonium Nugget",
       "block.michrosia.michrosiasapling": "Michrosia Sapling",
-      "block.michrosia.michrosiadirt": "Michrosia Dirt",
       "advancements.advancementcraftreprocessorpart.descr": "Craft a Reprocessor Part",
+      "block.michrosia.michrosiadirt": "Michrosia Dirt",
+      "item.michrosia.apple": "Apple",
       "block.michrosia.strippedmichrosiawood": "Stripped Michrosia Wood",
       "block.michrosia.michrosiagrass": "Michrosia Grass",
+      "item.michrosia.michrosiastick": "Michrosia Stick",
       "block.michrosia.darkcobblestoneslab": "Dark Cobblestone Slab",
       "block.michrosia.michrosiagrassshort2": "Michrosia Grass",
       "block.michrosia.michrosiagrassshort1": "Michrosia Grass",
+      "item.michrosia.wrench": "Wrench",
       "item.plutoniumingot.name": "Plutonium Ingot",
       "block.michrosia.darkcobblestonewall": "Dark Cobblestone Wall",
       "biome.michrosia.michrosiabiome": "Michrosia",

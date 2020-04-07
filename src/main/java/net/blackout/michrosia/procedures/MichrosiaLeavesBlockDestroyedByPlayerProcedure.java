@@ -4,6 +4,7 @@ import net.minecraft.world.World;
 import net.minecraft.item.ItemStack;
 import net.minecraft.entity.item.ItemEntity;
 
+import net.blackout.michrosia.item.AppleItem;
 import net.blackout.michrosia.block.MichrosiaSaplingBlock;
 import net.blackout.michrosia.MichrosiaElements;
 
@@ -34,9 +35,16 @@ public class MichrosiaLeavesBlockDestroyedByPlayerProcedure extends MichrosiaEle
 		int y = (int) dependencies.get("y");
 		int z = (int) dependencies.get("z");
 		World world = (World) dependencies.get("world");
-		if ((Math.random() < 0.01)) {
+		if ((Math.random() < 0.05)) {
 			if (!world.isRemote) {
 				ItemEntity entityToSpawn = new ItemEntity(world, x, y, z, new ItemStack(MichrosiaSaplingBlock.block, (int) (1)));
+				entityToSpawn.setPickupDelay(10);
+				world.addEntity(entityToSpawn);
+			}
+		}
+		if ((Math.random() < 0.005)) {
+			if (!world.isRemote) {
+				ItemEntity entityToSpawn = new ItemEntity(world, x, y, z, new ItemStack(AppleItem.block, (int) (1)));
 				entityToSpawn.setPickupDelay(10);
 				world.addEntity(entityToSpawn);
 			}

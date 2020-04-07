@@ -75,13 +75,15 @@ repositories {
 dependencies {
     minecraft 'net.minecraftforge:forge:1.14.4-28.2.3'
 
+	// Just Enough Items
     compileOnly fg.deobf("mezz.jei:jei-${project.mcVersion}:${project.jeiVersion}:api")
     runtimeOnly fg.deobf("mezz.jei:jei-${project.mcVersion}:${project.jeiVersion}")
 
+	// Just Enough Resources
     compile "jeresources:JustEnoughResources-${project.mcVersion}:${project.jerVersion}"
 
-    runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:${project.mcVersion}-${project.patchouliVersion}")
+	// Patchouli
+	runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:${project.mcVersion}-${project.patchouliVersion}")
 }
 
 apply from: 'mcreator.gradle'
-
