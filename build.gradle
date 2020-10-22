@@ -1,8 +1,6 @@
 buildscript {
     repositories {
-        maven {
-        	url = 'https://files.minecraftforge.net/maven'
-        }
+        maven { url = 'https://files.minecraftforge.net/maven' }
         jcenter()
         mavenCentral()
     }
@@ -13,15 +11,14 @@ buildscript {
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 
-def modName = project.name
-version = "${project.version}-${project.mcVersion}"
-group = project.group
-archivesBaseName = project.modId
+version = '1.0'
+group = 'com.yourname.modid'
+archivesBaseName = 'modid'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
 
 minecraft {
-    mappings channel: 'snapshot', version: '20190719-1.14.3'
+    mappings channel: 'snapshot', version: '20200514-1.15.1'
 
     runs {
         client {
@@ -52,38 +49,9 @@ minecraft {
     }
 }
 
-repositories {
-    jcenter()
-    mavenLocal()
-
-    maven { // JustEnoughItems
-        url = "https://dvs1.progwml6.com/files/maven/"
-    }
-    maven { // JustEnoughResources
-        name "bintray-way2muchnoise"
-        url "https://dl.bintray.com/way2muchnoise/dev"
-    }
-    maven { // CurseForge
-        name = "CurseForge"
-        url = "https://minecraft.curseforge.com/api/maven/"
-    }
-    maven {  // Patchouli
-        url 'https://maven.blamejared.com'
-    }
-}
-
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.14.4-28.2.3'
-
-	// Just Enough Items
-    compileOnly fg.deobf("mezz.jei:jei-${project.mcVersion}:${project.jeiVersion}:api")
-    runtimeOnly fg.deobf("mezz.jei:jei-${project.mcVersion}:${project.jeiVersion}")
-
-	// Just Enough Resources
-    compile "jeresources:JustEnoughResources-${project.mcVersion}:${project.jerVersion}"
-
-	// Patchouli
-	runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:${project.mcVersion}-${project.patchouliVersion}")
+    minecraft 'net.minecraftforge:forge:1.15.2-31.2.0'
 }
 
 apply from: 'mcreator.gradle'
+

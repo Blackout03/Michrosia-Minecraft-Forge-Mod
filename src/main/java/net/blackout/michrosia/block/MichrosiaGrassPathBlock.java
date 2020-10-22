@@ -2,6 +2,7 @@
 package net.blackout.michrosia.block;
 
 import net.minecraftforge.registries.ObjectHolder;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
@@ -12,12 +13,14 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.ISelectionContext;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
 import net.minecraft.entity.Entity;
+import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.BlockState;
@@ -25,16 +28,18 @@ import net.minecraft.block.Block;
 
 import net.blackout.michrosia.procedures.MichrosiaGrassPathEntityWalksOnTheBlockProcedure;
 import net.blackout.michrosia.itemgroup.MichrosiaTabItemGroup;
-import net.blackout.michrosia.MichrosiaElements;
+import net.blackout.michrosia.MichrosiaModElements;
 
+import java.util.Map;
 import java.util.List;
+import java.util.HashMap;
 import java.util.Collections;
 
-@MichrosiaElements.ModElement.Tag
-public class MichrosiaGrassPathBlock extends MichrosiaElements.ModElement {
+@MichrosiaModElements.ModElement.Tag
+public class MichrosiaGrassPathBlock extends MichrosiaModElements.ModElement {
 	@ObjectHolder("michrosia:michrosiagrasspath")
 	public static final Block block = null;
-	public MichrosiaGrassPathBlock(MichrosiaElements instance) {
+	public MichrosiaGrassPathBlock(MichrosiaModElements instance) {
 		super(instance, 3);
 	}
 
@@ -44,17 +49,17 @@ public class MichrosiaGrassPathBlock extends MichrosiaElements.ModElement {
 		elements.items
 				.add(() -> new BlockItem(block, new Item.Properties().group(MichrosiaTabItemGroup.tab)).setRegistryName(block.getRegistryName()));
 	}
+
+	@Override
+	@OnlyIn(Dist.CLIENT)
+	public void clientLoad(FMLClientSetupEvent event) {
+		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
+	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
 			super(Block.Properties.create(Material.ORGANIC).sound(SoundType.GROUND).hardnessAndResistance(0.6f, 0.6499999999999999f).lightValue(0)
-					.harvestLevel(1).harvestTool(ToolType.SHOVEL));
+					.harvestLevel(1).harvestTool(ToolType.SHOVEL).notSolid());
 			setRegistryName("michrosiagrasspath");
-		}
-
-		@OnlyIn(Dist.CLIENT)
-		@Override
-		public BlockRenderLayer getRenderLayer() {
-			return BlockRenderLayer.CUTOUT;
 		}
 
 		@Override
@@ -69,7 +74,8 @@ public class MichrosiaGrassPathBlock extends MichrosiaElements.ModElement {
 
 		@Override
 		public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
-			return VoxelShapes.create(0D, 0D, 0D, 1D, 0.9D, 1D);
+			Vec3d offset = state.getOffset(world, pos);
+			return VoxelShapes.create(0D, 0D, 0D, 1D, 0.9D, 1D).withOffset(offset.x, offset.y, offset.z);
 		}
 
 		@Override
@@ -87,7 +93,7 @@ public class MichrosiaGrassPathBlock extends MichrosiaElements.ModElement {
 			int y = pos.getY();
 			int z = pos.getZ();
 			{
-				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
 				MichrosiaGrassPathEntityWalksOnTheBlockProcedure.executeProcedure($_dependencies);
 			}

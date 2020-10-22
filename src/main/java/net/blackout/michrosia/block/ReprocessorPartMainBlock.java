@@ -24,16 +24,16 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.blackout.michrosia.itemgroup.MichrosiaTabItemGroup;
-import net.blackout.michrosia.MichrosiaElements;
+import net.blackout.michrosia.MichrosiaModElements;
 
 import java.util.List;
 import java.util.Collections;
 
-@MichrosiaElements.ModElement.Tag
-public class ReprocessorPartMainBlock extends MichrosiaElements.ModElement {
+@MichrosiaModElements.ModElement.Tag
+public class ReprocessorPartMainBlock extends MichrosiaModElements.ModElement {
 	@ObjectHolder("michrosia:reprocessorpartmain")
 	public static final Block block = null;
-	public ReprocessorPartMainBlock(MichrosiaElements instance) {
+	public ReprocessorPartMainBlock(MichrosiaModElements instance) {
 		super(instance, 27);
 	}
 
@@ -67,6 +67,7 @@ public class ReprocessorPartMainBlock extends MichrosiaElements.ModElement {
 
 		@Override
 		public BlockState getStateForPlacement(BlockItemUseContext context) {
+			;
 			return this.getDefaultState().with(FACING, context.getPlacementHorizontalFacing().getOpposite());
 		}
 

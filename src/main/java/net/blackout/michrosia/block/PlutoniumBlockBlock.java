@@ -27,16 +27,18 @@ import net.minecraft.block.Block;
 import net.blackout.michrosia.procedures.PlutoniumBlockEntityWalksOnTheBlockProcedure;
 import net.blackout.michrosia.procedures.PlutoniumBlockEntityCollidesInTheBlockProcedure;
 import net.blackout.michrosia.itemgroup.MichrosiaTabItemGroup;
-import net.blackout.michrosia.MichrosiaElements;
+import net.blackout.michrosia.MichrosiaModElements;
 
+import java.util.Map;
 import java.util.List;
+import java.util.HashMap;
 import java.util.Collections;
 
-@MichrosiaElements.ModElement.Tag
-public class PlutoniumBlockBlock extends MichrosiaElements.ModElement {
+@MichrosiaModElements.ModElement.Tag
+public class PlutoniumBlockBlock extends MichrosiaModElements.ModElement {
 	@ObjectHolder("michrosia:plutoniumblock")
 	public static final Block block = null;
-	public PlutoniumBlockBlock(MichrosiaElements instance) {
+	public PlutoniumBlockBlock(MichrosiaModElements instance) {
 		super(instance, 26);
 	}
 
@@ -48,7 +50,7 @@ public class PlutoniumBlockBlock extends MichrosiaElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(5f, 6f).lightValue(0).harvestLevel(2)
+			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(5f, 6f).lightValue(0).harvestLevel(1)
 					.harvestTool(ToolType.PICKAXE));
 			setRegistryName("plutoniumblock");
 		}
@@ -57,7 +59,7 @@ public class PlutoniumBlockBlock extends MichrosiaElements.ModElement {
 		@OnlyIn(Dist.CLIENT)
 		public void addInformation(ItemStack itemstack, IBlockReader world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent("\u00A73\u00A7lRadioactive"));
+			list.add(new StringTextComponent("\\u00A73\\u00A7lRadioactive"));
 		}
 
 		@Override
@@ -85,7 +87,7 @@ public class PlutoniumBlockBlock extends MichrosiaElements.ModElement {
 			int y = pos.getY();
 			int z = pos.getZ();
 			{
-				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
 				PlutoniumBlockEntityCollidesInTheBlockProcedure.executeProcedure($_dependencies);
 			}
@@ -98,7 +100,7 @@ public class PlutoniumBlockBlock extends MichrosiaElements.ModElement {
 			int y = pos.getY();
 			int z = pos.getZ();
 			{
-				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
 				PlutoniumBlockEntityWalksOnTheBlockProcedure.executeProcedure($_dependencies);
 			}

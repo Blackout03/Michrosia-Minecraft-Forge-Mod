@@ -18,16 +18,16 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.blackout.michrosia.itemgroup.MichrosiaTabItemGroup;
-import net.blackout.michrosia.MichrosiaElements;
+import net.blackout.michrosia.MichrosiaModElements;
 
 import java.util.List;
 import java.util.Collections;
 
-@MichrosiaElements.ModElement.Tag
-public class MichrosiaPlanksBlock extends MichrosiaElements.ModElement {
+@MichrosiaModElements.ModElement.Tag
+public class MichrosiaPlanksBlock extends MichrosiaModElements.ModElement {
 	@ObjectHolder("michrosia:michrosiaplanks")
 	public static final Block block = null;
-	public MichrosiaPlanksBlock(MichrosiaElements instance) {
+	public MichrosiaPlanksBlock(MichrosiaModElements instance) {
 		super(instance, 8);
 	}
 

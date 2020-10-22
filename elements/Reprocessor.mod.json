@@ -1,5 +1,5 @@
 {
-  "_fv": 6,
+  "_fv": 13,
   "_type": "block",
   "definition": {
     "texture": "reprocessor",
@@ -11,7 +11,12 @@
     "renderType": 2,
     "customModelName": "reprocessor:default",
     "rotationMode": 1,
+    "emissiveRendering": false,
+    "displayFluidOverlay": false,
+    "itemTexture": "",
+    "particleTexture": "",
     "hasTransparency": true,
+    "connectedSides": false,
     "transparencyType": "SOLID",
     "mx": 0.0,
     "my": -1.0,
@@ -19,21 +24,21 @@
     "Mx": 1.0,
     "My": 2.0,
     "Mz": 1.0,
-    "faceShape": "SOLID",
     "name": "Reprocessor",
     "specialInfo": [],
     "hardness": 3.0,
     "resistance": 10.0,
     "hasGravity": false,
+    "isWaterloggable": false,
     "creativeTab": {
       "value": "No creative tab entry"
     },
     "destroyTool": "pickaxe",
-    "affectedBySilkTouch": true,
     "customDrop": {
       "value": "CUSTOM:ReprocessorPartMain"
     },
     "dropAmount": 1,
+    "useLootTableForDrops": false,
     "isBeaconBase": false,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
@@ -49,6 +54,8 @@
     "creativePickItem": {
       "value": "CUSTOM:ReprocessorPartMain"
     },
+    "offsetType": "NONE",
+    "aiPathNodeType": "DEFAULT",
     "flammability": 0,
     "fireSpreadSpeed": 0,
     "isLadder": false,
@@ -68,7 +75,6 @@
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
-    "particleSpawningCondition": "ALWAYS",
     "hasInventory": true,
     "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,
@@ -79,6 +85,18 @@
     "inventoryOutSlotIDs": [
       2
     ],
+    "inventoryInSlotIDs": [],
+    "hasEnergyStorage": true,
+    "energyInitial": 0,
+    "energyCapacity": 10000,
+    "energyMaxReceive": 500,
+    "energyMaxExtract": 500,
+    "isFluidTank": false,
+    "fluidCapacity": 8000,
+    "fluidRestrictions": [],
+    "onNeighbourBlockChanges": {
+      "name": "ReprocessorNeighbourBlockChanges"
+    },
     "onTickUpdate": {
       "name": "ReprocessorUpdateTick"
     },

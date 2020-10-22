@@ -19,16 +19,16 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.blackout.michrosia.itemgroup.MichrosiaTabItemGroup;
-import net.blackout.michrosia.MichrosiaElements;
+import net.blackout.michrosia.MichrosiaModElements;
 
 import java.util.List;
 import java.util.Collections;
 
-@MichrosiaElements.ModElement.Tag
-public class MichrosiaDirtBlock extends MichrosiaElements.ModElement {
+@MichrosiaModElements.ModElement.Tag
+public class MichrosiaDirtBlock extends MichrosiaModElements.ModElement {
 	@ObjectHolder("michrosia:michrosiadirt")
 	public static final Block block = null;
-	public MichrosiaDirtBlock(MichrosiaElements instance) {
+	public MichrosiaDirtBlock(MichrosiaModElements instance) {
 		super(instance, 2);
 	}
 

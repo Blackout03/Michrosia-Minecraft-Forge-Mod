@@ -3,11 +3,17 @@ package net.blackout.michrosia.gui;
 
 import org.lwjgl.opengl.GL11;
 
+import net.minecraftforge.items.SlotItemHandler;
+import net.minecraftforge.items.ItemStackHandler;
+import net.minecraftforge.items.IItemHandler;
+import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.fml.network.NetworkEvent;
 import net.minecraftforge.fml.network.IContainerFactory;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.energy.CapabilityEnergy;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
@@ -21,28 +27,27 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.inventory.container.Slot;
 import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.inventory.container.Container;
-import net.minecraft.inventory.Inventory;
-import net.minecraft.inventory.IInventory;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.Entity;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.Minecraft;
 
-import net.blackout.michrosia.procedures.ReprocessorUpdateTickProcedure;
-import net.blackout.michrosia.MichrosiaElements;
-import net.blackout.michrosia.Michrosia;
+import net.blackout.michrosia.MichrosiaModElements;
+import net.blackout.michrosia.MichrosiaMod;
 
 import java.util.function.Supplier;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.Map;
 import java.util.HashMap;
 
-@MichrosiaElements.ModElement.Tag
-public class ReprocessorGUIGui extends MichrosiaElements.ModElement {
+@MichrosiaModElements.ModElement.Tag
+public class ReprocessorGUIGui extends MichrosiaModElements.ModElement {
 	public static HashMap guistate = new HashMap();
 	private static ContainerType<GuiContainerMod> containerType = null;
-	public ReprocessorGUIGui(MichrosiaElements instance) {
+	public ReprocessorGUIGui(MichrosiaModElements instance) {
 		super(instance, 43);
 		elements.addNetworkMessage(ButtonPressedMessage.class, ButtonPressedMessage::buffer, ButtonPressedMessage::new,
 				ButtonPressedMessage::handler);
@@ -54,7 +59,7 @@ public class ReprocessorGUIGui extends MichrosiaElements.ModElement {
 
 	@OnlyIn(Dist.CLIENT)
 	public void initElements() {
-		ScreenManager.registerFactory(containerType, GuiWindow::new);
+		DeferredWorkQueue.runLater(() -> ScreenManager.registerFactory(containerType, GuiWindow::new));
 	}
 
 	@SubscribeEvent
@@ -71,33 +76,54 @@ public class ReprocessorGUIGui extends MichrosiaElements.ModElement {
 		private World world;
 		private PlayerEntity entity;
 		private int x, y, z;
-		private IInventory internal;
+		private IItemHandler internal;
 		private Map<Integer, Slot> customSlots = new HashMap<>();
+		private boolean bound = false;
 		public GuiContainerMod(int id, PlayerInventory inv, PacketBuffer extraData) {
 			super(containerType, id);
 			this.entity = inv.player;
 			this.world = inv.player.world;
-			this.internal = new Inventory(3);
+			this.internal = new ItemStackHandler(2);
+			BlockPos pos = null;
 			if (extraData != null) {
-				BlockPos pos = extraData.readBlockPos();
+				pos = extraData.readBlockPos();
 				this.x = pos.getX();
 				this.y = pos.getY();
 				this.z = pos.getZ();
-				TileEntity ent = inv.player != null ? inv.player.world.getTileEntity(pos) : null;
-				if (ent instanceof IInventory)
-					this.internal = (IInventory) ent;
 			}
-			internal.openInventory(inv.player);
-			this.customSlots.put(0, this.addSlot(new Slot(internal, 0, 44, 21) {
-			}));
-			this.customSlots.put(1, this.addSlot(new Slot(internal, 1, 44, 48) {
-				@Override
-				public void onSlotChanged() {
-					super.onSlotChanged();
-					GuiContainerMod.this.slotChanged(1, 0, 0);
+			if (pos != null) {
+				if (extraData.readableBytes() == 1) { // bound to item
+					byte hand = extraData.readByte();
+					ItemStack itemstack;
+					if (hand == 0)
+						itemstack = this.entity.getHeldItemMainhand();
+					else
+						itemstack = this.entity.getHeldItemOffhand();
+					itemstack.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+						this.internal = capability;
+						this.bound = true;
+					});
+				} else if (extraData.readableBytes() > 1) {
+					extraData.readByte(); // drop padding
+					Entity entity = world.getEntityByID(extraData.readVarInt());
+					if (entity != null)
+						entity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							this.internal = capability;
+							this.bound = true;
+						});
+				} else { // might be bound to block
+					TileEntity ent = inv.player != null ? inv.player.world.getTileEntity(pos) : null;
+					if (ent != null) {
+						ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							this.internal = capability;
+							this.bound = true;
+						});
+					}
 				}
+			}
+			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 52, 35) {
 			}));
-			this.customSlots.put(2, this.addSlot(new Slot(internal, 2, 116, 35) {
+			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 106, 35) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
@@ -118,7 +144,7 @@ public class ReprocessorGUIGui extends MichrosiaElements.ModElement {
 
 		@Override
 		public boolean canInteractWith(PlayerEntity player) {
-			return internal.isUsableByPlayer(player);
+			return true;
 		}
 
 		@Override
@@ -128,18 +154,18 @@ public class ReprocessorGUIGui extends MichrosiaElements.ModElement {
 			if (slot != null && slot.getHasStack()) {
 				ItemStack itemstack1 = slot.getStack();
 				itemstack = itemstack1.copy();
-				if (index < 3) {
-					if (!this.mergeItemStack(itemstack1, 3, this.inventorySlots.size(), true)) {
+				if (index < 2) {
+					if (!this.mergeItemStack(itemstack1, 2, this.inventorySlots.size(), true)) {
 						return ItemStack.EMPTY;
 					}
 					slot.onSlotChange(itemstack1, itemstack);
-				} else if (!this.mergeItemStack(itemstack1, 0, 3, false)) {
-					if (index < 3 + 27) {
-						if (!this.mergeItemStack(itemstack1, 3 + 27, this.inventorySlots.size(), true)) {
+				} else if (!this.mergeItemStack(itemstack1, 0, 2, false)) {
+					if (index < 2 + 27) {
+						if (!this.mergeItemStack(itemstack1, 2 + 27, this.inventorySlots.size(), true)) {
 							return ItemStack.EMPTY;
 						}
 					} else {
-						if (!this.mergeItemStack(itemstack1, 3, 3 + 27, false)) {
+						if (!this.mergeItemStack(itemstack1, 2, 2 + 27, false)) {
 							return ItemStack.EMPTY;
 						}
 					}
@@ -242,15 +268,23 @@ public class ReprocessorGUIGui extends MichrosiaElements.ModElement {
 		@Override
 		public void onContainerClosed(PlayerEntity playerIn) {
 			super.onContainerClosed(playerIn);
-			internal.closeInventory(playerIn);
-			if ((internal instanceof Inventory) && (playerIn instanceof ServerPlayerEntity)) {
-				this.clearContainer(playerIn, playerIn.world, internal);
+			if (!bound && (playerIn instanceof ServerPlayerEntity)) {
+				if (!playerIn.isAlive() || playerIn instanceof ServerPlayerEntity && ((ServerPlayerEntity) playerIn).hasDisconnected()) {
+					for (int j = 0; j < internal.getSlots(); ++j) {
+						playerIn.dropItem(internal.extractItem(j, internal.getStackInSlot(j).getCount(), false), false);
+					}
+				} else {
+					for (int i = 0; i < internal.getSlots(); ++i) {
+						playerIn.inventory.placeItemBackInInventory(playerIn.world,
+								internal.extractItem(i, internal.getStackInSlot(i).getCount(), false));
+					}
+				}
 			}
 		}
 
 		private void slotChanged(int slotid, int ctype, int meta) {
 			if (this.world != null && this.world.isRemote) {
-				Michrosia.PACKET_HANDLER.sendToServer(new GUISlotChangedMessage(slotid, x, y, z, ctype, meta));
+				MichrosiaMod.PACKET_HANDLER.sendToServer(new GUISlotChangedMessage(slotid, x, y, z, ctype, meta));
 				handleSlotAction(entity, slotid, ctype, meta, x, y, z);
 			}
 		}
@@ -281,11 +315,20 @@ public class ReprocessorGUIGui extends MichrosiaElements.ModElement {
 
 		@Override
 		protected void drawGuiContainerBackgroundLayer(float par1, int par2, int par3) {
-			GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
+			GL11.glColor4f(1, 1, 1, 1);
 			Minecraft.getInstance().getTextureManager().bindTexture(texture);
 			int k = (this.width - this.xSize) / 2;
 			int l = (this.height - this.ySize) / 2;
-			this.blit(k, l, 0, 0, this.xSize, this.ySize);
+			this.blit(k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
+		}
+
+		@Override
+		public boolean keyPressed(int key, int b, int c) {
+			if (key == 256) {
+				this.minecraft.player.closeScreen();
+				return true;
+			}
+			return super.keyPressed(key, b, c);
 		}
 
 		@Override
@@ -295,7 +338,16 @@ public class ReprocessorGUIGui extends MichrosiaElements.ModElement {
 
 		@Override
 		protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-			this.font.drawString("Reprocessor", 8, 5, -12566464);
+			this.font.drawString("Reprocessor", 7, 5, -12566464);
+			this.font.drawString("" + (new Object() {
+				public int getEnergyStored(BlockPos pos) {
+					AtomicInteger _retval = new AtomicInteger(0);
+					TileEntity _ent = world.getTileEntity(pos);
+					if (_ent != null)
+						_ent.getCapability(CapabilityEnergy.ENERGY, null).ifPresent(capability -> _retval.set(capability.getEnergyStored()));
+					return _retval.get();
+				}
+			}.getEnergyStored(new BlockPos((int) x, (int) y, (int) z))) + "", 40, 58, -12829636);
 		}
 
 		@Override
@@ -404,15 +456,5 @@ public class ReprocessorGUIGui extends MichrosiaElements.ModElement {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))
 			return;
-		if (slotID == 1 && changeType == 0) {
-			{
-				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				ReprocessorUpdateTickProcedure.executeProcedure($_dependencies);
-			}
-		}
 	}
 }

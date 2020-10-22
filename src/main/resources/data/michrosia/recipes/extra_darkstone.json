@@ -1,0 +1,16 @@
+{
+  "group": "michrosia",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0"
+  ],
+  "key": {
+    "0": {
+      "item": "michrosia:extra_darkstone"
+    }
+  },
+  "result": {
+    "item": "michrosia:darkstone",
+    "count": 1
+  }
+}

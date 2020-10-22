@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "michrosia:blocks/black_pearl_ore",
+    "up": "michrosia:blocks/black_pearl_ore",
+    "north": "michrosia:blocks/black_pearl_ore",
+    "east": "michrosia:blocks/black_pearl_ore",
+    "south": "michrosia:blocks/black_pearl_ore",
+    "west": "michrosia:blocks/black_pearl_ore",
+    "particle": "michrosia:blocks/black_pearl_ore"
+  }
+}

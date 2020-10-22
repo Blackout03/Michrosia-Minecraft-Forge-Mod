@@ -2,10 +2,11 @@
   "group": "iron",
   "type": "minecraft:blasting",
   "experience": 5,
+  "cookingtime": 25,
   "ingredient": {
     "item": "michrosia:darkstoneironore"
   },
   "result": {
-    "item": "minecraft:iron_ingot"
+    "item": "minecraft:iron_nugget"
   }
 }

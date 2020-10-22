@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "michrosia:blocks/generator",
+    "up": "michrosia:blocks/generator",
+    "north": "michrosia:blocks/generator_front",
+    "east": "michrosia:blocks/generator",
+    "south": "michrosia:blocks/generator",
+    "west": "michrosia:blocks/generator",
+    "particle": "michrosia:blocks/generator"
+  }
+}

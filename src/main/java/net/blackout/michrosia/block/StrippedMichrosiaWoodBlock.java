@@ -23,16 +23,16 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.blackout.michrosia.itemgroup.MichrosiaTabItemGroup;
-import net.blackout.michrosia.MichrosiaElements;
+import net.blackout.michrosia.MichrosiaModElements;
 
 import java.util.List;
 import java.util.Collections;
 
-@MichrosiaElements.ModElement.Tag
-public class StrippedMichrosiaWoodBlock extends MichrosiaElements.ModElement {
+@MichrosiaModElements.ModElement.Tag
+public class StrippedMichrosiaWoodBlock extends MichrosiaModElements.ModElement {
 	@ObjectHolder("michrosia:strippedmichrosiawood")
 	public static final Block block = null;
-	public StrippedMichrosiaWoodBlock(MichrosiaElements instance) {
+	public StrippedMichrosiaWoodBlock(MichrosiaModElements instance) {
 		super(instance, 7);
 	}
 
@@ -76,7 +76,7 @@ public class StrippedMichrosiaWoodBlock extends MichrosiaElements.ModElement {
 			else if (facing == Direction.NORTH || facing == Direction.SOUTH)
 				facing = Direction.EAST;
 			else
-				facing = Direction.SOUTH;
+				facing = Direction.SOUTH;;
 			return this.getDefaultState().with(FACING, facing);
 		}
 

@@ -24,16 +24,18 @@ import net.minecraft.block.Block;
 
 import net.blackout.michrosia.procedures.MichrosiaLeavesBlockDestroyedByPlayerProcedure;
 import net.blackout.michrosia.itemgroup.MichrosiaTabItemGroup;
-import net.blackout.michrosia.MichrosiaElements;
+import net.blackout.michrosia.MichrosiaModElements;
 
+import java.util.Map;
 import java.util.List;
+import java.util.HashMap;
 import java.util.Collections;
 
-@MichrosiaElements.ModElement.Tag
-public class MichrosiaLeavesBlock extends MichrosiaElements.ModElement {
+@MichrosiaModElements.ModElement.Tag
+public class MichrosiaLeavesBlock extends MichrosiaModElements.ModElement {
 	@ObjectHolder("michrosia:michrosialeaves")
 	public static final Block block = null;
-	public MichrosiaLeavesBlock(MichrosiaElements instance) {
+	public MichrosiaLeavesBlock(MichrosiaModElements instance) {
 		super(instance, 13);
 	}
 
@@ -45,7 +47,7 @@ public class MichrosiaLeavesBlock extends MichrosiaElements.ModElement {
 	}
 	public static class CustomBlock extends LeavesBlock {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.LEAVES).sound(SoundType.PLANT).hardnessAndResistance(0.2f, 0.2f).lightValue(0));
+			super(Block.Properties.create(Material.LEAVES).sound(SoundType.PLANT).hardnessAndResistance(0.2f, 0.2f).lightValue(0).notSolid());
 			setRegistryName("michrosialeaves");
 		}
 
@@ -79,7 +81,7 @@ public class MichrosiaLeavesBlock extends MichrosiaElements.ModElement {
 			int y = pos.getY();
 			int z = pos.getZ();
 			{
-				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);

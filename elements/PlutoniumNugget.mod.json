@@ -1,11 +1,12 @@
 {
-  "_fv": 6,
+  "_fv": 13,
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "nugget_plutonium",
+    "texture": "plutonium_ingot",
     "customModelName": "Normal",
     "name": "Plutonium Nugget",
+    "rarity": "COMMON",
     "creativeTab": {
       "value": "CUSTOM:MichrosiaTab"
     },
@@ -14,19 +15,23 @@
     "useDuration": 0,
     "toolType": 1.0,
     "damageCount": 0,
+    "recipeRemainder": {
+      "value": ""
+    },
     "destroyAnyBlock": false,
     "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 5.0,
     "specialInfo": [
-      "Radioactive"
+      "\\u00A73\\u00A7lRadioactive"
     ],
     "hasGlow": true,
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
     "onEntityHitWith": {
       "name": "PlutoniumIngotMobIsHitWithItem"
-    },
-    "onItemInInventoryTick": {
-      "name": "PlutoniumIngotItemInInventoryTick"
     }
   }
 }

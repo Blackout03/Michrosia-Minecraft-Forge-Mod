@@ -8,25 +8,26 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.world.World;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.ITextComponent;
+import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.Entity;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.block.BlockState;
 
 import net.blackout.michrosia.procedures.PlutoniumIngotMobIsHitWithItemProcedure;
-import net.blackout.michrosia.procedures.PlutoniumIngotItemInInventoryTickProcedure;
 import net.blackout.michrosia.itemgroup.MichrosiaTabItemGroup;
-import net.blackout.michrosia.MichrosiaElements;
+import net.blackout.michrosia.MichrosiaModElements;
 
+import java.util.Map;
 import java.util.List;
+import java.util.HashMap;
 
-@MichrosiaElements.ModElement.Tag
-public class PlutoniumNuggetItem extends MichrosiaElements.ModElement {
+@MichrosiaModElements.ModElement.Tag
+public class PlutoniumNuggetItem extends MichrosiaModElements.ModElement {
 	@ObjectHolder("michrosia:plutoniumnugget")
 	public static final Item block = null;
-	public PlutoniumNuggetItem(MichrosiaElements instance) {
+	public PlutoniumNuggetItem(MichrosiaModElements instance) {
 		super(instance, 24);
 	}
 
@@ -36,7 +37,7 @@ public class PlutoniumNuggetItem extends MichrosiaElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(MichrosiaTabItemGroup.tab).maxStackSize(64));
+			super(new Item.Properties().group(MichrosiaTabItemGroup.tab).maxStackSize(64).rarity(Rarity.COMMON));
 			setRegistryName("plutoniumnugget");
 		}
 
@@ -64,35 +65,22 @@ public class PlutoniumNuggetItem extends MichrosiaElements.ModElement {
 		@Override
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent("\u00A73\u00A7lRadioactive"));
+			list.add(new StringTextComponent("\\u00A73\\u00A7lRadioactive"));
 		}
 
 		@Override
-		public boolean hitEntity(ItemStack itemstack, LivingEntity entity, LivingEntity entity2) {
-			super.hitEntity(itemstack, entity, entity2);
-			int x = (int) entity.posX;
-			int y = (int) entity.posY;
-			int z = (int) entity.posZ;
+		public boolean hitEntity(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
+			boolean retval = super.hitEntity(itemstack, entity, sourceentity);
+			double x = entity.getPosX();
+			double y = entity.getPosY();
+			double z = entity.getPosZ();
 			World world = entity.world;
 			{
-				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
 				PlutoniumIngotMobIsHitWithItemProcedure.executeProcedure($_dependencies);
 			}
-			return true;
-		}
-
-		@Override
-		public void inventoryTick(ItemStack itemstack, World world, Entity entity, int slot, boolean selected) {
-			super.inventoryTick(itemstack, world, entity, slot, selected);
-			int x = (int) entity.posX;
-			int y = (int) entity.posY;
-			int z = (int) entity.posZ;
-			{
-				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
-				$_dependencies.put("entity", entity);
-				PlutoniumIngotItemInInventoryTickProcedure.executeProcedure($_dependencies);
-			}
+			return retval;
 		}
 	}
 }

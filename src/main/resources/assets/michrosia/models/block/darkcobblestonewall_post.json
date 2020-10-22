@@ -1,7 +1,7 @@
 {
   "parent": "block/template_wall_post",
   "textures": {
-    "wall": "michrosia:blocks/darkcobblestone2",
-    "particle": "michrosia:blocks/darkcobblestone2"
+    "wall": "michrosia:blocks/darkcobblestone",
+    "particle": "michrosia:blocks/darkcobblestone"
   }
 }

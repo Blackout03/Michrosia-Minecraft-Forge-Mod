@@ -2,14 +2,23 @@
 package net.blackout.michrosia.block;
 
 import net.minecraftforge.registries.ObjectHolder;
+import net.minecraftforge.items.wrapper.SidedInvWrapper;
+import net.minecraftforge.items.IItemHandler;
+import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.energy.EnergyStorage;
+import net.minecraftforge.energy.CapabilityEnergy;
+import net.minecraftforge.common.util.LazyOptional;
+import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.storage.loot.LootContext;
+import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.IWorldReader;
 import net.minecraft.world.IBlockReader;
@@ -18,13 +27,13 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.ISelectionContext;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Rotation;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.Mirror;
 import net.minecraft.util.Direction;
-import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.LockableLootTileEntity;
@@ -42,9 +51,12 @@ import net.minecraft.inventory.container.Container;
 import net.minecraft.inventory.container.ChestContainer;
 import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.inventory.InventoryHelper;
+import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.fluid.IFluidState;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.client.renderer.RenderTypeLookup;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
@@ -53,20 +65,26 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.blackout.michrosia.procedures.ReprocessorUpdateTickProcedure;
+import net.blackout.michrosia.procedures.ReprocessorNeighbourBlockChangesProcedure;
 import net.blackout.michrosia.procedures.ReprocessorBlockDestroyedByPlayerProcedure;
-import net.blackout.michrosia.MichrosiaElements;
+import net.blackout.michrosia.MichrosiaModElements;
 
+import javax.annotation.Nullable;
+
+import java.util.stream.IntStream;
 import java.util.Random;
+import java.util.Map;
 import java.util.List;
+import java.util.HashMap;
 import java.util.Collections;
 
-@MichrosiaElements.ModElement.Tag
-public class ReprocessorBlock extends MichrosiaElements.ModElement {
+@MichrosiaModElements.ModElement.Tag
+public class ReprocessorBlock extends MichrosiaModElements.ModElement {
 	@ObjectHolder("michrosia:reprocessor")
 	public static final Block block = null;
 	@ObjectHolder("michrosia:reprocessor")
 	public static final TileEntityType<CustomTileEntity> tileEntityType = null;
-	public ReprocessorBlock(MichrosiaElements instance) {
+	public ReprocessorBlock(MichrosiaModElements instance) {
 		super(instance, 42);
 		FMLJavaModLoadingContext.get().getModEventBus().register(this);
 	}
@@ -81,19 +99,19 @@ public class ReprocessorBlock extends MichrosiaElements.ModElement {
 	public void registerTileEntity(RegistryEvent.Register<TileEntityType<?>> event) {
 		event.getRegistry().register(TileEntityType.Builder.create(CustomTileEntity::new, block).build(null).setRegistryName("reprocessor"));
 	}
+
+	@Override
+	@OnlyIn(Dist.CLIENT)
+	public void clientLoad(FMLClientSetupEvent event) {
+		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
+	}
 	public static class CustomBlock extends Block {
 		public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
 		public CustomBlock() {
 			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(3f, 10f).lightValue(0).harvestLevel(2)
-					.harvestTool(ToolType.PICKAXE));
+					.harvestTool(ToolType.PICKAXE).notSolid());
 			this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH));
 			setRegistryName("reprocessor");
-		}
-
-		@OnlyIn(Dist.CLIENT)
-		@Override
-		public BlockRenderLayer getRenderLayer() {
-			return BlockRenderLayer.CUTOUT;
 		}
 
 		@Override
@@ -108,18 +126,19 @@ public class ReprocessorBlock extends MichrosiaElements.ModElement {
 
 		@Override
 		public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
+			Vec3d offset = state.getOffset(world, pos);
 			switch ((Direction) state.get(FACING)) {
 				case UP :
 				case DOWN :
 				case SOUTH :
 				default :
-					return VoxelShapes.create(1D, -1D, 1D, 0D, 2D, 0D);
+					return VoxelShapes.create(1D, -1D, 1D, 0D, 2D, 0D).withOffset(offset.x, offset.y, offset.z);
 				case NORTH :
-					return VoxelShapes.create(0D, -1D, 0D, 1D, 2D, 1D);
+					return VoxelShapes.create(0D, -1D, 0D, 1D, 2D, 1D).withOffset(offset.x, offset.y, offset.z);
 				case WEST :
-					return VoxelShapes.create(0D, -1D, 1D, 1D, 2D, 0D);
+					return VoxelShapes.create(0D, -1D, 1D, 1D, 2D, 0D).withOffset(offset.x, offset.y, offset.z);
 				case EAST :
-					return VoxelShapes.create(1D, -1D, 0D, 0D, 2D, 1D);
+					return VoxelShapes.create(1D, -1D, 0D, 0D, 2D, 1D).withOffset(offset.x, offset.y, offset.z);
 			}
 		}
 
@@ -143,6 +162,7 @@ public class ReprocessorBlock extends MichrosiaElements.ModElement {
 
 		@Override
 		public BlockState getStateForPlacement(BlockItemUseContext context) {
+			;
 			return this.getDefaultState().with(FACING, context.getPlacementHorizontalFacing().getOpposite());
 		}
 
@@ -174,13 +194,32 @@ public class ReprocessorBlock extends MichrosiaElements.ModElement {
 		}
 
 		@Override
-		public void tick(BlockState state, World world, BlockPos pos, Random random) {
+		public void neighborChanged(BlockState state, World world, BlockPos pos, Block neighborBlock, BlockPos fromPos, boolean moving) {
+			super.neighborChanged(state, world, pos, neighborBlock, fromPos, moving);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			if (world.getRedstonePowerFromNeighbors(new BlockPos(x, y, z)) > 0) {
+			} else {
+			}
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				ReprocessorNeighbourBlockChangesProcedure.executeProcedure($_dependencies);
+			}
+		}
+
+		@Override
+		public void tick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
 			super.tick(state, world, pos, random);
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
 			{
-				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
@@ -197,7 +236,7 @@ public class ReprocessorBlock extends MichrosiaElements.ModElement {
 			int y = pos.getY();
 			int z = pos.getZ();
 			{
-				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
@@ -244,7 +283,7 @@ public class ReprocessorBlock extends MichrosiaElements.ModElement {
 		}
 	}
 
-	public static class CustomTileEntity extends LockableLootTileEntity {
+	public static class CustomTileEntity extends LockableLootTileEntity implements ISidedInventory {
 		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(3, ItemStack.EMPTY);
 		protected CustomTileEntity() {
 			super(tileEntityType);
@@ -253,14 +292,21 @@ public class ReprocessorBlock extends MichrosiaElements.ModElement {
 		@Override
 		public void read(CompoundNBT compound) {
 			super.read(compound);
-			this.stacks = NonNullList.withSize(this.getSizeInventory(), ItemStack.EMPTY);
+			if (!this.checkLootAndRead(compound)) {
+				this.stacks = NonNullList.withSize(this.getSizeInventory(), ItemStack.EMPTY);
+			}
 			ItemStackHelper.loadAllItems(compound, this.stacks);
+			if (compound.get("energyStorage") != null)
+				CapabilityEnergy.ENERGY.readNBT(energyStorage, null, compound.get("energyStorage"));
 		}
 
 		@Override
 		public CompoundNBT write(CompoundNBT compound) {
 			super.write(compound);
-			ItemStackHelper.saveAllItems(compound, this.stacks);
+			if (!this.checkLootAndWrite(compound)) {
+				ItemStackHelper.saveAllItems(compound, this.stacks);
+			}
+			compound.put("energyStorage", CapabilityEnergy.ENERGY.writeNBT(energyStorage, null));
 			return compound;
 		}
 
@@ -281,7 +327,7 @@ public class ReprocessorBlock extends MichrosiaElements.ModElement {
 
 		@Override
 		public int getSizeInventory() {
-			return 3;
+			return stacks.size();
 		}
 
 		@Override
@@ -290,18 +336,6 @@ public class ReprocessorBlock extends MichrosiaElements.ModElement {
 				if (!itemstack.isEmpty())
 					return false;
 			return true;
-		}
-
-		@Override
-		public boolean isItemValidForSlot(int index, ItemStack stack) {
-			if (index == 2)
-				return false;
-			return true;
-		}
-
-		@Override
-		public ItemStack getStackInSlot(int slot) {
-			return stacks.get(slot);
 		}
 
 		@Override
@@ -332,6 +366,65 @@ public class ReprocessorBlock extends MichrosiaElements.ModElement {
 		@Override
 		protected void setItems(NonNullList<ItemStack> stacks) {
 			this.stacks = stacks;
+		}
+
+		@Override
+		public boolean isItemValidForSlot(int index, ItemStack stack) {
+			if (index == 2)
+				return false;
+			return true;
+		}
+
+		@Override
+		public int[] getSlotsForFace(Direction side) {
+			return IntStream.range(0, this.getSizeInventory()).toArray();
+		}
+
+		@Override
+		public boolean canInsertItem(int index, ItemStack stack, @Nullable Direction direction) {
+			return this.isItemValidForSlot(index, stack);
+		}
+
+		@Override
+		public boolean canExtractItem(int index, ItemStack stack, Direction direction) {
+			return true;
+		}
+		private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
+		private final EnergyStorage energyStorage = new EnergyStorage(10000, 500, 500, 0) {
+			@Override
+			public int receiveEnergy(int maxReceive, boolean simulate) {
+				int retval = super.receiveEnergy(maxReceive, simulate);
+				if (!simulate) {
+					markDirty();
+					world.notifyBlockUpdate(pos, world.getBlockState(pos), world.getBlockState(pos), 2);
+				}
+				return retval;
+			}
+
+			@Override
+			public int extractEnergy(int maxExtract, boolean simulate) {
+				int retval = super.extractEnergy(maxExtract, simulate);
+				if (!simulate) {
+					markDirty();
+					world.notifyBlockUpdate(pos, world.getBlockState(pos), world.getBlockState(pos), 2);
+				}
+				return retval;
+			}
+		};
+		@Override
+		public <T> LazyOptional<T> getCapability(Capability<T> capability, @Nullable Direction facing) {
+			if (!this.removed && facing != null && capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)
+				return handlers[facing.ordinal()].cast();
+			if (!this.removed && capability == CapabilityEnergy.ENERGY)
+				return LazyOptional.of(() -> energyStorage).cast();
+			return super.getCapability(capability, facing);
+		}
+
+		@Override
+		public void remove() {
+			super.remove();
+			for (LazyOptional<? extends IItemHandler> handler : handlers)
+				handler.invalidate();
 		}
 	}
 }

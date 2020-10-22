@@ -5,17 +5,20 @@ import net.minecraft.potion.EffectInstance;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
-import net.blackout.michrosia.MichrosiaElements;
+import net.blackout.michrosia.MichrosiaModElements;
 
-@MichrosiaElements.ModElement.Tag
-public class MichrosiaGrassPathEntityWalksOnTheBlockProcedure extends MichrosiaElements.ModElement {
-	public MichrosiaGrassPathEntityWalksOnTheBlockProcedure(MichrosiaElements instance) {
+import java.util.Map;
+
+@MichrosiaModElements.ModElement.Tag
+public class MichrosiaGrassPathEntityWalksOnTheBlockProcedure extends MichrosiaModElements.ModElement {
+	public MichrosiaGrassPathEntityWalksOnTheBlockProcedure(MichrosiaModElements instance) {
 		super(instance, 59);
 	}
 
-	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {
+	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
-			System.err.println("Failed to load dependency entity for procedure MichrosiaGrassPathEntityWalksOnTheBlock!");
+			if (!dependencies.containsKey("entity"))
+				System.err.println("Failed to load dependency entity for procedure MichrosiaGrassPathEntityWalksOnTheBlock!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

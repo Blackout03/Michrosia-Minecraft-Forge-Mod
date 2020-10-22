@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "michrosia:blocks/ore_dark_iron",
-    "up": "michrosia:blocks/ore_dark_iron",
-    "north": "michrosia:blocks/ore_dark_iron",
-    "east": "michrosia:blocks/ore_dark_iron",
-    "south": "michrosia:blocks/ore_dark_iron",
-    "west": "michrosia:blocks/ore_dark_iron",
-    "particle": "michrosia:blocks/ore_dark_iron"
+    "down": "michrosia:blocks/dark_iron_ore",
+    "up": "michrosia:blocks/dark_iron_ore",
+    "north": "michrosia:blocks/dark_iron_ore",
+    "east": "michrosia:blocks/dark_iron_ore",
+    "south": "michrosia:blocks/dark_iron_ore",
+    "west": "michrosia:blocks/dark_iron_ore",
+    "particle": "michrosia:blocks/dark_iron_ore"
   }
 }

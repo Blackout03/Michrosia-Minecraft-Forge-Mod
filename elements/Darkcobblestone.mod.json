@@ -1,17 +1,22 @@
 {
-  "_fv": 6,
+  "_fv": 13,
   "_type": "block",
   "definition": {
-    "texture": "darkcobblestone2",
-    "textureTop": "darkcobblestone2",
-    "textureLeft": "darkcobblestone2",
-    "textureFront": "darkcobblestone2",
-    "textureRight": "darkcobblestone2",
-    "textureBack": "darkcobblestone2",
+    "texture": "darkcobblestone",
+    "textureTop": "darkcobblestone",
+    "textureLeft": "darkcobblestone",
+    "textureFront": "darkcobblestone",
+    "textureRight": "darkcobblestone",
+    "textureBack": "darkcobblestone",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 0,
+    "emissiveRendering": false,
+    "displayFluidOverlay": false,
+    "itemTexture": "",
+    "particleTexture": "",
     "hasTransparency": false,
+    "connectedSides": false,
     "transparencyType": "SOLID",
     "mx": 0.0,
     "my": 0.0,
@@ -19,21 +24,21 @@
     "Mx": 1.0,
     "My": 1.0,
     "Mz": 1.0,
-    "faceShape": "SOLID",
     "name": "Darkcobblestone",
     "specialInfo": [],
     "hardness": 2.0,
     "resistance": 6.0,
     "hasGravity": false,
+    "isWaterloggable": false,
     "creativeTab": {
       "value": "CUSTOM:MichrosiaTab"
     },
     "destroyTool": "pickaxe",
-    "affectedBySilkTouch": false,
     "customDrop": {
       "value": ""
     },
     "dropAmount": 1,
+    "useLootTableForDrops": false,
     "isBeaconBase": false,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
@@ -49,6 +54,8 @@
     "creativePickItem": {
       "value": ""
     },
+    "offsetType": "NONE",
+    "aiPathNodeType": "DEFAULT",
     "flammability": 0,
     "fireSpreadSpeed": 0,
     "isLadder": false,
@@ -68,7 +75,6 @@
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
-    "particleSpawningCondition": "ALWAYS",
     "hasInventory": false,
     "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,
@@ -77,14 +83,19 @@
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,
     "inventoryOutSlotIDs": [],
+    "inventoryInSlotIDs": [],
+    "hasEnergyStorage": false,
+    "energyInitial": 0,
+    "energyCapacity": 400000,
+    "energyMaxReceive": 200,
+    "energyMaxExtract": 200,
+    "isFluidTank": false,
+    "fluidCapacity": 8000,
+    "fluidRestrictions": [],
     "spawnWorldTypes": [
       "Surface"
     ],
-    "restrictionBiomes": [
-      {
-        "value": "CUSTOM:MichrosiaBiome"
-      }
-    ],
+    "restrictionBiomes": [],
     "blocksToReplace": [
       {
         "value": "CUSTOM:Darkstone"

@@ -8,11 +8,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
 
 import net.blackout.michrosia.block.MichrosiaGrassBlock;
-import net.blackout.michrosia.MichrosiaElements;
+import net.blackout.michrosia.MichrosiaModElements;
 
-@MichrosiaElements.ModElement.Tag
-public class MichrosiaTabItemGroup extends MichrosiaElements.ModElement {
-	public MichrosiaTabItemGroup(MichrosiaElements instance) {
+@MichrosiaModElements.ModElement.Tag
+public class MichrosiaTabItemGroup extends MichrosiaModElements.ModElement {
+	public MichrosiaTabItemGroup(MichrosiaModElements instance) {
 		super(instance, 39);
 	}
 

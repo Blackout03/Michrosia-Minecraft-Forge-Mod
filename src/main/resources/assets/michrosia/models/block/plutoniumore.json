@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "michrosia:blocks/ore_plutonium2",
-    "up": "michrosia:blocks/ore_plutonium2",
-    "north": "michrosia:blocks/ore_plutonium2",
-    "east": "michrosia:blocks/ore_plutonium2",
-    "south": "michrosia:blocks/ore_plutonium2",
-    "west": "michrosia:blocks/ore_plutonium2",
-    "particle": "michrosia:blocks/ore_plutonium2"
+    "down": "michrosia:blocks/plutonium_ore",
+    "up": "michrosia:blocks/plutonium_ore",
+    "north": "michrosia:blocks/plutonium_ore",
+    "east": "michrosia:blocks/plutonium_ore",
+    "south": "michrosia:blocks/plutonium_ore",
+    "west": "michrosia:blocks/plutonium_ore",
+    "particle": "michrosia:blocks/plutonium_ore"
   }
 }

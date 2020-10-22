@@ -1,8 +1,8 @@
 {
   "parent": "block/stairs",
   "textures": {
-    "bottom": "michrosia:blocks/darkcobblestone2",
-    "top": "michrosia:blocks/darkcobblestone2",
-    "side": "michrosia:blocks/darkcobblestone2"
+    "bottom": "michrosia:blocks/darkcobblestone",
+    "top": "michrosia:blocks/darkcobblestone",
+    "side": "michrosia:blocks/darkcobblestone"
   }
 }

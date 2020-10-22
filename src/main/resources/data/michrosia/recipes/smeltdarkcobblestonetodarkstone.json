@@ -2,6 +2,7 @@
   "group": "darkstone",
   "type": "minecraft:smelting",
   "experience": 0,
+  "cookingtime": 200,
   "ingredient": {
     "item": "michrosia:darkcobblestone"
   },

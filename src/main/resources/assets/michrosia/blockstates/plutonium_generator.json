@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "michrosia:block/plutonium_generator"
+    },
+    "facing=east": {
+      "model": "michrosia:block/plutonium_generator",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "michrosia:block/plutonium_generator",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "michrosia:block/plutonium_generator",
+      "y": 270
+    }
+  }
+}

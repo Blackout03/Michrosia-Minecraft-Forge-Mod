@@ -25,21 +25,22 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Block;
 
 import net.blackout.michrosia.itemgroup.MichrosiaTabItemGroup;
-import net.blackout.michrosia.MichrosiaElements;
+import net.blackout.michrosia.MichrosiaModElements;
 
 import java.util.Random;
 import java.util.List;
 import java.util.Collections;
 
-@MichrosiaElements.ModElement.Tag
-public class DarkstoneIronOreBlock extends MichrosiaElements.ModElement {
+@MichrosiaModElements.ModElement.Tag
+public class DarkstoneIronOreBlock extends MichrosiaModElements.ModElement {
 	@ObjectHolder("michrosia:darkstoneironore")
 	public static final Block block = null;
-	public DarkstoneIronOreBlock(MichrosiaElements instance) {
+	public DarkstoneIronOreBlock(MichrosiaModElements instance) {
 		super(instance, 110);
 	}
 
@@ -73,11 +74,13 @@ public class DarkstoneIronOreBlock extends MichrosiaElements.ModElement {
 	public void init(FMLCommonSetupEvent event) {
 		for (Biome biome : ForgeRegistries.BIOMES.getValues()) {
 			boolean biomeCriteria = false;
-			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("michrosia:michrosiabiome")))
+			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("michrosia:michrosia")))
+				biomeCriteria = true;
+			if (ForgeRegistries.BIOMES.getKey(biome).equals(new ResourceLocation("michrosia:darkstone_hills")))
 				biomeCriteria = true;
 			if (!biomeCriteria)
 				continue;
-			biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(new OreFeature(OreFeatureConfig::deserialize) {
+			biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, new OreFeature(OreFeatureConfig::deserialize) {
 				@Override
 				public boolean place(IWorld world, ChunkGenerator generator, Random rand, BlockPos pos, OreFeatureConfig config) {
 					DimensionType dimensionType = world.getDimension().getType();
@@ -88,12 +91,38 @@ public class DarkstoneIronOreBlock extends MichrosiaElements.ModElement {
 						return false;
 					return super.place(world, generator, rand, pos, config);
 				}
-			}, new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("darkstoneironore", "darkstoneironore", blockAt -> {
+			}.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("darkstoneironore", "darkstoneironore", blockAt -> {
 				boolean blockCriteria = false;
 				if (blockAt.getBlock() == DarkstoneBlock.block.getDefaultState().getBlock())
 					blockCriteria = true;
+				if (blockAt.getBlock() == ExtraDarkstoneBlock.block.getDefaultState().getBlock())
+					blockCriteria = true;
+				if (blockAt.getBlock() == EvenExtraDarkstoneBlock.block.getDefaultState().getBlock())
+					blockCriteria = true;
+				if (blockAt.getBlock() == Blocks.COAL_ORE.getDefaultState().getBlock())
+					blockCriteria = true;
+				if (blockAt.getBlock() == Blocks.IRON_ORE.getDefaultState().getBlock())
+					blockCriteria = true;
+				if (blockAt.getBlock() == Blocks.REDSTONE_ORE.getDefaultState().getBlock())
+					blockCriteria = true;
+				if (blockAt.getBlock() == Blocks.REDSTONE_ORE.getDefaultState().getBlock())
+					blockCriteria = true;
+				if (blockAt.getBlock() == Blocks.GOLD_ORE.getDefaultState().getBlock())
+					blockCriteria = true;
+				if (blockAt.getBlock() == Blocks.LAPIS_ORE.getDefaultState().getBlock())
+					blockCriteria = true;
+				if (blockAt.getBlock() == Blocks.DIAMOND_ORE.getDefaultState().getBlock())
+					blockCriteria = true;
+				if (blockAt.getBlock() == Blocks.EMERALD_ORE.getDefaultState().getBlock())
+					blockCriteria = true;
+				if (blockAt.getBlock() == Blocks.GRANITE.getDefaultState().getBlock())
+					blockCriteria = true;
+				if (blockAt.getBlock() == Blocks.DIORITE.getDefaultState().getBlock())
+					blockCriteria = true;
+				if (blockAt.getBlock() == Blocks.ANDESITE.getDefaultState().getBlock())
+					blockCriteria = true;
 				return blockCriteria;
-			}), block.getDefaultState(), 12), Placement.COUNT_RANGE, new CountRangeConfig(16, 0, 0, 92)));
+			}), block.getDefaultState(), 12)).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(16, 0, 0, 136))));
 		}
 	}
 }

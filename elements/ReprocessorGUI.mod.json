@@ -1,11 +1,14 @@
 {
-  "_fv": 6,
+  "_fv": 13,
   "_type": "gui",
   "definition": {
     "type": 1,
-    "width": 352,
-    "height": 332,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
     "renderBgLayer": true,
+    "doesPauseGame": false,
     "components": [
       {
         "type": "inputslot",
@@ -14,28 +17,11 @@
             "value": ""
           },
           "id": 0,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
           "name": "Slot #0",
-          "x": 336,
-          "y": 114
-        }
-      },
-      {
-        "type": "inputslot",
-        "data": {
-          "inputLimit": {
-            "value": ""
-          },
-          "color": {
-            "value": -16750951,
-            "falpha": 0.0
-          },
-          "id": 1,
-          "onSlotChanged": {
-            "name": "ReprocessorUpdateTick"
-          },
-          "name": "Slot #1",
-          "x": 336,
-          "y": 168
+          "x": 177,
+          "y": 71
         }
       },
       {
@@ -47,17 +33,32 @@
             "falpha": 0.0
           },
           "name": "Reprocessor",
-          "x": 266,
-          "y": 84
+          "x": 133,
+          "y": 42
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "<energy>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "<energy>",
+          "x": 166,
+          "y": 95
         }
       },
       {
         "type": "outputslot",
         "data": {
-          "id": 2,
-          "name": "Slot #2",
-          "x": 481,
-          "y": 142
+          "id": 1,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #1",
+          "x": 231,
+          "y": 71
         }
       }
     ]

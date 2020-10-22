@@ -18,22 +18,6 @@
       "ids": {}
     },
     {
-      "name": "PlutoniumIngotItemInInventoryTick",
-      "type": "procedure",
-      "sortid": 29,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
       "name": "PlutoniumIngotMobIsHitWithItem",
       "type": "procedure",
       "sortid": 30,
@@ -54,7 +38,7 @@
       "type": "item",
       "sortid": 25,
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "ids": {}
     },
     {
@@ -78,7 +62,7 @@
       "type": "item",
       "sortid": 24,
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "ids": {}
     },
     {
@@ -118,7 +102,7 @@
       "type": "block",
       "sortid": 26,
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "ids": {}
     },
     {
@@ -149,22 +133,6 @@
       "name": "MichrosiaDirt",
       "type": "block",
       "sortid": 2,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "MichrosiaBiome",
-      "type": "biome",
-      "sortid": 37,
-      "compiles": true,
-      "locked_code": true,
-      "ids": {}
-    },
-    {
-      "name": "Darkstone2",
-      "type": "block",
-      "sortid": 38,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -209,15 +177,15 @@
           },
           {
             "name": "x",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "y",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "z",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "world",
@@ -241,15 +209,15 @@
           },
           {
             "name": "x",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "y",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "z",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "world",
@@ -289,15 +257,15 @@
           },
           {
             "name": "x",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "y",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "z",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "world",
@@ -317,15 +285,15 @@
         "dependencies": [
           {
             "name": "x",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "y",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "z",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "world",
@@ -369,15 +337,15 @@
         "dependencies": [
           {
             "name": "x",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "y",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "z",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "world",
@@ -429,15 +397,15 @@
         "dependencies": [
           {
             "name": "x",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "y",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "z",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "world",
@@ -461,15 +429,15 @@
           },
           {
             "name": "x",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "y",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "z",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "world",
@@ -533,15 +501,15 @@
           },
           {
             "name": "x",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "y",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "z",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "world",
@@ -573,15 +541,15 @@
           },
           {
             "name": "x",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "y",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "z",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "world",
@@ -725,15 +693,15 @@
           },
           {
             "name": "x",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "y",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "z",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "world",
@@ -802,30 +770,6 @@
       "name": "WallsItemTag",
       "type": "tag",
       "sortid": 72,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "MichrosiaBiomeFeatures",
-      "type": "code",
-      "sortid": 73,
-      "compiles": true,
-      "locked_code": true,
-      "ids": {}
-    },
-    {
-      "name": "CraftReprocessorPart",
-      "type": "recipe",
-      "sortid": 75,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "CraftReprocessorMain",
-      "type": "recipe",
-      "sortid": 76,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -927,30 +871,6 @@
       "ids": {}
     },
     {
-      "name": "LootTableMichrosiaChestsHouse",
-      "type": "loottable",
-      "sortid": 92,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "House3",
-      "type": "structure",
-      "sortid": 95,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "House4",
-      "type": "structure",
-      "sortid": 96,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
       "name": "AdvancementAdvanceMichrosiaBiome",
       "type": "achievement",
       "sortid": 97,
@@ -995,17 +915,13 @@
       "type": "procedure",
       "sortid": 104,
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "ids": {},
       "metadata": {
         "dependencies": [
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       }
@@ -1052,16 +968,20 @@
       "metadata": {
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "y",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "z",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "world",
@@ -1119,22 +1039,6 @@
       "ids": {}
     },
     {
-      "name": "MichrosiaStick",
-      "type": "item",
-      "sortid": 115,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "Wrench",
-      "type": "tool",
-      "sortid": 116,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
       "name": "ReprocessorPartOnBlockRightClicked",
       "type": "procedure",
       "sortid": 117,
@@ -1149,15 +1053,15 @@
           },
           {
             "name": "x",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "y",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "z",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "world",
@@ -1181,15 +1085,252 @@
           },
           {
             "name": "x",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "y",
-            "type": "int"
+            "type": "number"
           },
           {
             "name": "z",
-            "type": "int"
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CraftMainReprocessor",
+      "type": "recipe",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "craft_main_reprocessor"
+    },
+    {
+      "name": "CraftReprocessorPart",
+      "type": "recipe",
+      "sortid": 121,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "craft_reprocessor_part"
+    },
+    {
+      "name": "Michrosia",
+      "type": "biome",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "michrosia"
+    },
+    {
+      "name": "DarkstoneHills",
+      "type": "biome",
+      "sortid": 123,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "darkstone_hills"
+    },
+    {
+      "name": "ExtraDarkstone",
+      "type": "block",
+      "sortid": 124,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "extra_darkstone"
+    },
+    {
+      "name": "CraftDarkstone",
+      "type": "recipe",
+      "sortid": 125,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "craft_darkstone"
+    },
+    {
+      "name": "EvenExtraDarkstone",
+      "type": "block",
+      "sortid": 126,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "even_extra_darkstone"
+    },
+    {
+      "name": "CraftDarkstoneAgain",
+      "type": "recipe",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "craft_darkstone_again"
+    },
+    {
+      "name": "MoreDarkstoneExtra",
+      "type": "block",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "more_darkstone_extra"
+    },
+    {
+      "name": "BlackPearlOre",
+      "type": "block",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "black_pearl_ore"
+    },
+    {
+      "name": "BlackPearl",
+      "type": "item",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "black_pearl"
+    },
+    {
+      "name": "BlackPearlOreBlockDestroyedByExplosion",
+      "type": "procedure",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "black_pearl_ore_block_destroyed_by_explosion",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BlackPearlOreBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "black_pearl_ore_block_destroyed_by_player",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GeneratorGUI",
+      "type": "gui",
+      "sortid": 132,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "generator_gui"
+    },
+    {
+      "name": "PlutoniumGeneratorUpdateTick",
+      "type": "procedure",
+      "sortid": 133,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "plutonium_generator_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PlutoniumGenerator",
+      "type": "block",
+      "sortid": 133,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "plutonium_generator"
+    },
+    {
+      "name": "ReprocessorNeighbourBlockChanges",
+      "type": "procedure",
+      "sortid": 135,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "reprocessor_neighbour_block_changes",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
           },
           {
             "name": "world",
@@ -1201,9 +1342,21 @@
   ],
   "variable_elements": [
     {
-      "name": "First_Join",
+      "name": "playerFirstJoin1",
       "type": "logic",
-      "scope": "world",
+      "scope": "player_lifetime",
+      "value": "true"
+    },
+    {
+      "name": "playerFirstJoin2",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "true"
+    },
+    {
+      "name": "playerFirstJoin3",
+      "type": "logic",
+      "scope": "player_lifetime",
       "value": "true"
     }
   ],
@@ -1224,8 +1377,11 @@
       "block.michrosia.strippedmichrosialog": "Stripped Michrosia Log",
       "itemGroup.tabmichrosia": "Michrosia",
       "block.michrosia.michrosiaplankstrapdoor": "Michrosia Trap Door",
+      "block.michrosia.black_pearl_ore": "Black Pearl Ore",
       "advancements.advancementbuildthereprocessor.descr": "Build the Reprocessor.",
       "advancements.advancementjoinworldmichrosia.descr": "Join a world with Michrosia Installed",
+      "biome.michrosia.darkstone_hills": "Darkstone Hills",
+      "item.michrosia.black_pearl": "Black Pearl",
       "block.michrosia.michrosiaplanksstairs": "Michrosia Stairs",
       "item.plutoniumnugget.name": "Plutonium Nugget",
       "block.michrosia.michrosiasapling": "Michrosia Sapling",
@@ -1234,23 +1390,25 @@
       "item.michrosia.apple": "Apple",
       "block.michrosia.strippedmichrosiawood": "Stripped Michrosia Wood",
       "block.michrosia.michrosiagrass": "Michrosia Grass",
-      "item.michrosia.michrosiastick": "Michrosia Stick",
       "block.michrosia.darkcobblestoneslab": "Dark Cobblestone Slab",
       "block.michrosia.michrosiagrassshort2": "Michrosia Grass",
       "block.michrosia.michrosiagrassshort1": "Michrosia Grass",
-      "item.michrosia.wrench": "Wrench",
       "item.plutoniumingot.name": "Plutonium Ingot",
       "block.michrosia.darkcobblestonewall": "Dark Cobblestone Wall",
-      "biome.michrosia.michrosiabiome": "Michrosia",
       "advancements.advancementadvancemichrosiabiome.title": "Advance Michrosia",
       "block.michrosia.reprocessorpartmain": "Main Reprocessor Part",
       "block.michrosia.reprocessorpart": "Reprocessor Part",
       "block.michrosia.michrosiaplanksslab": "Michrosia Slab",
+      "block.michrosia.extra_darkstone": "Darkstone",
       "block.michrosia.darkstoneslab": "Darkstone Slab",
       "block.michrosia.michrosiaplanks": "Michrosia Planks",
       "tile.darkcobblestone.name": "Darkcobblestone",
+      "block.michrosia.plutonium_generator": "Plutonium Generator",
       "block.michrosia.michrosiaplanksfence": "Michrosia Fence",
       "block.michrosia.darkstonewall": "Darkstone Wall",
+      "block.michrosia.even_extra_darkstone": "Darkstone",
+      "biome.michrosia.michrosia": "Michrosia",
+      "block.michrosia.more_darkstone_extra": "Darkstone",
       "item.michrosia.plutoniumnugget": "Plutonium Nugget",
       "tile.michrosiagrass.name": "Michrosia Grass",
       "block.michrosia.plutoniumblock": "Plutonium Block",
@@ -1258,7 +1416,6 @@
       "block.michrosia.darkstoneironore": "Iron Ore",
       "block.michrosia.darkstone": "Darkstone",
       "advancements.advancementcraftreprocessorpart.title": "What is a Reprocessor?",
-      "block.michrosia.darkstone2": "Darkstone",
       "block.michrosia.darkcobblestone": "Darkcobblestone",
       "advancements.advancementadvancemichrosiabiome.descr": "Advance on toward the Michrosia Biome.",
       "block.michrosia.plutoniumore": "Plutonium Ore",
@@ -1279,10 +1436,10 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
-    "currentGenerator": "1.14.4",
+    "currentGenerator": "forge-1.15.2",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.blackout.michrosia",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202000213314
+  "mcreatorVersion": 202000599999
 }

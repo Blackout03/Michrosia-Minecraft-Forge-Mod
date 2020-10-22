@@ -1,17 +1,22 @@
 {
-  "_fv": 6,
+  "_fv": 13,
   "_type": "block",
   "definition": {
-    "texture": "ore_dark_iron",
-    "textureTop": "ore_dark_iron",
-    "textureLeft": "ore_dark_iron",
-    "textureFront": "ore_dark_iron",
-    "textureRight": "ore_dark_iron",
-    "textureBack": "ore_dark_iron",
+    "texture": "dark_iron_ore",
+    "textureTop": "dark_iron_ore",
+    "textureLeft": "dark_iron_ore",
+    "textureFront": "dark_iron_ore",
+    "textureRight": "dark_iron_ore",
+    "textureBack": "dark_iron_ore",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 0,
+    "emissiveRendering": false,
+    "displayFluidOverlay": false,
+    "itemTexture": "",
+    "particleTexture": "",
     "hasTransparency": false,
+    "connectedSides": false,
     "transparencyType": "SOLID",
     "mx": 0.0,
     "my": 0.0,
@@ -19,21 +24,21 @@
     "Mx": 1.0,
     "My": 1.0,
     "Mz": 1.0,
-    "faceShape": "SOLID",
     "name": "Iron Ore",
     "specialInfo": [],
     "hardness": 3.0,
     "resistance": 3.0,
     "hasGravity": false,
+    "isWaterloggable": false,
     "creativeTab": {
       "value": "CUSTOM:MichrosiaTab"
     },
     "destroyTool": "pickaxe",
-    "affectedBySilkTouch": false,
     "customDrop": {
       "value": ""
     },
     "dropAmount": 1,
+    "useLootTableForDrops": false,
     "isBeaconBase": false,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
@@ -49,6 +54,8 @@
     "creativePickItem": {
       "value": ""
     },
+    "offsetType": "NONE",
+    "aiPathNodeType": "DEFAULT",
     "flammability": 0,
     "fireSpreadSpeed": 0,
     "isLadder": false,
@@ -68,7 +75,6 @@
     "particleSpawningShape": "Spread",
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
-    "particleSpawningCondition": "ALWAYS",
     "hasInventory": false,
     "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,
@@ -77,22 +83,73 @@
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,
     "inventoryOutSlotIDs": [],
+    "inventoryInSlotIDs": [],
+    "hasEnergyStorage": false,
+    "energyInitial": 0,
+    "energyCapacity": 400000,
+    "energyMaxReceive": 200,
+    "energyMaxExtract": 200,
+    "isFluidTank": false,
+    "fluidCapacity": 8000,
+    "fluidRestrictions": [],
     "spawnWorldTypes": [
       "Surface"
     ],
     "restrictionBiomes": [
       {
-        "value": "CUSTOM:MichrosiaBiome"
+        "value": "CUSTOM:Michrosia"
+      },
+      {
+        "value": "CUSTOM:DarkstoneHills"
       }
     ],
     "blocksToReplace": [
       {
         "value": "CUSTOM:Darkstone"
+      },
+      {
+        "value": "CUSTOM:ExtraDarkstone"
+      },
+      {
+        "value": "CUSTOM:EvenExtraDarkstone"
+      },
+      {
+        "value": "Blocks.COAL_ORE"
+      },
+      {
+        "value": "Blocks.IRON_ORE"
+      },
+      {
+        "value": "Blocks.REDSTONE_ORE"
+      },
+      {
+        "value": "Blocks.LIT_REDSTONE_ORE"
+      },
+      {
+        "value": "Blocks.GOLD_ORE"
+      },
+      {
+        "value": "Blocks.LAPIS_ORE"
+      },
+      {
+        "value": "Blocks.DIAMOND_ORE"
+      },
+      {
+        "value": "Blocks.EMERALD_ORE"
+      },
+      {
+        "value": "Blocks.STONE#1"
+      },
+      {
+        "value": "Blocks.STONE#3"
+      },
+      {
+        "value": "Blocks.STONE#5"
       }
     ],
     "frequencyPerChunks": 16,
     "frequencyOnChunk": 12,
     "minGenerateHeight": 0,
-    "maxGenerateHeight": 92
+    "maxGenerateHeight": 136
   }
 }

@@ -2,6 +2,7 @@
   "group": "iron",
   "type": "minecraft:smelting",
   "experience": 5,
+  "cookingtime": 50,
   "ingredient": {
     "item": "michrosia:darkstoneironore"
   },
